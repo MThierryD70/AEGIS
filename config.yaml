@@ -1,0 +1,15 @@
+scanner:
+  extensions: [".exe", ".dll", ".js", ".pdf"]
+  max_file_size_mb: 100
+  exclude_paths: []
+
+database:
+  path: "./data/signatures.db"
+
+quarantine:
+  dir: "./quarantine"
+  encrypt: false
+
+logging:
+  level: "INFO"
+  file: "./logs/antivirus.log"
