@@ -84,3 +84,32 @@
 2026-04-17 05:31:45 [INFO] Base de signatures initialisée : ./data/signatures.db
 2026-04-17 05:42:14 [INFO] Base de signatures initialisée : ./data/signatures.db
 2026-04-17 05:42:49 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:43:13 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:43:13 [ERROR] Erreur lecture du fichier test_files\eicar.com : [Errno 2] No such file or directory: 'test_files\\eicar.com'
+2026-04-17 18:43:13 [ERROR] Erreur lecture du fichier test_files\programme.exe : [Errno 2] No such file or directory: 'test_files\\programme.exe'
+2026-04-17 18:46:58 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:46:58 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 18:47:53 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:47:53 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 18:48:56 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:48:56 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 18:50:33 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:50:33 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 18:51:38 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:51:38 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 18:53:25 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:53:25 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 18:56:14 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:56:14 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 18:57:51 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:57:51 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 18:59:15 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 18:59:15 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 19:00:52 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 19:00:52 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 19:01:16 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 19:01:16 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 19:02:16 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 19:02:16 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 19:07:21 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 19:07:21 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
