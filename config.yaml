@@ -1,5 +1,5 @@
 scanner:
-  extensions: [".exe", ".dll", ".js", ".pdf"]
+  extensions: [".exe", ".dll", ".js", ".pdf", ".com"]
   max_file_size_mb: 100
   exclude_paths: []
 
