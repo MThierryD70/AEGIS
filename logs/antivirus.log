@@ -71,3 +71,16 @@
 2026-04-17 03:35:32 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
 2026-04-17 03:35:32 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
 2026-04-17 03:39:27 [ERROR] Erreur lecture du fichier Tests\test_files\eicar.txt : [Errno 2] No such file or directory: 'Tests\\test_files\\eicar.txt'
+2026-04-17 05:11:17 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:12:28 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:13:42 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:14:54 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:17:52 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:20:44 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:21:59 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:28:49 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:29:23 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:30:18 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:31:45 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:42:14 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:42:49 [INFO] Base de signatures initialisée : ./data/signatures.db
