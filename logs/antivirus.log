@@ -113,3 +113,39 @@
 2026-04-17 19:02:16 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
 2026-04-17 19:07:21 [INFO] Base de signatures initialisée : ./data/signatures.db
 2026-04-17 19:07:21 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 20:14:38 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:19:26 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:19:50 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:29:00 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:30:15 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:35:23 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:42:39 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:43:59 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:44:13 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:47:33 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:48:07 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:56:50 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:56:50 [INFO]  Démarrage du scan : Tests/test_files
+2026-04-17 20:56:50 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 20:56:50 [WARNING]  [!] MENACE : EICAR-Test-File  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com
+2026-04-17 20:56:50 [INFO]  Scan terminé en 0.02s -  5 fichiers(s) analysé (s),  1 menace (s) détectée (s) 
+2026-04-17 20:59:55 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 20:59:55 [INFO]  Démarrage du scan : Tests/test_files
+2026-04-17 20:59:55 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 20:59:55 [WARNING]  [!] MENACE : EICAR-Test-File  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com
+2026-04-17 20:59:55 [INFO]  Scan terminé en 0.01s -  5 fichiers(s) analysé (s),  1 menace (s) détectée (s) 
+2026-04-17 21:01:03 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 21:01:03 [INFO]  Démarrage du scan : Tests/test_files
+2026-04-17 21:01:03 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 21:01:03 [WARNING]  [!] MENACE : EICAR-Test-File  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com
+2026-04-17 21:01:04 [INFO]  Scan terminé en 0.01s -  5 fichiers(s) analysé (s),  1 menace (s) détectée (s) 
+2026-04-17 21:01:33 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 21:01:33 [INFO]  Démarrage du scan : Tests/test_files
+2026-04-17 21:01:33 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 21:01:33 [WARNING]  [!] MENACE : EICAR-Test-File  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com
+2026-04-17 21:01:33 [INFO]  Scan terminé en 0.01s -  5 fichiers(s) analysé (s),  1 menace (s) détectée (s) 
+2026-04-17 21:01:45 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 21:01:45 [INFO]  Démarrage du scan : Tests/test_files
+2026-04-17 21:01:45 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-17 21:01:45 [WARNING]  [!] MENACE : EICAR-Test-File  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com
+2026-04-17 21:01:45 [INFO]  Scan terminé en 0.01s -  5 fichiers(s) analysé (s),  1 menace (s) détectée (s) 
