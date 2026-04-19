@@ -1,0 +1,60 @@
+{
+  "scan_date": "2026-04-19T17:15:15.912225",
+  "summary": {
+    "total_scanned": 5,
+    "threats_found": 1,
+    "duration_seconds": 0.012
+  },
+  "results": [
+    {
+      "path": "C:\\Users\\DELL LATITUDE 5420\\OneDrive\\Bureau\\New projects\\Antivirus\\AEGIS\\Tests\\test_files\\document.pdf",
+      "is_threat": false,
+      "malware_name": null,
+      "severity": null,
+      "hashes": {
+        "md5": "d41d8cd98f00b204e9800998ecf8427e",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "path": "C:\\Users\\DELL LATITUDE 5420\\OneDrive\\Bureau\\New projects\\Antivirus\\AEGIS\\Tests\\test_files\\eicar.com",
+      "is_threat": true,
+      "malware_name": "EICAR-Test-File",
+      "severity": 4,
+      "hashes": {
+        "md5": "44d88612fea8a8f36de82e1278abb02f",
+        "sha256": "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f"
+      }
+    },
+    {
+      "path": "C:\\Users\\DELL LATITUDE 5420\\OneDrive\\Bureau\\New projects\\Antivirus\\AEGIS\\Tests\\test_files\\programme.exe",
+      "is_threat": false,
+      "malware_name": null,
+      "severity": null,
+      "hashes": {
+        "md5": "d41d8cd98f00b204e9800998ecf8427e",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "path": "C:\\Users\\DELL LATITUDE 5420\\OneDrive\\Bureau\\New projects\\Antivirus\\AEGIS\\Tests\\test_files\\script.js",
+      "is_threat": false,
+      "malware_name": null,
+      "severity": null,
+      "hashes": {
+        "md5": "d41d8cd98f00b204e9800998ecf8427e",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "path": "C:\\Users\\DELL LATITUDE 5420\\OneDrive\\Bureau\\New projects\\Antivirus\\AEGIS\\Tests\\test_files\\sous_dossier\\autre.dll",
+      "is_threat": false,
+      "malware_name": null,
+      "severity": null,
+      "hashes": {
+        "md5": "d41d8cd98f00b204e9800998ecf8427e",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ]
+}
