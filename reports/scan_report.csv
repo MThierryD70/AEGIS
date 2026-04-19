@@ -1,6 +1,0 @@
-fichier,est_menace,malware,severite,md5,sha256
-C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\document.pdf,False,,,d41d8cd98f00b204e9800998ecf8427e,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com,True,EICAR-Test-File,4,44d88612fea8a8f36de82e1278abb02f,275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f
-C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\programme.exe,False,,,d41d8cd98f00b204e9800998ecf8427e,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\script.js,False,,,d41d8cd98f00b204e9800998ecf8427e,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\sous_dossier\autre.dll,False,,,d41d8cd98f00b204e9800998ecf8427e,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
