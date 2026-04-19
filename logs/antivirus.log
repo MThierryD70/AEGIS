@@ -149,3 +149,80 @@
 2026-04-17 21:01:45 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
 2026-04-17 21:01:45 [WARNING]  [!] MENACE : EICAR-Test-File  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com
 2026-04-17 21:01:45 [INFO]  Scan terminé en 0.01s -  5 fichiers(s) analysé (s),  1 menace (s) détectée (s) 
+2026-04-19 11:26:08 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:28:24 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:28:24 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:29:37 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:29:37 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:29:56 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:29:56 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:32:50 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:32:50 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:34:19 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:34:19 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:34:53 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:34:53 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:36:01 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:36:01 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:40:34 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:40:34 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:41:23 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:41:23 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:41:23 [ERROR] ID introuvable en quarantaine : None
+2026-04-19 11:41:23 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:41:23 [ERROR]  ID introuvable : None
+2026-04-19 11:41:34 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:41:34 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:41:58 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:41:58 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:45:01 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:45:01 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:50:51 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:50:51 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:50:51 [ERROR] ID introuvable en quarantaine : None
+2026-04-19 11:50:51 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:50:51 [ERROR]  ID introuvable : None
+2026-04-19 11:51:13 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:51:13 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:51:13 [ERROR] ID introuvable en quarantaine : None
+2026-04-19 11:51:13 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:51:13 [ERROR]  ID introuvable : None
+2026-04-19 11:51:55 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 11:51:55 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:51:55 [ERROR] ID introuvable en quarantaine : None
+2026-04-19 11:51:55 [ERROR]  Impossible de déplacer Tests\test_files\a_quarantiner.exe : [WinError 123] La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte
+2026-04-19 11:51:55 [ERROR]  ID introuvable : None
+2026-04-19 15:18:42 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:20:21 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:23:02 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:23:02 [WARNING]  Fichier mis en quarantaine: a_quarantiner.exe -> 44186ce7-74f7-485a-87a0-28de22d036aa
+2026-04-19 15:23:02 [INFO]  Fichier restauré : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\a_quarantiner.exe
+2026-04-19 15:23:02 [WARNING]  Fichier mis en quarantaine: a_quarantiner.exe -> 2c6ef53e-cc17-40b9-a732-cbe739110ac9
+2026-04-19 15:23:02 [INFO]  Fichier supprimé définitivelent: 2c6ef53e-cc17-40b9-a732-cbe739110ac9
+2026-04-19 15:27:17 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:28:04 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:29:49 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:30:23 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:30:23 [WARNING]  Fichier mis en quarantaine: a_quarantiner.exe -> 7dce9758-3e95-40fa-9209-1ca59955d2bb
+2026-04-19 15:31:14 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:32:02 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:32:41 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:33:36 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:34:12 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:34:12 [WARNING]  Fichier mis en quarantaine: a_quarantiner.exe -> 30d7f5b2-4139-4b44-a6c7-560a9a9104cf
+2026-04-19 15:34:12 [INFO]  Fichier restauré : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\a_quarantiner.exe
+2026-04-19 15:34:43 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:34:43 [WARNING]  Fichier mis en quarantaine: a_quarantiner.exe -> 8b22dc3b-9562-4d24-a8b0-98289e3b8e2d
+2026-04-19 15:34:43 [INFO]  Fichier restauré : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\a_quarantiner.exe
+2026-04-19 15:34:43 [WARNING]  Fichier mis en quarantaine: a_quarantiner.exe -> b91e372a-88df-48b0-95a2-29675c78c51f
+2026-04-19 15:34:43 [INFO]  Fichier supprimé définitivelent: b91e372a-88df-48b0-95a2-29675c78c51f
+2026-04-19 15:36:15 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:36:15 [WARNING]  Fichier mis en quarantaine: a_quarantiner.exe -> 50826072-9517-49fd-af7a-21ef405efe46
+2026-04-19 15:36:15 [INFO]  Fichier restauré : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\a_quarantiner.exe
+2026-04-19 15:36:15 [WARNING]  Fichier mis en quarantaine: a_quarantiner.exe -> 792a5a05-aee0-4a51-b3bc-4ed78ce346e5
+2026-04-19 15:36:15 [INFO]  Fichier supprimé définitivelent: 792a5a05-aee0-4a51-b3bc-4ed78ce346e5
+2026-04-19 15:36:26 [INFO]  Quarantaine initialisée : quarantine
+2026-04-19 15:36:26 [WARNING]  Fichier mis en quarantaine: a_quarantiner.exe -> 52c03aa2-dc42-4908-bc9c-e3dbccd81b06
+2026-04-19 15:36:26 [INFO]  Fichier restauré : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\a_quarantiner.exe
+2026-04-19 15:36:26 [WARNING]  Fichier mis en quarantaine: a_quarantiner.exe -> 78e84063-f7e7-4787-a6ac-3f27483ba84e
+2026-04-19 15:36:26 [INFO]  Fichier supprimé définitivelent: 78e84063-f7e7-4787-a6ac-3f27483ba84e
