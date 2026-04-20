@@ -486,3 +486,5 @@
 2026-04-19 19:54:36 [INFO]  Quarantaine initialisée : quarantine
 2026-04-19 19:54:45 [INFO]  Quarantaine initialisée : quarantine
 2026-04-19 19:54:49 [INFO]  Fichier supprimé définitivelent: 2a2c933c-b125-42ca-b079-4e9fc1c855e7
+2026-04-20 23:55:04 [WARNING]  Impossible de lire test_files\script.js pour entropie : [Errno 2] No such file or directory: 'test_files\\script.js'
+2026-04-20 23:55:04 [WARNING]  Impossible de lire test_files\eicar.com pour entropie : [Errno 2] No such file or directory: 'test_files\\eicar.com'
