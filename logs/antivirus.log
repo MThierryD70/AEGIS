@@ -488,3 +488,28 @@
 2026-04-19 19:54:49 [INFO]  Fichier supprimé définitivelent: 2a2c933c-b125-42ca-b079-4e9fc1c855e7
 2026-04-20 23:55:04 [WARNING]  Impossible de lire test_files\script.js pour entropie : [Errno 2] No such file or directory: 'test_files\\script.js'
 2026-04-20 23:55:04 [WARNING]  Impossible de lire test_files\eicar.com pour entropie : [Errno 2] No such file or directory: 'test_files\\eicar.com'
+2026-04-21 02:05:04 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-21 02:05:04 [WARNING] yara-python non installée - scan YARA désactivé
+2026-04-21 02:05:04 [INFO]  Démarrage du scan : tests/test_files
+2026-04-21 02:07:45 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-21 02:07:45 [WARNING] yara-python non installée - scan YARA désactivé
+2026-04-21 02:07:45 [INFO]  Démarrage du scan : tests/test_files
+2026-04-21 02:07:45 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-21 02:07:45 [WARNING]  [!] MENACE : EICAR-Test-File  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com
+2026-04-21 02:07:45 [WARNING]  [!] MENACE : None  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\suspect.exe
+2026-04-21 02:07:45 [INFO]  Scan terminé en 0.01s -  6 fichiers(s) analysé (s),  2 menace (s) détectée (s) 
+2026-04-21 02:16:04 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-21 02:16:04 [WARNING] yara-python non installée - scan YARA désactivé
+2026-04-21 02:16:04 [INFO]  Démarrage du scan : tests/test_files
+2026-04-21 02:16:04 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-21 02:16:04 [WARNING]  [!] MENACE : EICAR-Test-File  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com
+2026-04-21 02:16:04 [WARNING]  [!] MENACE : None  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\suspect.exe
+2026-04-21 02:16:04 [INFO]  Scan terminé en 0.01s -  6 fichiers(s) analysé (s),  2 menace (s) détectée (s) 
+2026-04-21 02:24:21 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-21 02:24:21 [INFO] 1 fichier(s) de règles YARA chergé(s)
+2026-04-21 02:24:21 [INFO]  Démarrage du scan : tests/test_files
+2026-04-21 02:24:21 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
+2026-04-21 02:24:21 [WARNING]  Règle(s) YARA déclenchée(s) sur eicar.com: EICAR_Test_File
+2026-04-21 02:24:21 [WARNING]  [!] MENACE : EICAR-Test-File  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com
+2026-04-21 02:24:21 [WARNING]  [!] MENACE : None  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\suspect.exe
+2026-04-21 02:24:21 [INFO]  Scan terminé en 0.02s -  6 fichiers(s) analysé (s),  2 menace (s) détectée (s) 
