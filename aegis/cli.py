@@ -79,8 +79,6 @@ def quarantine_list():
         click.echo() 
 
 
-
-
 @quarantine.command(name="restore")
 @click.argument("quarantine_id")
 def quarantine_restore(quarantine_id):
@@ -114,4 +112,42 @@ def quarantine_delete (quarantine_id):
 
 
 
+@cli.group()
+def update():
+    """Gestion des mises à jours de signatures."""
+    pass
+
+
+@update.command(name="import")
+@click.argument("json_path")
+def update_import(json_path):
+    """Importe des dignatures depuis un fichier JSON local."""
+    config = get_config()
+    from aegis.updater.updater import Updater
+    updater = Updater(config)
+    result = updater.import_from_file (json_path)
+
+    if result ["success"]:
+        click.echo(f"\n Import réussi : ")
+        click.echo(f"    Ajoutées : {result['added']}")
+        click.echo(f"    Doublons : {result['skipped']}")
+        click.echo(f"    Erreurs : {result['errors']}")
+    else:
+        click.echo(" Import échoué. ", err=True)
+
+    
+
+
+
+@update.command(name="status")
+def update_status():
+    """Affiche le status de la base de signatures."""
+
+    config = get_config()
+
+    from aegis.updater.updater import Updater
+    updater = Updater(config)
+    status = updater.status()
+    click.echo(f" Signatures en base : {status['total_signatures']}")
+    click.echo(f" Base de données    : {status['database_path']}")
 

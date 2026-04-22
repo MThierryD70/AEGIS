@@ -513,3 +513,69 @@
 2026-04-21 02:24:21 [WARNING]  [!] MENACE : EICAR-Test-File  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\eicar.com
 2026-04-21 02:24:21 [WARNING]  [!] MENACE : None  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Tests\test_files\suspect.exe
 2026-04-21 02:24:21 [INFO]  Scan terminé en 0.02s -  6 fichiers(s) analysé (s),  2 menace (s) détectée (s) 
+2026-04-22 10:41:59 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:43:22 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:45:00 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:45:00 [ERROR]  Fichier introuvable : data/sample_signatures.json
+2026-04-22 10:45:00 [ERROR]  Fichier introuvable : data/sample_signatures.json
+2026-04-22 10:46:14 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:46:14 [ERROR]  Fichier introuvable : data/sample_signatures.json
+2026-04-22 10:46:14 [ERROR]  Fichier introuvable : data/sample_signatures.json
+2026-04-22 10:47:14 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:47:14 [ERROR]  Fichier introuvable : data/sample_signatures.json
+2026-04-22 10:47:14 [ERROR]  Fichier introuvable : data/sample_signatures.json
+2026-04-22 10:47:41 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:48:08 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:48:08 [ERROR]  Fichier introuvable : data/sample_signatures.json
+2026-04-22 10:48:08 [ERROR]  Fichier introuvable : data/sample_signatures.json
+2026-04-22 10:49:27 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:50:07 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:50:07 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 10:50:36 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:50:36 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 10:50:36 [INFO]  Import terminée - 2 ajoutée(s),  1 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 10:50:36 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 10:50:36 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 10:51:04 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:51:04 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 10:51:04 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 10:51:04 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 10:51:04 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 10:51:41 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:51:41 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 10:51:41 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 10:51:41 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 10:51:41 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 10:54:28 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:54:56 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:54:56 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 10:54:56 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 10:56:16 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 10:56:16 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 10:56:16 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 11:04:30 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 11:04:30 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 11:04:30 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 11:05:38 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 11:05:38 [ERROR]  Fichier introuvable : data/sample_signatures.jsoncls
+2026-04-22 11:05:45 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 11:05:45 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 11:05:45 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 11:06:02 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 11:06:02 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 11:06:02 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 11:08:15 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 11:09:54 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 11:09:54 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 11:09:54 [INFO]  Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 11:14:37 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 11:14:37 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 11:14:37 [INFO]  
+
+Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 11:16:12 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-22 11:16:12 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-04-22 11:16:12 [INFO]  
+
+Import terminée - 0 ajoutée(s),  3 ignorée(s) (doublon), 0 erreur(s)
+2026-04-22 11:18:20 [INFO] Base de signatures initialisée : ./data/signatures.db
