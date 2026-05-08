@@ -22,7 +22,11 @@ class MatchResult:
             f" Via {self.hash_type}"
         )
 
+
+
+
 class SignatureMatcher:
+    
     def __init__(self, db: SignatureDB):
         self.db = db
         self.logger = get_logger()

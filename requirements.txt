@@ -1,1 +1,18 @@
 pyyaml>=6.0.1
+
+pip install pyyaml
+
+pip install rich
+
+pip install click
+
+pip install pefile
+
+pip install yara-python {
+    S'assurer que les outils de compilation (Microsoft C++ Build Tools) sont installés. Sinon :
+        Télécharge et installe Microsoft C++ Build Tools.
+        Pendant l’installation, coche Desktop development with C++.
+
+        Ensuite installer yara-python
+}
+

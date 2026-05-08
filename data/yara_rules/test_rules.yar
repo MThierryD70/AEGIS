@@ -1,3 +1,4 @@
+
 rule EICAR_Test_File {
     meta:
         description = "Détecte le fichier de test EICAR standard"
@@ -8,7 +9,6 @@ rule EICAR_Test_File {
     condition:
         $eicar
 }
-
 
 
 

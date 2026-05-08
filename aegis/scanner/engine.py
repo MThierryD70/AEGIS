@@ -10,8 +10,8 @@ from aegis.scanner.hasher import HashCalculator
 from aegis.db.signature_db import SignatureDB
 from aegis.detection.signature_matcher import SignatureMatcher, MatchResult
 
-from aegis.detection.heuristic import HeuristicAnalyzer, HeuristicResult
-from aegis.detection.yara_scanner import YaraScanner, YaraResult
+#from aegis.detection.heuristic import HeuristicAnalyzer, HeuristicResult
+#from aegis.detection.yara_scanner import YaraScanner, YaraResult
 
 
 
@@ -21,8 +21,8 @@ class FileResult:
     hashes: Optional[dict]
     match_result: MatchResult
 
-    heuristic_result : HeuristicResult = None
-    yara_result: YaraResult = None
+    #heuristic_result : HeuristicResult = None
+    #yara_result: YaraResult = None
 
 
 
@@ -30,12 +30,12 @@ class FileResult:
     @property
     def is_threat (self) -> bool:
         sig_threat = self.match_result.is_threat
-        yara_threat = self.yara_result is not None and self.yara_result.is_threat
-        heuristic_threat = (
+        #yara_threat = self.yara_result is not None and self.yara_result.is_threat
+        """heuristic_threat = (
             self.heuristic_result is not None
             and self.heuristic_result.is_suspicious
-        )
-        return sig_threat or yara_threat or heuristic_threat
+        )"""
+        return sig_threat #or yara_threat #or heuristic_threat
     
 
 
@@ -72,8 +72,8 @@ class ScannerEngine:
         self.db = SignatureDB(config.database.path)
         self.matcher = SignatureMatcher(self.db)
 
-        self.heuristic = HeuristicAnalyzer()
-        self.yara_scanner = YaraScanner("data/yara_rules")
+        #self.heuristic = HeuristicAnalyzer()
+        #self.yara_scanner = YaraScanner("data/yara_rules")
 
 
 
@@ -110,14 +110,14 @@ class ScannerEngine:
             )
         
         match_result = self.matcher.check(hashes)
-        heuristic_result = self.heuristic.analyze(path)
-        yara_result = self.yara_scanner.scan(path)
+        #heuristic_result = self.heuristic.analyze(path)
+        #yara_result = self.yara_scanner.scan(path)
 
         return FileResult(
             path=path,
             hashes = hashes,
             match_result = match_result,
-            heuristic_result=heuristic_result,
-            yara_result=yara_result
+            #heuristic_result=heuristic_result,
+            #yara_result=yara_result
         )  
 

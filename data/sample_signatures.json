@@ -7,12 +7,16 @@
             "malware_name": "EICAR-Test-File",
             "severity": 4
         },
+
+        
+
         {
             "hash_type": "md5",
             "hash_value": "44d88612fea8a8f36de82e1278abb02f",
             "malware_name": "EICAR-Test-File-MD5",
             "severity": 4
         },
+
         {
             "hash_type": "sha256",
             "hash_value": "abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890",
