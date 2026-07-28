@@ -100,3 +100,483 @@
 2026-04-17 05:42:49 [INFO] Base de signatures initialisée : ./data/signatures.db
 >>>>>>> e77f2f4 (Etape 4: Signature Database)
 >>>>>>> 061525d (Etape 12: Hasher C++)
+2026-07-28 23:15:34 [WARNING] Erreur de lecture C++ pour : test_files\eicar.com
+2026-07-28 23:17:52 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\AAA--- Marius\downloaded\VSCodeUserSetup-x64-1.97.1.exe
+2026-07-28 23:17:53 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Cours\PLSQL.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours-Mathématiques-Financières.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Les 5 clés pour cultiver son intelligence émotionnelle -- Daniel Goleman -- Dunod Editeur, Paris, 2013 -- Dunod -- 9782100594283 -- 6ca216217fb34f2bc6bafde341b5bcb1 -- Anna’s Archive.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Solve Dad's Pb\Résolution\Sol 1\rufus-4.15.exe
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Solve Dad's Pb\Résolution\Sol 2\Fly\FlyOOBE.exe
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Solve Dad's Pb\Résolution\Sol 2\Fly\scripts\Flyby11\CpuCheckNative.dll
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Solve Dad's Pb\Résolution\Sol 2\Fly\scripts\Flyby11\Flyby11.exe
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Solve Dad's Pb\Résolution\Sol 2\Fly\scripts\ViVeTool\Albacore.ViVe.dll
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Solve Dad's Pb\Résolution\Sol 2\Fly\scripts\ViVeTool\ViVeTool.exe
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\Spiritus\fun.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\Cybersec_demo_brute_force\offensive\le_point_js.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\CodeAlpha\Finally\Masra Thierry Dorobe.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\CodeAlpha\Instructions\Cyber Security Tasks & Instructions — CodeAlpha M1.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\CodeAlpha\Post & Submission\Lettre_offer_stage.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\CodeAlpha\Instructions\Instructions\Cyber Security Tasks & Instructions — CodeAlpha M1.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\Antivirus\Old\tests\samples\eicar.com
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\Antivirus\AEGIS\aa_test\eicar.com
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\Antivirus\AEGIS\Tests\test_files\document.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\Antivirus\AEGIS\Tests\test_files\programme.exe
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\Antivirus\AEGIS\Tests\test_files\script.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\Antivirus\AEGIS\Tests\test_files\suspect.exe
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\Antivirus\AEGIS\Tests\test_files\sous_dossier\autre.dll
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Réalisations\Antivirus\AEGIS\cpp\bin\hasher.dll
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\fiche_de_choix_m1_informatique_site_versailles_completée.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Bac.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Lettre de recommandation 2.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Relevé.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Bac + Attest niveau + Relevés\1ère année_relevé_notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Bac + Attest niveau + Relevés\2em_année_relevé_notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Bac + Attest niveau + Relevés\Attestation de scolarité.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Bac + Attest niveau + Relevés\Bac_relevé_notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Bac + Attest niveau + Relevés\Diplôme BAC.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\ID\Sej_card.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Old_ref_&_study_plan\Reference_II_Letter_of_recommandation_MASRA_Thierry_D_.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Old_ref_&_study_plan\Reference_I_Letter_of_recommandation_MASRA_Thierry_D.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\GGG__Autres docs\Old_ref_&_study_plan\Study_plan_MASRA_Thierry_D.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\AMCI\Attestation d'inscription.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\AMCI\Diplôme BAC.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\AMCI\Passport_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\AMCI\Relevés de notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\AMCI\Sej_card.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Inde ICCR\Fitness.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Inde ICCR\Policy_Guidelines.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Turkie\26TD003809_SummaryPDFEn.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Turkie\Lettre de recommandation.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Turkie\AAA_ Phases accomplies\26TD003809_SummaryPDFEn.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Turkie\Certifs qualifications\Attestation concours art oratoire.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Turkie\Certifs qualifications\certf prem class.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Turkie\Certifs qualifications\MASRA THIERRY DOROBE-Hackathon.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Turkie\CV\CV_Masra_Thierry.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\fiche_de_choix_m1_informatique_site_versailles_completée.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Infos Bourse\reglementation_du_programme_de_bourses_internationales_de_master_universite_paris-saclay.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Motiv letter\Lettre de motivation_OK.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Volume horaire\Volume horaire_OK.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\Bac et Relevés\Attestation de scolarité.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\Bac et Relevés\Diplôme BAC.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\Bac et Relevés\Relevés de notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\CV\blzck_Ful de CV (1).pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\CV\Ful de CV.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\CV\red_Ful de CV.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\ID\Sej_card.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\Ref s\Lettre recommandation\Lettre de recommandation_2.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\CV\OK\CV_Ok.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\Bac et Relevés\Relevés\1ère année_relevé_notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\Bac et Relevés\Relevés\2em_année_relevé_notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Paris-Saclay Master Only\Docs\Bac et Relevés\Relevés\Bac_relevé_notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Japan MEXT\Kyoto_out_deadline\Admissions_Guide_2026-2027_english.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Japan MEXT\Osaka\14_a_EN2027.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\Japan MEXT\Osaka\Application quali assess.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\AMCI\Bult1\10th_grade_transcript_2020-2021_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\AMCI\Bult1\11th_grade transcript_2021-2022_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\BBB__Autres bourses\AMCI\Bult1\12th_grade_trascript2022-2023_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\CSCA\CSCA-Guidebook.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\1_bachelor_deg_Ok\7_Passport_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\1_bachelor_deg_Ok\Diploma.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\1_bachelor_deg_Ok\physical examination record.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\1_bachelor_deg_Ok\Reference_II_Letter_of_recommandation_MASRA_Thierry_D_.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\1_bachelor_deg_Ok\Reference_I_Letter_of_recommandation_MASRA_Thierry_D.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\1_bachelor_deg_Ok\Relevé de notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\1_bachelor_deg_Ok\Study_plan_MASRA_Thierry_D.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\2_master_deg_Ok\7_Passport_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\2_master_deg_Ok\Diploma.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\2_master_deg_Ok\physical examination record.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\2_master_deg_Ok\Recommandation_letter_II_.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\2_master_deg_Ok\Recommandation_letter_I_.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\2_master_deg_Ok\Relevé de notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\2_master_deg_Ok\Other supporting docs\11_Other_supporting_2_12th_grade_trascript2022-2023_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\2_master_deg_Ok\Other supporting docs\11_Other_supporting_3_11th_grade transcript_2021-2022_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\2_master_deg_Ok\Other supporting docs\11_Other_supporting_4_10th_grade_transcript_2020-2021_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\1_bachelor_deg_Ok\Other supporting docs\11_Other_supporting_2_12th_grade_trascript2022-2023_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\1_bachelor_deg_Ok\Other supporting docs\11_Other_supporting_3_11th_grade transcript_2021-2022_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\Hunan University\1_bachelor_deg_Ok\Other supporting docs\11_Other_supporting_4_10th_grade_transcript_2020-2021_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\CSCA\Prép test\CSCA Chemistry Examination Syllabus-2025.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\CSCA\Prép test\CSCA Mathematics Examination Syllabus-2025.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Others\CSCA\Prép test\CSCA Physics Examination Syllabus-2025.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Guizhou\Application phase\Docs\7_Passport_MASRA_T.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Guizhou\Application phase\Docs\ATTESTATION DE CAPACITE FINANCIERE.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Guizhou\Application phase\Docs\Bachelor's degree certificate.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Guizhou\Application phase\Docs\Criminal record.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Retour avec Dieu à côté\AAA__China_CSC\Guizhou\Application phase\Docs\Crim rec\Crim rec.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Projects\Projects\Bruteforce_simultation_défense\offensive\le_point_js.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Projects\New Organisation\Vie en échiquier\assets\echiquier.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Projects\New Organisation\Prise de contôl\Control_app\assets\main.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Projects\New Organisation\Prise de contôl\Control_app\Bouillon\essaies_.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Projects\New Organisation\Prise de contôl\Control_app\Bouillon\fun.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Projects\New Organisation\Prise de contôl\Control_app\Bouillon\last_niveaux.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Projects\New Organisation\Prise de contôl\Control_app\Bouillon\old_2_niveaux.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Projects\New Organisation\Prise de contôl\Control_app\Bouillon\old_3_niveaux.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Projects\New Organisation\Prise de contôl\Control_app\Bouillon\old_niveaux.js
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Projects\New Organisation\Pouvoir\48 laws of power\Les 48 Lois du Pouvoir Résumé .pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Coatching Mbaidéné\CmdDos.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Coatching Mbaidéné\cours_CommandesSEWin.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Coatching Mbaidéné\RapidTyping_Setup_5.5.exe
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Pour les vac\Maths\Théorie des ensembles\théorie-des-ensembles-cours-01.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Pour les vac\Maths\Théorie des ensembles\théorie-des-ensembles-et-des-applications.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Pour les vac\Maths\Théorie des ensembles\théorie-des-ensembles-exercice-01.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Pour les vac\Maths\Théorie des ensembles\théorie-des-ensembles-exercice-02.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Pour les vac\Maths\Théorie des ensembles\théorie-des-ensembles-Résumé-01.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Pour les vac\Maths\Théorie des graphes\Graphesexoscorrigés2.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Pour les vac\Maths\Théorie des graphes\main_graphes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Pour les vacccs now\Pour les vac\Maths\Théorie des graphes\polygraph-Sigward.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\AAA--- Marius\Demande-de-stage-1.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\AAA--- Marius\Ndilnodji madjiadoum.lettre de motivation.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\AAA--- Marius\Nouveau Document Microsoft Word.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\AAA--- Marius\NOUVELLRE LISTE.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\AAA--- Marius\Projet de création MARIUS.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\Victor pdf disable\SKM_654e25100214110.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\Victor pdf disable\Done\SKM_654e25100214110-1.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\Victor pdf disable\Done\SKM_654e25100214110-2.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\Victor pdf disable\Done\SKM_654e25100214110-3.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\Victor pdf disable\Done\SKM_654e25100214110-4.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\Victor pdf disable\Done\SKM_654e25100214110-5.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\Victor pdf disable\Done\SKM_654e25100214110-6.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\Victor pdf disable\Done\SKM_654e25100214110-7.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\Victor pdf disable\Done\SKM_654e25100214110-8.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\Victor pdf disable\Done\SKM_654e25100214110-9.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\AAA--- Marius\downloaded\Demande-de-stage-1.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Infor\Codage\AAA--Projets personnels\Générer unnombre aléatoire\tt.exe
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Et maintenant\Faire du fric\Comment générer du contenu avec IA\Possibilités avec copilot.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Et maintenant\Faire du fric\Comment générer du contenu avec IA\Possibilités avec Gemini.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Et maintenant\Bourses\SUPTECHNOLOGY\Doc à fournir concours\Dip Bac.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Et maintenant\Bourses\SUPTECHNOLOGY\Doc à fournir concours\Sej_card.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Chaina_prepare_traveling\Translated_贵州交通职业大学2025年国际学生报到须知(新）(1).pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Chaina_prepare_traveling\贵州交通职业大学2025年国际学生报到须知(新）(1).pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\MTI bourse\Carte de séjour.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\MTI bourse\Relevé de notes baccalauréat.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\Russie_Olympiad\ПМиИИ  демо ENG.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\Russie_Olympiad\Dommage\ИиТ демо ENG.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\Russie_Olympiad\Dommage\КНиНД демо ENG.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\autres versions ok\Relevé de notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\Not\Bulletins Première 2021-2022.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\Not\外国人体格检查表（FOREIGNER PHYSICAL EXAMINATION FORM）.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\Phases accomplies\-251830002-MASRA THIERRY DOROBE-RB0065335-马萨拉-入学申请表.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\Phases accomplies\预录取通知（7人全额奖学金).pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\OK\To fill\外国人体格检查表（FOREIGNER PHYSICAL EXAMINATION FORM）.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\OK\To fill\Rempli en pdf\name -留学申请表 - 202504.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\OK\To fill\Rempli en pdf\英文简历 Resume in English.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\OK\To fill\Rempli en pdf\Prêt à envoyer\Application form_MASRA Thierry D.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\OK\To fill\Rempli en pdf\Prêt à envoyer\Physical examination form_ MASRA Thierry D.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Doss bourse\China bourse\OK\To fill\Rempli en pdf\Prêt à envoyer\英文简历 Resume in English.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Acte de naissance.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Attestation d'incription.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Attestation de prise en charge.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Carte nationale.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Casier judiciaire.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Certficat d'admission Baccalauréat traduis Anglais.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Certificat d'admission Bac.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Certificat médical.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\zzz.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\Bac traduit\Certficat d'admission Baccalauréat traduis Anglais.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\New sej card pic\Sej_card.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\1ère année_relevé_notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\1ère année_relvé_de_note.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\2em_année_relevé_notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\Attestation de scolarité.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\Casier_judiciaire.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\New folder\Acte de naissance.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\New folder\Bac_relevé_notes.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\New folder\Dip Bac.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\New folder\Diplôme BAC.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\New folder\Exam medic China.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Relevé de notes et attestation de niveau Supmti\New folder\SKM_C45826030412000.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Nouveau dossier\Bac\Certificat_Bac_Original_Duplic.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Nouveau dossier\Bac\High_school_certificate_Chinese.pdf
+2026-07-28 23:17:56 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\Documents\AAA--Documents prêts\Nouveau dossier\Bac\High_school_certificate_English.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\zzzz__Dossier_patatgé\Ninite Chrome Installer.exe
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\ZZZInstructions\Rapport première réunion\Synthèse de la réunion.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\Mémoire\Rédaction\Prêt à envoyer\Mémoire_PFE_MASRA_Thierry_DOROBE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\Mémoire\Rédaction\Version complète\Fondations\Mémoire_PFE_MASRA_Thierry_D_vers_4.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\Mémoire\Learning\Cours Rania\PFA_How na do it\05-Formation-CANVA-ETR (2).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\Mémoire\Learning\Cours Rania\PFA_How na do it\Canva-ATELIER-01-Presentation-15-04-2024.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\Mémoire\Learning\Cours Rania\PFA_How na do it\Guide-dutilisation-Canva.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\Mémoire\Learning\Cours Rania\PFA_How na do it\Guide_PFE_KHADIM RANIA.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\Mémoire\Learning\Cours Rania\PFA_How na do it\MÃ©thodologie de rÃ©alisation d'un pfe.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\Mémoire\Learning\Cours Rania\PFA_How na do it\METHODOLOGIE DU PFE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\Mémoire\Learning\Cours Rania\PFA_How na do it\pdf.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Doc profess\AAA___Recherche statge\111_ Stage\Mémoire\Learning\Cours Rania\PFA_How na do it\TabledesMatieres_orange_modif-CH.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\chp2_imp.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Programme_IIA.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Formation Algooo\Others\Polycopié_Algorthmique_L1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Formation Algooo\Supports\TD_ N°1_Algo_Solution.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Notes  S2 2isi  24.25.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Notes S1  2ISI 24-25.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Gestion des fichiers.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\gestion des utilisateurs et des groupes.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Com français\AT et états du Moi[1].pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Com français\Compétences langagières.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Com français\cours MTU (soft skills) (1).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Com français\Glossaire - MTU_S1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Comptab\compta gÃ©n.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Comptab\n Cours_Comptabilite generale Partie-1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Comptab génér\compta gÃ©n.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Comptab génér\n Cours_Comptabilite generale Partie-1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Maths\chapitre-1-1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Maths\Maths_Programmation Linéaire.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\à arranger\Cours_Unix_removed.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\à arranger\exercices à transformations multiples.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\à arranger\Plan Comptable marocain.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\à arranger\Programmation web_HTML_2023-2024 - Copie.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\à arranger\Programmation web_HTML_2023-2024.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Autre exo\exercices-python3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Autre exo\exos_corriges.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Autre exo\swinnen-g.-apprendre-a-programmer-avec-python..-avec-plus-de-40-pages-de-corriges-dexercices-eyrolles-2009.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Autre exo\TPPython.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\3. coursPythonExceptions.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\4. coursPythonFunctions.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\7. coursPythonFiles.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\ch1_python.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\ch2_python.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\ch3_python.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\ch4_python.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\TP1 - Solution.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\tp2 - Correction EX1, 2, 3, 5, 6.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\TP2 - Solution.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\TP3 solution.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\zzzzTP1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\zzzzTP2_python.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\zzzzTP3_python.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Python\Cours\zzzzTP4_python.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Autres\9782340027466_extrait.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Autres\doc_actualite_2181167.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Autres\si-bd.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Autres\SI.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\SI\SI TP1 -PowerAMC.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\SI\SI TP2_MERISE-03-MCD-MLD-MPD_-_Power_AMC - Copie.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\SI\SI TP2_MERISE-03-MCD-MLD-MPD_-_Power_AMC.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\SQL\TD5_SQL-LDD.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\SQL\TD5_SQL-LDD_Correction.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Unix\Chapitre_2_Commandes_Linux .pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Unix\Chapitre_3_Commandes_Linux.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Unix\Cours_Unix_removed.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Unix\zzz.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Unix\zzzchap2_mine_.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Unix\zzzcours_unix_mine_.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\B_1em sem\Cours Rania\Unix\zzzsupport1_mine_.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\java_chap_7.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PFA_How na do it\05-Formation-CANVA-ETR (2).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PFA_How na do it\Canva-ATELIER-01-Presentation-15-04-2024.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PFA_How na do it\Guide-dutilisation-Canva.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PFA_How na do it\Guide_PFE_KHADIM RANIA.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PFA_How na do it\MÃ©thodologie de rÃ©alisation d'un pfe.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PFA_How na do it\METHODOLOGIE DU PFE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PFA_How na do it\pdf.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PFA_How na do it\TabledesMatieres_orange_modif-CH.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PHP\examen (5).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PHP\php partie1 (1).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Cours\2 - Classes-3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Cours\ch1_uml.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Cours\ch4_DS.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Cours\ch5_DET.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Exercices\TD3_DS.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Exercices\TD4_ET - Solution.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Exercices\TD4_ET.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Prep uml exam\TD2_DC - Solution.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Prep uml exam\TD2_DC.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Prep uml exam\TD3_DS - Solution.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Prep uml exam\TD3_DS.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Prep uml exam\TD4_ET - Solution.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Prep uml exam\TD4_ET.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Prep uml exam\TD5_DA - Solution.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\UML\Prep uml exam\TD5_DA.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Téléinfo\Cours\Support  de Cours_rÃ©seau_Fst_Chp2.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Téléinfo\Cours\Support  de Cours_rÃ©seau_Fst_Chp3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Téléinfo\Cours\Support  de Cours_rÃ©seau_Fst_Chp4.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Téléinfo\Cours\Support  de Cours_rÃ©seau_Fst_Chp5.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Téléinfo\Recherches téléinfo\Chapitre11_IFT1215_2x.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Téléinfo\Recherches téléinfo\CMs-Reseaux.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Téléinfo\Recherches téléinfo\Cours de Télématique.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Téléinfo\TP TelInf\Support_TP_RÃ©seaux_Info.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Téléinfo\TP TelInf\TP_1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PHP\Cours php\php partie1 (1).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\PHP\Exercices php\TP1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Cours java\Java_ch_1_introduction_orienté_objet.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Cours java\Java_ch_2_les_bases_.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Cours java\Java_ch_3_Classe & Objet.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Cours java\Java_ch_4_héritage_et_polymorphise_.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Cours java\Java_ch_5_Collections.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Cours java\java_ch_7_java-swing_&_interfaces_HM.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Cours java\java_cours_last.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Exercices\JAVA_TP_1_.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Exercices\JAVA_TP_2_.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Exercices\JAVA_TP_3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Exercices\JAVA_TP_5.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Java for now\exam_exempl.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\Java for now\sa_soluss.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Java\TD à arranger\Essayés\TD_2_EX_1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Base de données__trouvés\Contrôle_Continu - 2023-2024.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Base de données__trouvés\Contrôle_Continu.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Base de données__trouvés\Contrôle_Final.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Base de données__trouvés\Contrôle_Final_2022-2023.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Base de données__trouvés\Contrôle_Final_2023-2024.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Base de données__trouvés\Cours_Les Jointures_Les groupements_Les Transactions_L'intégrité Référentielle.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Base de données__trouvés\TD9VueIndex.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Base de données__trouvés\TD9VueIndexCorrige.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Base de données__trouvés\TPCorrige_MajJointureSql2_emp.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Cours\3 Algèbre rlationnelle - copie.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\Cours\Cours BD_Algebre-Relationnelle.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\TD\TD4_AlgÃ¨bre_Relationnelle.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\TD\TD6-SQL-LMD.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 2ème année\AAA__2em sem\Base de data\TD\TD6-SQL-LMD_Correction.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Autres\Epreuve-de-Logique-2018 (4).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Autres\Epreuve-de-Logique-Aout-2019 (2).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Autres\Notes S1 1ISI 23-24.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Autres\Notes SESSION ORDINAIRE S2  23.24 1ISI.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Bureautique\462-Guide PowerPoint 2007(version débutante).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Bureautique\Boumendil Karima.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Bureautique\www.cours-gratuit.com--id-1552.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\ZZZZ\TD&TP_structure.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Langage_c\Fonctions\Home work\Exo1 resol éq prem deg\lo.exe
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Langage_c\Fonctions\Home work\Exo2 nb_parfait\lo.exe
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Langage_c\Fonctions\Home work\Tab & fonc les tris\lo.exe
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Langage_c\Fonctions\Faits\Second degré\lo.exe
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\HTML\Cours_html_&_css\Devloppement Web_CSS.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\HTML\Cours_html_&_css\Programmation web_HTML_2023-2024.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\Cours 1ère année\Bureautique\word\word-tp4 .pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\Manip4_2019_Server.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\structure_examens_3ISI.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\TD2Analysededonnee (1).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\TD3AD.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\TDAFC (2).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Communication\Administrative English Full Course Summary.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Communication\DOC-20241220-WA0001..pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Contôle.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\EXERCICE GLOBAL DE SYNTHÈSE – PL_SQL.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\TP_à_arranger\TP3 Les services réseau avancé.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\zzzz_Atres\Chapitre2Architecture des ordinateurs .pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\zzz__Cyber_sec_aide_des profs\Prof Hamid\Attacking and Exploiting Modern Web Applications_ Discover the mindset, techniques, and tools to perform modern web attacks..pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\zzz__Cyber_sec_aide_des profs\Prof Hamid\Burp Suite Cookbook Web application security.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\Cours\1___chapitre1_TCP_IP_ProgRéseau.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\Cours\2____ACFrOgDJ_Ck9JVyEVUznvvHrIyVmeiGIc4HUBu2aqqA4-R-XgW1Oqd_EAfiEFiEcCrlxcgOFFGyM-TUnLRS_MGCfkyDIaG8bdmUPzXgKQ9uVnMLcAA9no5G5Ro18kS1QM3DoBB7s5UABVyOdfmj5.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\Cours\3___TCP_IP_ a revoir.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\Cours\4__Cours_TCP_IP (2).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\Cours\5__Cours TCP_IP.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\Cours\Ch_5_Prog_Réseau.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TD & TP Réseau\TD1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TD & TP Réseau\TP1_routage_statique.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TD & TP Réseau\TP2_routage_dynamique.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TD & TP Réseau\TP3_Gestion des processus.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TP_Complet_MASRA_Thierry_D\TP_AdminDB_MASRA_Thierry_D\TP_1_AdminDB_MASRA_Thierry_D.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TP_Complet_MASRA_Thierry_D\TP_AdminDB_MASRA_Thierry_D\TP_2_AdminDB_MASRA_Thierry_D.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TP_Complet_MASRA_Thierry_D\TP_AdminDB_MASRA_Thierry_D\TP_3_AdminDB_MASRA_Thierry_D.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TP_Complet_MASRA_Thierry_D\TP_AdminDB_MASRA_Thierry_D\TP_4_AdminDB_MASRA_Thierry_D.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TP_Complet_MASRA_Thierry_D\TP_Réseau_MASRA_Thierry_D\TP_1_Réseau_MASRA_Thierry_DOROBE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TP_Complet_MASRA_Thierry_D\TP_Réseau_MASRA_Thierry_D\TP_2_Réseau_MASRA_Thierry_DOROBE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TP_Complet_MASRA_Thierry_D\TP_Réseau_MASRA_Thierry_D\TP_3_Réseau_MASRA_Thierry_DOROBE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TP_Complet_MASRA_Thierry_D\TP_Réseau_MASRA_Thierry_D\TP_4_Réseau_MASRA_Thierry_DOROBE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TD & TP Réseau\OK\TP_1_Réseau_MASRA_Thierry_DOROBE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TD & TP Réseau\OK\TP_2_Réseau_MASRA_Thierry_DOROBE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TD & TP Réseau\OK\TP_3_Réseau_MASRA_Thierry_DOROBE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Réseau\TD & TP Réseau\OK\TP_4_Réseau_MASRA_Thierry_DOROBE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\TP & TD PL_SQL\TP _ Utilisation des curseurs en PL_SQL.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\TP & TD PL_SQL\TP – Prise en main du Chapitre 1 _ Introduction et Structure de base de PL_SQL.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\TP & TD PL_SQL\TP_PLSQL_MASRA_Thierry_D.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\zzz__Seerch PL_SQL\7 Programmation PL-SQL Oracle.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\zzz__Seerch PL_SQL\Chapitre3_versionEtudiant.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\zzz__Seerch PL_SQL\CoursBDA2-PLSQL.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\zzz__Seerch PL_SQL\Cours_Introduction_au_PLSQL_Oracle.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\zzz__Seerch PL_SQL\PLSQL-Base-4p.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Popozé\Methodes\Procedures .pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Popozé\Methodes\TP1 procedures.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\Cours\1___Statistiques-descriptives.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\Cours\2___Test-de-corrélation-simple.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\Cours\3___Test-Khi-deux .pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\Cours\4___A-C-P-.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\Cours Analyse Data downloaded\A-C-P-.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\Cours Analyse Data downloaded\acp-cours.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\Cours Analyse Data downloaded\ACP_L3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\Cours Analyse Data downloaded\diapo_analyse_de_correlation.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Analyse des données\TD_TP\TD_1 Analyse Descriptive des donnees.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\Cours\ch1-3+sauvegarde.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\Cours\chap1_administration de DB.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\Cours\chapitre 2 (1).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\Cours\chapitre 3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\Cours\zz _ Cours complet Cours de SQL Server.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\Mini projet\Mini_projet.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\Mini projet\Mini_projet_MASRA_Thierry_DOROBE.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\TP Adm DB\tp1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\TP Adm DB\tp2.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\TP Adm DB\tp3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\TP Adm DB\tp4.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\TP Adm DB\Faits\TP_1_AdminDB_MASRA_Thierry_D.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\TP Adm DB\Faits\TP_2_AdminDB_MASRA_Thierry_D.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\TP Adm DB\Faits\TP_3_AdminDB_MASRA_Thierry_D.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Admin_DataBase\TP Adm DB\Faits\TP_4_AdminDB_MASRA_Thierry_D.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\Cours\ch 0 Administration Windows.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\Cours\ch0 A_Introduction aux.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\Cours\ch1 Présentation de windows server 2016.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\Cours\ch2 Les services de domaine Active Directory.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\Cours\ch3 Les stratégies de groupe.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\Cours\ch4 Les services réseau avancé.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\Cours\ch5 Les services fichier avancé.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\TP Admin SE\TP7.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\TP Admin SE\TP8 Les services fichier avancé.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\TP Admin SE\TP_1 Les services de domaine Active Directory.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\TP Admin SE\TP_2 Les services réseau avancé (1).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\TP Admin SE\TP_3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\TP Admin SE\TP_4.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\TP Admin SE\TP_5 Les stratégies de groupe.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\Administration SE\TP Admin SE\TP_6.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\1. ETL Power Query.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\2. Power Pivot.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\TD 1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\Cours\ch1 Les bases de l'architecture Oracle.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\Cours\ch2 Démarrage et arrêt.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\Cours\ch3 Gestion des utilisateurs et de leurs droits.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\Cours\ch4 Tablespaces et fichiers de données.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\TD-TP\TP0 - Listner.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\TD-TP\TP0.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\TD-TP\TP1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\TD-TP\TP2.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\TD-TP\TP3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\TD-TP\Vue.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\ZZZ__TP Power BI\TP1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\TD-TP\Faits\TP_1_MASRA.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\TD-TP\Faits\TP_2_Masra_Thierry_D.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\Cours\Datawhere\Ch1 DataWarehouse.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\Cours\Datawhere\Ch2 DataWarehouse.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\Cours\Datawhere\Ch3 DataWarehouse.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\4_Data Base poussée\Cours\Datanalyse\TP\1. ETL Power Query.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\Cours\POOPythonChap1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\Cours\POOPythonChap2.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\Cours\POOPythonChap3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\Cours\POOPythonChap4.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\TD-TP\TD1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\TD-TP\TP1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\TD-TP\TP2.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\TD-TP\TP3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\For data\Atelier 1\atelier1_python_data_science.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\For data\Atelier 1\insurance (1).pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\For data\Atelier 1\insurance.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\For data\Atelier 2\atelier_2_visualisation_matplotlib_canada.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\For data\Atelier 2\Canada.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\For data\Atelier 3\atelier_3_visualisation_seaborn.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\3_Python Data\For data\Atelier 4\atelier_4_folium_geospatial.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\Cours\1. coursJavaIntroduction.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\Cours\2. coursJavaBasicConcepts.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\Cours\3. coursJavaOop.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\Cours\4. Exception.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\Cours\5. chapitre-collections-final.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\Cours\5. Collection ch5.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\Cours\5. Collection.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\Cours\Java Threads.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\Cours\map.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\TD-TP\TP1_v1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\TD-TP\TP3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\TD-TP\Du 2em année\JAVA_TP_1_.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\TD-TP\Du 2em année\JAVA_TP_2_.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\TD-TP\Du 2em année\JAVA_TP_3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\TD-TP\Du 2em année\JAVA_TP_5.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\2_Vaja Object DVP Object\Cours\Java db\9. JDBC.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\1_IA\Cours\Chapitre1.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\1_IA\Cours\chapitre2IA.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\1_IA\Cours\Chapitre3.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\1_IA\TD-TP\atelier_ia_classification_bank.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\1_IA\TD-TP\TD2_ML.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\1_IA\TD-TP\TD_IA.pdf
+2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\1_IA\TD-TP\TP_TSP_Python_Recuit_simulé.pdf
