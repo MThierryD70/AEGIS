@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 061525d (Etape 12: Hasher C++)
 2026-05-08 21:09:13 [INFO] Base de signatures initialisée : ./data/signatures.db
 2026-05-08 21:09:13 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau
 2026-05-08 21:09:14 [WARNING] Signature trouvée: EICAR-Test-File(sha256: 275a021bbfb6489e...)
@@ -5,3 +9,94 @@
 2026-05-08 21:09:14 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Invités\AAA--- Marius\downloaded\VSCodeUserSetup-x64-1.97.1.exe
 2026-05-08 21:09:16 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Cours\PLSQL.pdf
 2026-05-08 21:09:17 [INFO]  Scan terminé en 3.83s -  597 fichiers(s) analysé (s),  1 menace (s) détectée (s) 
+<<<<<<< HEAD
+=======
+=======
+2026-04-16 22:43:59 [INFO] Antivirus démarré
+2026-04-16 22:43:59 [WARNING] Fichier suspect
+2026-04-16 22:43:59 [ERROR] Erreur critique
+2026-04-16 22:45:49 [INFO] Antivirus démarré	
+2026-04-16 22:45:49 [WARNING] Fichier suspect	
+2026-04-16 22:45:49 [ERROR] Erreur critique	
+2026-04-16 22:46:03 [INFO] Antivirus démarré	
+2026-04-16 22:46:03 [WARNING] Fichier suspect	
+2026-04-16 22:46:03 [ERROR] Erreur critique	
+2026-04-16 22:46:20 [INFO] Antivirus démarré	
+2026-04-16 22:46:20 [WARNING] Fichier suspect	
+2026-04-16 22:46:20 [ERROR] Erreur critique	
+2026-04-16 22:48:58 [INFO] Antivirus démarré
+2026-04-16 22:48:58 [WARNING] Fichier suspect
+2026-04-16 22:48:58 [ERROR] Erreur critique
+2026-04-16 22:49:25 [INFO] Antivirus démarré
+2026-04-16 22:49:25 [WARNING] Fichier suspect
+2026-04-16 22:49:25 [ERROR] Erreur critique
+2026-04-16 22:49:44 [INFO] Antivirus démarré
+2026-04-16 22:49:44 [WARNING] Fichier suspect
+2026-04-16 22:49:44 [ERROR] Erreur critique
+2026-04-16 22:50:00 [INFO] Antivirus démarré
+2026-04-16 22:50:00 [WARNING] Fichier suspect
+2026-04-16 22:50:00 [ERROR] Erreur critique
+2026-04-16 22:50:24 [INFO] Antivirus démarré
+2026-04-16 22:50:24 [WARNING] Fichier suspect
+2026-04-16 22:50:24 [ERROR] Erreur critique
+2026-04-16 22:50:33 [INFO] Antivirus démarré
+2026-04-16 22:50:33 [WARNING] Fichier suspect
+2026-04-16 22:50:33 [ERROR] Erreur critique
+2026-04-17 00:16:03 [ERROR] Chemin introuvable: \\?\C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Doc profess
+2026-04-17 00:16:28 [ERROR] Chemin introuvable: \\?\C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\Doc profess
+2026-04-17 00:16:41 [ERROR] Chemin introuvable: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\Doc profess
+2026-04-17 00:31:21 [ERROR] Chemin introuvable: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\New projects\Antivirus\AEGIS\BraveSosftware
+2026-04-17 03:28:33 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:28:33 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:28:33 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:28:33 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\eicar.com : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\eicar.com'
+2026-04-17 03:29:04 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:29:04 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:29:04 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:29:04 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\eicar.txt : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\eicar.txt'
+2026-04-17 03:29:37 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:29:37 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:29:37 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:29:37 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\eicar.txt : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\eicar.txt'
+2026-04-17 03:30:45 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:30:45 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:30:45 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:30:45 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\eicar.txt : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\eicar.txt'
+2026-04-17 03:31:24 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:31:24 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:31:24 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:31:24 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\eicar.txt : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\eicar.txt'
+2026-04-17 03:32:05 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:32:05 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:32:05 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:32:05 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\eicar.txt : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\eicar.txt'
+2026-04-17 03:32:50 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:32:50 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:32:50 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:32:50 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\eicar.txt : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\eicar.txt'
+2026-04-17 03:33:17 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:33:17 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:33:17 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:33:17 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\eicar.txt : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\eicar.txt'
+2026-04-17 03:34:28 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:34:28 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:34:28 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:35:32 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:35:32 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:35:32 [ERROR] Erreur lecture du fichier Tests\test_files_pour_etap_2_part2\programme.exe : [Errno 2] No such file or directory: 'Tests\\test_files_pour_etap_2_part2\\programme.exe'
+2026-04-17 03:39:27 [ERROR] Erreur lecture du fichier Tests\test_files\eicar.txt : [Errno 2] No such file or directory: 'Tests\\test_files\\eicar.txt'
+2026-04-17 05:11:17 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:12:28 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:13:42 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:14:54 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:17:52 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:20:44 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:21:59 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:28:49 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:29:23 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:30:18 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:31:45 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:42:14 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-04-17 05:42:49 [INFO] Base de signatures initialisée : ./data/signatures.db
+>>>>>>> e77f2f4 (Etape 4: Signature Database)
+>>>>>>> 061525d (Etape 12: Hasher C++)
