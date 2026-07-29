@@ -580,3 +580,20 @@
 2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\1_IA\TD-TP\TD2_ML.pdf
 2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\1_IA\TD-TP\TD_IA.pdf
 2026-07-28 23:17:57 [WARNING] Erreur de lecture C++ pour : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\AAA_Saison 2\1_IA\TD-TP\TP_TSP_Python_Recuit_simulé.pdf
+2026-07-29 19:54:45 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-07-29 19:54:45 [INFO] Bloom Filter chargé: 0 signature (s), 0 bits actifs
+2026-07-29 19:56:02 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-07-29 19:56:02 [INFO] Bloom Filter chargé: 0 signature (s), 0 bits actifs
+2026-07-29 20:10:22 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-07-29 20:10:22 [ERROR]  Fichier introuvable : data\Imports signatures\sample_signatures.jsoncls
+2026-07-29 20:10:40 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-07-29 20:10:40 [INFO]  Import signatures version 2026.04.22  (3 entrée(s))
+2026-07-29 20:10:40 [INFO]  
+
+Import terminée - 3 ajoutée(s),  0 ignorée(s) (doublon), 0 erreur(s)
+2026-07-29 20:10:57 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-07-29 20:10:57 [INFO] Bloom Filter chargé: 3 signature (s), 21 bits actifs
+2026-07-29 20:10:57 [WARNING] Signature trouvée : EICAR-Test-File (sha256: 275a021bbfb6489e...)
+2026-07-29 20:12:10 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-07-29 20:12:10 [INFO] Bloom Filter chargé: 3 signature (s), 21 bits actifs
+2026-07-29 20:12:10 [WARNING] Signature trouvée : EICAR-Test-File (sha256: 275a021bbfb6489e...)

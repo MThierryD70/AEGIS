@@ -90,4 +90,10 @@ class SignatureDB:
                 (hash_value.lower(),)
             )
             return cursor.rowcount > 0
+
+    def get_all_hashes(self) -> list:
+        with self._connect() as conn:
+            cursor = conn.execute("SELECT hash_value FROM signatures")
+            return [row[0] for row in cursor.fetchall()]
+        
             
