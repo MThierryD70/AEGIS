@@ -6685,3 +6685,409 @@ Import terminée - 3 ajoutée(s),  0 ignorée(s) (doublon), 0 erreur(s)
 2026-07-31 01:13:53 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\aa_test\eicar.com
 2026-07-31 01:13:55 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Cours\PLSQL.pdf
 2026-07-31 01:13:55 [INFO]  Scan terminé en 2.76s -  660 fichiers(s) analysé (s),  2 menace (s) détectée (s) 
+2026-07-31 01:22:44 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-07-31 01:22:44 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-07-31 01:22:44 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-07-31 01:22:44 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau
+2026-07-31 01:22:44 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-07-31 01:22:44 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\Save\eicar.com
+2026-07-31 01:22:44 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-07-31 01:22:44 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\Tests\malware_test\eicar.com
+2026-07-31 01:22:46 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Cours\PLSQL.pdf
+2026-07-31 01:22:47 [INFO]  Scan terminé en 3.03s -  660 fichiers(s) analysé (s),  2 menace (s) détectée (s) 
+2026-07-31 22:53:25 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 22:57:13 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 22:57:13 [INFO] Python 3.14 - OK
+2026-07-31 22:57:13 [INFO] Dépendances obligatoires : 
+2026-07-31 22:57:13 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 22:57:13 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 22:57:13 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 22:57:14 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 22:57:14 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 22:57:14 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 22:57:14 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 22:57:15 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 22:57:15 [INFO] Dépendances optionelles: 
+2026-07-31 23:02:48 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:02:48 [INFO] Python 3.14 - OK
+2026-07-31 23:02:48 [INFO] Dépendances obligatoires : 
+2026-07-31 23:02:48 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:02:48 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:02:48 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:02:48 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:02:48 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:02:48 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:02:48 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:02:48 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:02:48 [INFO] Dépendances optionelles: 
+2026-07-31 23:06:57 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:06:57 [INFO] Python 3.14 - OK
+2026-07-31 23:06:57 [INFO] Dépendances obligatoires : 
+2026-07-31 23:06:57 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:06:57 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:06:57 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:06:57 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:06:57 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:06:57 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:06:57 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:06:57 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:06:57 [INFO] Dépendances optionelles: 
+2026-07-31 23:06:57 [INFO] Toutes les déoendances sont satisfaites (0 installée (s))
+2026-07-31 23:08:07 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:08:07 [INFO] Python 3.14 - OK
+2026-07-31 23:08:07 [INFO] Dépendances obligatoires : 
+2026-07-31 23:08:07 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:08:07 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:08:07 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:08:07 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:08:07 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:08:07 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:08:07 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:08:07 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:08:07 [INFO] Dépendances optionelles: 
+2026-07-31 23:08:07 [INFO] Toutes les déoendances sont satisfaites (0 installée (s))
+2026-07-31 23:08:41 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:08:41 [INFO] Python 3.14 - OK
+2026-07-31 23:08:41 [INFO] Dépendances obligatoires : 
+2026-07-31 23:08:41 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:08:41 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:08:41 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:08:41 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:08:41 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:08:41 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:08:41 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:08:41 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:08:41 [INFO] Dépendances optionelles: 
+2026-07-31 23:08:41 [INFO] 
+Toutes les déoendances sont satisfaites (0 installée (s))
+2026-07-31 23:09:07 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:09:07 [INFO] Python 3.14 - OK
+2026-07-31 23:09:07 [INFO] Dépendances obligatoires : 
+2026-07-31 23:09:07 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:09:07 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:09:07 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:09:08 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:09:08 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:09:08 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:09:08 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:09:08 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:09:08 [INFO] Dépendances optionelles: 
+2026-07-31 23:09:08 [INFO] Toutes les déoendances sont satisfaites (0 installée (s))
+2026-07-31 23:10:05 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:10:05 [INFO] Python 3.14 - OK
+2026-07-31 23:10:05 [INFO] Dépendances obligatoires : 
+2026-07-31 23:10:05 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:10:05 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:10:05 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:10:05 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:10:05 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:10:05 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:10:05 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:10:05 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:10:05 [INFO] Dépendances optionelles: 
+2026-07-31 23:10:05 [INFO] Toutes les déoendances sont satisfaites (0 installée (s))
+2026-07-31 23:13:09 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:13:09 [INFO] Python 3.14 - OK
+2026-07-31 23:13:09 [INFO] Dépendances obligatoires : 
+2026-07-31 23:13:09 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:13:09 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:13:09 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:13:09 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:13:09 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:13:09 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:13:09 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:13:09 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:13:09 [INFO] Dépendances optionelles: 
+2026-07-31 23:13:09 [INFO] Toutes les déoendances sont satisfaites (0 installée (s))
+2026-07-31 23:13:41 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:13:41 [INFO] Python 3.14 - OK
+2026-07-31 23:13:41 [INFO] Dépendances obligatoires : 
+2026-07-31 23:13:41 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:13:41 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:13:41 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:13:41 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:13:41 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:13:41 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:13:41 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:13:41 [INFO] Dépendances optionelles: 
+2026-07-31 23:13:41 [ERROR] Dépendances manquantes : httpx
+2026-07-31 23:14:27 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:14:27 [INFO] Python 3.14 - OK
+2026-07-31 23:14:27 [INFO] Dépendances obligatoires : 
+2026-07-31 23:14:27 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:14:27 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:14:27 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:14:27 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:14:27 [INFO] Installation de httpx ...
+2026-07-31 23:14:28 [ERROR] Erreur installation httpx : 'CompletedProcess' object has no attribute 'returncoden'
+2026-07-31 23:14:28 [ERROR] X httpx - echec
+2026-07-31 23:14:28 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:14:28 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:14:28 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:14:28 [INFO] Dépendances optionelles: 
+2026-07-31 23:14:28 [ERROR] Dépendances manquantes : httpx
+2026-07-31 23:15:41 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:15:41 [INFO] Python 3.14 - OK
+2026-07-31 23:15:41 [INFO] Dépendances obligatoires : 
+2026-07-31 23:15:41 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:15:41 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:15:41 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:15:41 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:15:42 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:15:42 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:15:42 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:15:42 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:15:42 [INFO] Dépendances optionelles: 
+2026-07-31 23:15:42 [INFO] Toutes les déoendances sont satisfaites (0 installée (s))
+2026-07-31 23:15:54 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:15:54 [INFO] Python 3.14 - OK
+2026-07-31 23:15:54 [INFO] Dépendances obligatoires : 
+2026-07-31 23:15:54 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:15:54 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:15:54 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:15:55 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:15:55 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:15:55 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:15:55 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:15:55 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:15:55 [INFO] Dépendances optionelles: 
+2026-07-31 23:15:55 [INFO] Toutes les déoendances sont satisfaites (0 installée (s))
+2026-07-31 23:16:01 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:16:01 [INFO] Python 3.14 - OK
+2026-07-31 23:16:01 [INFO] Dépendances obligatoires : 
+2026-07-31 23:16:01 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:16:01 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:16:01 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:16:01 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:16:01 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:16:01 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:16:01 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:16:01 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:16:01 [INFO] Dépendances optionelles: 
+2026-07-31 23:16:01 [INFO] Toutes les déoendances sont satisfaites (0 installée (s))
+2026-07-31 23:16:29 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:16:29 [INFO] Python 3.14 - OK
+2026-07-31 23:16:29 [INFO] Dépendances obligatoires : 
+2026-07-31 23:16:29 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:16:29 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:16:29 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:16:29 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:16:29 [INFO] Installation de httpx ...
+2026-07-31 23:16:30 [INFO]  OK, httpx installé
+2026-07-31 23:16:30 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:16:30 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:16:30 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:16:30 [INFO] Dépendances optionelles: 
+2026-07-31 23:16:30 [INFO] Toutes les déoendances sont satisfaites (1 installée (s))
+2026-07-31 23:17:01 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:17:01 [INFO] Python 3.14 - OK
+2026-07-31 23:17:01 [INFO] Dépendances obligatoires : 
+2026-07-31 23:17:01 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:17:01 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:17:01 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:17:01 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:17:01 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:17:01 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:17:01 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:17:01 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:17:01 [INFO] Dépendances optionelles: 
+2026-07-31 23:17:01 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-07-31 23:18:18 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:18:18 [INFO] Python 3.14 - OK
+2026-07-31 23:18:18 [INFO] Dépendances obligatoires : 
+2026-07-31 23:18:18 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:18:18 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:18:18 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:18:18 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:18:18 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:18:18 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:18:18 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:18:18 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:18:18 [INFO] Dépendances optionelles: 
+2026-07-31 23:18:18 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-07-31 23:48:31 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:48:31 [INFO] Python 3.14 - OK
+2026-07-31 23:48:31 [INFO] Dépendances obligatoires : 
+2026-07-31 23:48:31 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:48:31 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:48:31 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:48:31 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:48:31 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:48:31 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:48:31 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:48:31 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:48:31 [INFO] Dépendances optionelles: 
+2026-07-31 23:48:31 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-07-31 23:48:41 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-07-31 23:48:41 [INFO] Python 3.14 - OK
+2026-07-31 23:48:41 [INFO] Dépendances obligatoires : 
+2026-07-31 23:48:41 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-07-31 23:48:41 [INFO]  OK click (8.3.3) - déjà présent
+2026-07-31 23:48:41 [INFO]  OK rich (inconnue) - déjà présent
+2026-07-31 23:48:41 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-07-31 23:48:41 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-07-31 23:48:41 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-07-31 23:48:41 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-07-31 23:48:41 [INFO]  OK yara (4.5.4) - déjà présent
+2026-07-31 23:48:41 [INFO] Dépendances optionelles: 
+2026-07-31 23:48:41 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-08-01 00:01:00 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-08-01 00:01:00 [INFO] Python 3.14 - OK
+2026-08-01 00:01:00 [INFO] Dépendances obligatoires : 
+2026-08-01 00:01:00 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-08-01 00:01:00 [INFO]  OK click (8.3.3) - déjà présent
+2026-08-01 00:01:00 [INFO]  OK rich (inconnue) - déjà présent
+2026-08-01 00:01:00 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-08-01 00:01:00 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-08-01 00:01:00 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-08-01 00:01:00 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-08-01 00:01:00 [INFO]  OK yara (4.5.4) - déjà présent
+2026-08-01 00:01:00 [INFO] Dépendances optionelles: 
+2026-08-01 00:01:00 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-08-01 00:17:40 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-08-01 00:17:40 [INFO] Python 3.14 - OK
+2026-08-01 00:17:40 [INFO] Dépendances obligatoires : 
+2026-08-01 00:17:40 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-08-01 00:17:40 [INFO]  OK click (8.3.3) - déjà présent
+2026-08-01 00:17:40 [INFO]  OK rich (inconnue) - déjà présent
+2026-08-01 00:17:40 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-08-01 00:17:40 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-08-01 00:17:40 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-08-01 00:17:40 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-08-01 00:17:40 [INFO]  OK yara (4.5.4) - déjà présent
+2026-08-01 00:17:40 [INFO] Dépendances optionelles: 
+2026-08-01 00:17:40 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-08-01 00:19:41 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-08-01 00:19:41 [INFO] Python 3.14 - OK
+2026-08-01 00:19:41 [INFO] Dépendances obligatoires : 
+2026-08-01 00:19:41 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-08-01 00:19:41 [INFO]  OK click (8.3.3) - déjà présent
+2026-08-01 00:19:41 [INFO]  OK rich (inconnue) - déjà présent
+2026-08-01 00:19:41 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-08-01 00:19:41 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-08-01 00:19:41 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-08-01 00:19:41 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-08-01 00:19:41 [INFO]  OK yara (4.5.4) - déjà présent
+2026-08-01 00:19:41 [INFO] Dépendances optionelles: 
+2026-08-01 00:19:41 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-08-01 00:19:47 [INFO]  ====================== Vérification des dépendances Python ============================
+2026-08-01 00:19:47 [INFO] Python 3.14 - OK
+2026-08-01 00:19:47 [INFO] Dépendances obligatoires : 
+2026-08-01 00:19:47 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-08-01 00:19:47 [INFO]  OK click (8.3.3) - déjà présent
+2026-08-01 00:19:47 [INFO]  OK rich (inconnue) - déjà présent
+2026-08-01 00:19:47 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-08-01 00:19:47 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-08-01 00:19:47 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-08-01 00:19:47 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-08-01 00:19:47 [INFO]  OK yara (4.5.4) - déjà présent
+2026-08-01 00:19:47 [INFO] Dépendances optionelles: 
+2026-08-01 00:19:47 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-08-01 00:21:04 [INFO] 
+ ====================== Vérification des dépendances Python ============================
+2026-08-01 00:21:04 [INFO] Python 3.14 - OK
+2026-08-01 00:21:04 [INFO] Dépendances obligatoires : 
+2026-08-01 00:21:04 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-08-01 00:21:04 [INFO]  OK click (8.3.3) - déjà présent
+2026-08-01 00:21:04 [INFO]  OK rich (inconnue) - déjà présent
+2026-08-01 00:21:04 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-08-01 00:21:04 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-08-01 00:21:04 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-08-01 00:21:04 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-08-01 00:21:04 [INFO]  OK yara (4.5.4) - déjà présent
+2026-08-01 00:21:04 [INFO] Dépendances optionelles: 
+2026-08-01 00:21:04 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-08-01 00:21:50 [INFO] 
+====================== Vérification des dépendances Python ============================
+2026-08-01 00:21:50 [INFO] Python 3.14 - OK
+2026-08-01 00:21:50 [INFO] Dépendances obligatoires : 
+2026-08-01 00:21:50 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-08-01 00:21:50 [INFO]  OK click (8.3.3) - déjà présent
+2026-08-01 00:21:50 [INFO]  OK rich (inconnue) - déjà présent
+2026-08-01 00:21:50 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-08-01 00:21:50 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-08-01 00:21:50 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-08-01 00:21:50 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-08-01 00:21:50 [INFO]  OK yara (4.5.4) - déjà présent
+2026-08-01 00:21:50 [INFO] Dépendances optionelles: 
+2026-08-01 00:21:50 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-08-01 00:22:14 [INFO] 
+
+====================== Vérification des dépendances Python ============================
+2026-08-01 00:22:14 [INFO] Python 3.14 - OK
+2026-08-01 00:22:14 [INFO] Dépendances obligatoires : 
+2026-08-01 00:22:14 [INFO]  OK yaml (6.0.3) - déjà présent
+2026-08-01 00:22:14 [INFO]  OK click (8.3.3) - déjà présent
+2026-08-01 00:22:14 [INFO]  OK rich (inconnue) - déjà présent
+2026-08-01 00:22:14 [INFO]  OK pefile (2024.8.26) - déjà présent
+2026-08-01 00:22:14 [INFO]  OK httpx (0.28.1) - déjà présent
+2026-08-01 00:22:14 [INFO]  OK cryptography (49.0.0) - déjà présent
+2026-08-01 00:22:14 [INFO]  OK pybind11 (3.0.4) - déjà présent
+2026-08-01 00:22:14 [INFO]  OK yara (4.5.4) - déjà présent
+2026-08-01 00:22:14 [INFO] Dépendances optionelles: 
+2026-08-01 00:22:14 [INFO] Toutes les dépendances sont satisfaites (0 installée (s))
+2026-08-01 00:24:06 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 00:24:06 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 00:24:06 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 00:24:06 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau
+2026-08-01 00:24:07 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-08-01 00:24:07 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\Save\eicar.com
+2026-08-01 00:24:07 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-08-01 00:24:07 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\Tests\malware_test\eicar.com
+2026-08-01 00:24:11 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Cours\PLSQL.pdf
+2026-08-01 00:24:12 [INFO]  Scan terminé en 6.19s -  660 fichiers(s) analysé (s),  2 menace (s) détectée (s) 
+2026-08-01 00:28:48 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 00:28:48 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 00:28:48 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 00:28:48 [INFO]  Démarrage du scan : .
+2026-08-01 00:28:48 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-08-01 00:28:48 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\Tests\malware_test\eicar.com
+2026-08-01 00:28:48 [INFO]  Scan terminé en 0.12s -  16 fichiers(s) analysé (s),  1 menace (s) détectée (s) 
+2026-08-01 00:29:08 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 00:29:08 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 00:29:08 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 00:29:08 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\OneDrive\Images
+2026-08-01 00:29:08 [INFO]  Scan terminé en 0.63s -  1 fichiers(s) analysé (s),  0 menace (s) détectée (s) 
+2026-08-01 00:30:15 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 00:30:15 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 00:30:15 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 00:30:15 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\OneDrive\Images
+2026-08-01 00:30:21 [INFO]  Scan terminé en 5.80s -  1779 fichiers(s) analysé (s),  0 menace (s) détectée (s) 
+2026-08-01 00:32:43 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 00:32:43 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 00:32:43 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 00:32:43 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\OneDrive\Téléchargements
+2026-08-01 00:32:43 [ERROR] Chemin introuvable: C:\Users\DELL LATITUDE 5420\OneDrive\Téléchargements
+2026-08-01 00:32:43 [INFO]  Scan terminé en 0.00s -  0 fichiers(s) analysé (s),  0 menace (s) détectée (s) 
+2026-08-01 00:33:12 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 00:33:12 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 00:33:12 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 00:33:12 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\OneDrive\Download
+2026-08-01 00:33:12 [ERROR] Chemin introuvable: C:\Users\DELL LATITUDE 5420\OneDrive\Download
+2026-08-01 00:33:12 [INFO]  Scan terminé en 0.00s -  0 fichiers(s) analysé (s),  0 menace (s) détectée (s) 
+2026-08-01 00:34:00 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 00:34:00 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 00:34:00 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 00:34:00 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\Downloads
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Bionic-1.0.2-3-x64.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\OBS-Studio-32.1.2-Windows-x64-Installer.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\OllamaSetup.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\OpenCode Desktop Installer.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\tor-browser-windows-x86_64-portable-15.0.14.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\VirtualBox-7.2.8-173730-Win.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Win64OpenSSL-4_0_1.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\xampp-windows-x64-8.0.30-0-VS16-installer.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Hacking Ethic\burpsuite_community_windows-x64_v2026_3_2.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Logis pour cours\Anaconda3-2025.12-2-Windows-x86_64.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Logis pour cours\Apache-NetBeans-25-bin-windows-x64.exe
+2026-08-01 00:34:01 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Logis pour cours\Apache-NetBeans-29.exe
+2026-08-01 00:34:02 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Logis pour cours\Packet_Tracer822_64bit_setup_signed.exe
+2026-08-01 00:34:02 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Logis pour cours\PBIDesktopSetup_x64.exe
+2026-08-01 00:34:02 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Logis pour cours\xampp-windows-x64-8.2.12-0-VS16-installer.exe
+2026-08-01 00:34:02 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Outils\DaVinci_Resolve_20.1_Windows.exe
+2026-08-01 00:34:02 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Outils\Intel-Graphics-Software-Application_T5MXX_WIN64_25.40.1953.2_A01.EXE
+2026-08-01 00:34:02 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Outils\Intel-UHD-Iris-Xe-Graphics-Driver_GJRP1_WIN64_32.0.101.7080_A22.EXE
+2026-08-01 00:34:02 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Outils\OllamaSetup.exe
+2026-08-01 00:34:03 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Outils\VirtualBox-7.0.18-162988-Win.exe
+2026-08-01 00:34:03 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\telech_ancien_user\3uTools_v9.02.025_Setup_x64.exe
+2026-08-01 00:34:09 [INFO]  Scan terminé en 8.59s -  439 fichiers(s) analysé (s),  0 menace (s) détectée (s) 

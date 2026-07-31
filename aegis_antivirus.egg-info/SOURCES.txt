@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+aegis_antivirus.egg-info/PKG-INFO
+aegis_antivirus.egg-info/SOURCES.txt
+aegis_antivirus.egg-info/dependency_links.txt
+aegis_antivirus.egg-info/entry_points.txt
+aegis_antivirus.egg-info/requires.txt
+aegis_antivirus.egg-info/top_level.txt

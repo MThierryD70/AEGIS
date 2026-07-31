@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=72", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegis-antivirus"
+version = "1.0.0"
+description = "Antivirus à base de signatures avec moteur C++ haute performance"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "MASRA Thierry D.", email = "masrathierrydorobe@gmail.com"}
+]
+keywords = ["antivirus", "security", "malware", "cybersecurity"]
+
+dependencies = [
+    "pyyaml>=6.0.1",
+    "click>=8.1.7",
+    "rich>=13.7.0",
+    "pefile>=2023.2.7",
+    "python-magic-bin>=0.4.14",
+    "httpx>=0.25.2",
+    "cryptography>=41.0.7",
+    "pybind11>=3.0.0",
+    "yara-python>=4.3.0",
+]
+
+[project.optional-dependencies]
+api = [
+    "fastapi>=0.104.1",
+    "uvicorn>=0.24.0",
+]
+dev = [
+    "pytest>=7.4.3",
+    "pytest-cov>=4.1.0",
+]
+
+[project.scripts]
+antivirus = "antivirus.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["antivirus*"]
