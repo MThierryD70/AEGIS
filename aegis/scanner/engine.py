@@ -6,13 +6,16 @@ from typing import List, Optional
 from aegis.config.manager import Config
 from aegis.logger.logger import get_logger
 from aegis.scanner.walker import FileWalker
-from aegis.scanner.hasher import HashCalculator
 from aegis.db.signature_db import SignatureDB
-from aegis.detection.signature_matcher import SignatureMatcher, MatchResult
+
+#from aegis.scanner.hasher import HashCalculator
+#from aegis.detection.signature_matcher import SignatureMatcher
+from aegis.detection.signature_matcher import MatchResult
+
+from aegis.core.aegis_engine import AegisHasher, AegisBloomMatcher, log_status
 
 #from aegis.detection.heuristic import HeuristicAnalyzer, HeuristicResult
 #from aegis.detection.yara_scanner import YaraScanner, YaraResult
-
 
 
 @dataclass
@@ -23,9 +26,6 @@ class FileResult:
 
     #heuristic_result : HeuristicResult = None
     #yara_result: YaraResult = None
-
-
-
 
     @property
     def is_threat (self) -> bool:
@@ -70,12 +70,13 @@ class ScannerEngine:
         self.logger = get_logger()
         self.walker = FileWalker(config)
         self.db = SignatureDB(config.database.path)
-        self.matcher = SignatureMatcher(self.db)
+        #self.matcher = SignatureMatcher(self.db)
+
+        self.matcher = AegisBloomMatcher(self.db)
 
         #self.heuristic = HeuristicAnalyzer()
         #self.yara_scanner = YaraScanner("data/yara_rules")
-
-
+        log_status()
 
 
 
@@ -100,7 +101,8 @@ class ScannerEngine:
         return report
     
     def _analyze(self, path: Path) -> FileResult:
-        hashes = HashCalculator.compute (path)
+        #hashes = HashCalculator.compute (path)
+        hashes = AegisHasher.compute(path)
 
         if hashes is None:
             return FileResult(

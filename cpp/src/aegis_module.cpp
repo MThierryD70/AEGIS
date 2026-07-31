@@ -1,3 +1,6 @@
+#define _WIN32_WINNT 0x0600     // Windows Vista minimum - active CP_UTF8
+#define UNICODE                 // active l'API Unicode de Windows
+#include <windows.h>
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
 #include <string>
@@ -20,6 +23,7 @@ namespace py = pybind11;
 #define BLOOM_SIZE      9600000
 #define BLOOM_BYTES     (BLOOM_SIZE / 8)
 #define NUM_HASHES      7
+       
 
 //_________________________________________________________________
 // Utilitaires internes
@@ -34,24 +38,66 @@ static std::string bytes_to_hex (const unsigned char* bytes, size_t length) {
     return oss.str();
 }
 
+
+
+
 //__________________________________________________________________
 // Module Hasher
 //__________________________________________________________________
 
+// Convertit UTF-8 vers UTF-16 (wstring) pour l'API windows
+static std::wstring utf8_to_wstring(const std::string& str){
+    if (str.empty()) return L"";
+    int size = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), -1, nullptr, 0);
+    std::wstring result(size -1, 0);
+    MultiByteToWideChar(CP_UTF8, 0, str.c_str(), -1, &result[0], size);
+    return result;
+}
+
 static std::string hash_file (const std::string& filepath, bool use_sha256){
-    std::ifstream file(filepath, std::ios::binary);
-    if (!file.is_open()){
-        throw std::runtime_error("Impossible d'ouvrir : " + filepath);
+    //std::ifstream file(filepath, std::ios::binary);
+    //if (!file.is_open()){
+    //    throw std::runtime_error("Impossible d'ouvrir : " + filepath);
+    //}
+
+
+    // Conversion UTF-8 -> UTF-16 pour supporter les accents et espaces
+    std::wstring wpath = utf8_to_wstring(filepath);
+
+    HANDLE hFile = CreateFileW(
+        wpath.c_str(),
+        GENERIC_READ,
+        FILE_SHARE_READ,
+        nullptr,
+        OPEN_EXISTING,
+        FILE_ATTRIBUTE_NORMAL,
+        nullptr
+    );
+
+    if(hFile == INVALID_HANDLE_VALUE){
+        throw std::runtime_error("Impossible d'ouvrir : "+ filepath);
     }
+
+
 
     EVP_MD_CTX* ctx = EVP_MD_CTX_new();
     const EVP_MD* md = use_sha256 ? EVP_sha256() : EVP_md5();
     EVP_DigestInit_ex(ctx, md, nullptr);
 
-    char buffer[BLOCK_SIZE];
-    while(file.read(buffer, BLOCK_SIZE) || file.gcount() > 0){
-        EVP_DigestUpdate(ctx, buffer, file.gcount());
+    unsigned char buffer[BLOCK_SIZE];
+    DWORD bytes_read = 0;
+
+    //char buffer[BLOCK_SIZE];
+    //while(file.read(buffer, BLOCK_SIZE) || file.gcount() > 0){
+    //    EVP_DigestUpdate(ctx, buffer, file.gcount());
+    //}
+
+    while (ReadFile(hFile, buffer, BLOCK_SIZE, &bytes_read, nullptr)
+            && bytes_read > 0){
+        EVP_DigestUpdate(ctx, buffer, bytes_read);
     }
+
+    CloseHandle(hFile);
 
     unsigned char hash[EVP_MAX_MD_SIZE];
     unsigned int hash_len = 0;
@@ -60,6 +106,7 @@ static std::string hash_file (const std::string& filepath, bool use_sha256){
 
     return bytes_to_hex(hash, hash_len);
 }
+
 
 // Retourner {"md5" : "...", "sha256" : "..."} comme dict Python
 
