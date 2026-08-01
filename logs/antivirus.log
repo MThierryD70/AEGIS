@@ -7091,3 +7091,246 @@ Toutes les déoendances sont satisfaites (0 installée (s))
 2026-08-01 00:34:03 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\Outils\VirtualBox-7.0.18-162988-Win.exe
 2026-08-01 00:34:03 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\Downloads\telech_ancien_user\3uTools_v9.02.025_Setup_x64.exe
 2026-08-01 00:34:09 [INFO]  Scan terminé en 8.59s -  439 fichiers(s) analysé (s),  0 menace (s) détectée (s) 
+2026-08-01 21:31:56 [INFO] === Construction des modules C++ ===
+2026-08-01 21:31:56 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 21:31:56 [INFO] Module C++ déjà compilé — utilisez --force pour recompiler
+2026-08-01 21:32:35 [INFO] === Construction des modules C++ ===
+2026-08-01 21:32:35 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 21:32:35 [INFO] Nettoyage du dossier build...
+2026-08-01 21:34:40 [INFO] === Construction des modules C++ ===
+2026-08-01 21:34:41 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 21:34:41 [INFO] Module C++ déjà compilé — utilisez --force pour recompiler
+2026-08-01 21:34:47 [INFO] === Construction des modules C++ ===
+2026-08-01 21:34:47 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 21:34:47 [INFO] Nettoyage du dossier build...
+2026-08-01 21:35:45 [INFO] === Construction des modules C++ ===
+2026-08-01 21:35:46 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 21:35:46 [INFO] Configuration CMake...
+2026-08-01 21:35:46 [INFO] Commande : cmake .. -Dpybind11_DIR=C:\Users\DELL LATITUDE 5420\AppData\Roaming\Python\Python314\site-packages\pybind11\share\cmake\pybind11 -G MinGW Makefiles -DCMAKE_BUILD_TYPE=Release -DOPENSSL_INCLUDE_DIR=C:\Program Files\mingw64\include -DOPENSSL_SSL_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libssl.lib -DOPENSSL_CRYPTO_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libcrypto.lib
+2026-08-01 21:35:46 [INFO] Compilation en cours...
+2026-08-01 21:35:47 [ERROR] X Fichier .pyd introuvable après compilation
+2026-08-01 21:51:38 [INFO] === Construction des modules C++ ===
+2026-08-01 21:51:38 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 21:51:38 [INFO] Cache CMake nettoyé
+2026-08-01 21:51:38 [INFO] Ancien module supprimé : aegis_cpp.cp314-win_amd64.pyd
+2026-08-01 21:51:38 [INFO] Configuration CMake...
+2026-08-01 21:51:38 [INFO] Commande : cmake .. -Dpybind11_DIR=C:\Users\DELL LATITUDE 5420\AppData\Roaming\Python\Python314\site-packages\pybind11\share\cmake\pybind11 -G MinGW Makefiles -DCMAKE_BUILD_TYPE=Release -DOPENSSL_INCLUDE_DIR=C:\Program Files\mingw64\include -DOPENSSL_SSL_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libssl.lib -DOPENSSL_CRYPTO_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libcrypto.lib
+2026-08-01 21:51:42 [INFO] Compilation en cours...
+2026-08-01 21:51:43 [ERROR] ✗ Fichier .pyd introuvable après compilation
+2026-08-01 21:52:30 [INFO] === Construction des modules C++ ===
+2026-08-01 21:52:30 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 21:52:30 [INFO] Configuration CMake...
+2026-08-01 21:52:30 [INFO] Commande : cmake .. -Dpybind11_DIR=C:\Users\DELL LATITUDE 5420\AppData\Roaming\Python\Python314\site-packages\pybind11\share\cmake\pybind11 -G MinGW Makefiles -DCMAKE_BUILD_TYPE=Release -DOPENSSL_INCLUDE_DIR=C:\Program Files\mingw64\include -DOPENSSL_SSL_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libssl.lib -DOPENSSL_CRYPTO_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libcrypto.lib
+2026-08-01 21:52:31 [INFO] Compilation en cours...
+2026-08-01 21:52:31 [ERROR] ✗ Fichier .pyd introuvable après compilation
+2026-08-01 21:53:13 [INFO] === Construction des modules C++ ===
+2026-08-01 21:53:13 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 21:53:13 [INFO] Configuration CMake...
+2026-08-01 21:53:13 [INFO] Commande : cmake .. -Dpybind11_DIR=C:\Users\DELL LATITUDE 5420\AppData\Roaming\Python\Python314\site-packages\pybind11\share\cmake\pybind11 -G MinGW Makefiles -DCMAKE_BUILD_TYPE=Release -DOPENSSL_INCLUDE_DIR=C:\Program Files\mingw64\include -DOPENSSL_SSL_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libssl.lib -DOPENSSL_CRYPTO_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libcrypto.lib
+2026-08-01 21:53:14 [INFO] Compilation en cours...
+2026-08-01 21:53:15 [INFO] ✓ Module C++ compilé avec succès
+2026-08-01 21:53:15 [INFO] Module vérifié : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\cpp\bin\aegis_cpp.cp314-win_amd64.pyd
+2026-08-01 21:53:45 [INFO] === Construction des modules C++ ===
+2026-08-01 21:53:45 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 21:53:45 [INFO] Cache CMake nettoyé
+2026-08-01 21:53:45 [INFO] Ancien module supprimé : aegis_cpp.cp314-win_amd64.pyd
+2026-08-01 21:53:45 [INFO] Configuration CMake...
+2026-08-01 21:53:45 [INFO] Commande : cmake .. -Dpybind11_DIR=C:\Users\DELL LATITUDE 5420\AppData\Roaming\Python\Python314\site-packages\pybind11\share\cmake\pybind11 -G MinGW Makefiles -DCMAKE_BUILD_TYPE=Release -DOPENSSL_INCLUDE_DIR=C:\Program Files\mingw64\include -DOPENSSL_SSL_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libssl.lib -DOPENSSL_CRYPTO_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libcrypto.lib
+2026-08-01 21:53:49 [INFO] Compilation en cours...
+2026-08-01 21:53:49 [ERROR] ✗ Fichier .pyd introuvable après compilation
+2026-08-01 21:54:19 [INFO] === Construction des modules C++ ===
+2026-08-01 21:54:19 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 21:54:19 [INFO] Cache CMake nettoyé
+2026-08-01 21:54:19 [INFO] Configuration CMake...
+2026-08-01 21:54:19 [INFO] Commande : cmake .. -Dpybind11_DIR=C:\Users\DELL LATITUDE 5420\AppData\Roaming\Python\Python314\site-packages\pybind11\share\cmake\pybind11 -G MinGW Makefiles -DCMAKE_BUILD_TYPE=Release -DOPENSSL_INCLUDE_DIR=C:\Program Files\mingw64\include -DOPENSSL_SSL_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libssl.lib -DOPENSSL_CRYPTO_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libcrypto.lib
+2026-08-01 21:54:23 [INFO] Compilation en cours...
+2026-08-01 21:54:24 [INFO] ✓ Module C++ compilé avec succès
+2026-08-01 21:54:24 [INFO] Module vérifié : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\cpp\bin\aegis_cpp.cp314-win_amd64.pyd
+2026-08-01 22:14:27 [INFO] === Construction des modules C++ ===
+2026-08-01 22:14:27 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 22:14:27 [INFO] Module C++ déjà compilé — utilisez --force pour recompiler
+2026-08-01 22:14:42 [INFO] === Construction des modules C++ ===
+2026-08-01 22:14:42 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 22:14:42 [INFO] Cache CMake nettoyé
+2026-08-01 22:14:42 [INFO] Ancien module supprimé : aegis_cpp.cp314-win_amd64.pyd
+2026-08-01 22:14:42 [INFO] Ancien module supprimé : aegis_cpp.cp314-win_amd64.pyd
+2026-08-01 22:14:42 [INFO] Configuration CMake...
+2026-08-01 22:14:42 [INFO] Commande : cmake .. -Dpybind11_DIR=C:\Users\DELL LATITUDE 5420\AppData\Roaming\Python\Python314\site-packages\pybind11\share\cmake\pybind11 -G MinGW Makefiles -DCMAKE_BUILD_TYPE=Release -DOPENSSL_INCLUDE_DIR=C:\Program Files\mingw64\include -DOPENSSL_SSL_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libssl.lib -DOPENSSL_CRYPTO_LIBRARY=C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD\libcrypto.lib
+2026-08-01 22:14:46 [INFO] Compilation en cours...
+2026-08-01 22:14:47 [INFO] ✓ Module C++ compilé avec succès
+2026-08-01 22:14:47 [INFO] Module vérifié : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\cpp\bin\aegis_cpp.cp314-win_amd64.pyd
+2026-08-01 22:15:09 [INFO] === Construction des modules C++ ===
+2026-08-01 22:15:09 [INFO] 
+=== Environnement C++ ===
+  OK g++          C:\Program Files\mingw64\bin\g++.EXE (g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Bre)
+  OK cmake        C:\Program Files\CMake\bin\cmake.EXE (cmake version 4.4.1)
+  OK python       C:\Program Files\Python314\python.exe (Python 3.14.6)
+
+  OpenSSL include : C:\Program Files\mingw64\include
+  OpenSSL lib     : C:\Program Files\OpenSSL-Win64\lib\VC\x64\MD
+  MinGW bin       : C:\Program Files\mingw64\bin
+
+  Compilation C++ : possible
+2026-08-01 22:15:09 [INFO] Module C++ déjà compilé — utilisez --force pour recompiler
+2026-08-01 22:15:33 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 22:15:33 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 22:15:33 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 22:15:33 [INFO]  Démarrage du scan :  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau
+2026-08-01 22:15:33 [ERROR] Chemin introuvable: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\ C:\Users\DELL LATITUDE 5420\OneDrive\Bureau
+2026-08-01 22:15:33 [INFO]  Scan terminé en 0.00s -  0 fichiers(s) analysé (s),  0 menace (s) détectée (s) 
+2026-08-01 22:15:43 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 22:15:43 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 22:15:43 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 22:15:43 [INFO]  Démarrage du scan :  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau
+2026-08-01 22:15:43 [ERROR] Chemin introuvable: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\ C:\Users\DELL LATITUDE 5420\OneDrive\Bureau
+2026-08-01 22:15:43 [INFO]  Scan terminé en 0.00s -  0 fichiers(s) analysé (s),  0 menace (s) détectée (s) 
+2026-08-01 22:16:06 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 22:16:06 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 22:16:06 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 22:16:06 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau
+2026-08-01 22:16:08 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-08-01 22:16:08 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\Save\eicar.com
+2026-08-01 22:16:08 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-08-01 22:16:08 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\Tests\malware_test\eicar.com
+2026-08-01 22:17:36 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Cours\PLSQL.pdf
+2026-08-01 22:17:38 [INFO]  Scan terminé en 92.23s -  1394 fichiers(s) analysé (s),  2 menace (s) détectée (s) 
+2026-08-01 22:18:04 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 22:18:04 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 22:18:04 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 22:18:04 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau
+2026-08-01 22:18:05 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-08-01 22:18:05 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\Save\eicar.com
+2026-08-01 22:18:05 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-08-01 22:18:05 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\Tests\malware_test\eicar.com
+2026-08-01 22:18:08 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Cours\PLSQL.pdf
+2026-08-01 22:18:09 [INFO]  Scan terminé en 5.31s -  1394 fichiers(s) analysé (s),  2 menace (s) détectée (s) 
+2026-08-01 22:18:27 [INFO] Base de signatures initialisée : ./data/signatures.db
+2026-08-01 22:18:27 [INFO] Bloom Filter chargé : 3 signature(s), 21 bits actifs
+2026-08-01 22:18:27 [INFO] Module aegis_cpp (pybind11) chargé avec succès
+2026-08-01 22:18:27 [INFO]  Démarrage du scan : C:\Users\DELL LATITUDE 5420\OneDrive\Bureau
+2026-08-01 22:18:28 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-08-01 22:18:28 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\Save\eicar.com
+2026-08-01 22:18:28 [WARNING] Signature trouvée: EICAR-Test-File-MD5 (md5 : 44d88612fea8a8f3...)
+2026-08-01 22:18:28 [WARNING]  [!] MENACE : EICAR-Test-File-MD5  ->  C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Realisations\Antivirus\AEGIS\Tests\malware_test\eicar.com
+2026-08-01 22:18:31 [WARNING]  Fichier trop volumineux, ignoré: C:\Users\DELL LATITUDE 5420\OneDrive\Bureau\Cours\11111_Cours 3ème année\Saison 1\PL SQL\Cours\PLSQL.pdf
+2026-08-01 22:18:32 [INFO]  Scan terminé en 4.57s -  1394 fichiers(s) analysé (s),  2 menace (s) détectée (s) 

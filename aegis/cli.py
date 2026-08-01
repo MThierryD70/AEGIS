@@ -205,4 +205,57 @@ def update_status():
     click.echo(f"Base de données    : {status['database_path']}")
 
 
+@cli.group()
+def build():
+    """Compilation des modules C++ haute performance."""
+    pass
+
+@build.command(name="compile")
+@click.option("--force", is_flag=True,
+              help="Force la recompilation même si déjà compilé")
+def build_compile(force):
+    """Compile les modules C++ (hasher + bloom filter)."""
+    from aegis.build.builder import CppBuilder
+    config = get_config()
+    builder = CppBuilder()
+    success = builder.build(force_rebuild=force)
+
+    if success:
+        click.echo("\nOK Modules C++ prêts - performances maximales actives")
+    else:
+        click.echo(
+            "\n⚠ Compilation échouée ou environnement incomplet.\n"
+            "  AEGIS fonctionne en mode Python pur (moins rapide).\n"
+            "  Installez g++, CMake et OpenSSL puis relancez :\n"
+            "  antivirus build compile"
+        )
+
+
+@build.command(name="status")
+def build_status():
+    """Affiche le statut des modules C++."""
+    from aegis.build.detector import EnvironmentDetector
+    from pathlib import Path
+    get_config()
+
+    detector = EnvironmentDetector()
+    report = detector.detect()
+    click.echo(report.summary())
+
+    bin_dir = Path("cpp/bin")
+    pyd_files = list(bin_dir.glob("aegis_cpp*.pyd")) if bin_dir.exists() else []
+
+    click.echo("\n=== Modules compilés ===")
+    if pyd_files:
+        for f in pyd_files:
+            click.echo(f"  OK {f.name}")
+    else:
+        click.echo("  X Aucun module compilé")
+        click.echo("    Lancez : antivirus build compile")
+
+
+
+
+
+
 
