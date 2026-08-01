@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\aegis_cpp.dir/objects.a
+"C:\Program Files\mingw64\bin\ar.exe" qc CMakeFiles\aegis_cpp.dir/objects.a @CMakeFiles\aegis_cpp.dir\objects1.rsp
+"C:\Program Files\mingw64\bin\c++.exe" -O3 -DNDEBUG -shared -o aegis_cpp.cp314-win_amd64.pyd -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\aegis_cpp.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\aegis_cpp.dir\linkLibs.rsp

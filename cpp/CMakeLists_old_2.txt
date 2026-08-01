@@ -7,25 +7,34 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Trouve Python
 find_package(Python REQUIRED COMPONENTS Interpreter Development)
 
-# pybind11
-find_package(pybind11 REQUIRED CONFIG)
+# pybind11 — chemin récupéré depuis Python
+execute_process(
+    COMMAND "${Python_EXECUTABLE}" -c
+        "import pybind11; print(pybind11.get_cmake_dir())"
+    OUTPUT_VARIABLE PYBIND11_CMAKE_DIR
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+    RESULT_VARIABLE PYBIND11_RESULT
+)
 
-# OpenSSL — chemins passés explicitement via -D
-# (détectés par antivirus/build/detector.py)
-if(NOT OPENSSL_INCLUDE_DIR)
+if(NOT PYBIND11_RESULT EQUAL 0)
     message(FATAL_ERROR
-        "OPENSSL_INCLUDE_DIR non défini. "
-        "Utilisez python main.py build pour compiler.")
+        "pybind11 introuvable. Lancez : pip install pybind11")
 endif()
 
-if(NOT OPENSSL_SSL_LIBRARY OR NOT OPENSSL_CRYPTO_LIBRARY)
+list(APPEND CMAKE_PREFIX_PATH "${PYBIND11_CMAKE_DIR}")
+find_package(pybind11 REQUIRED CONFIG)
+
+# OpenSSL - find_package cherche automatiquement
+# Les chemins peuvent être passés via -DOPENSSL_INCLUDE_DIR etc.
+find_package(OpenSSL REQUIRED)
+
+if(NOT OpenSSL_FOUND)
     message(FATAL_ERROR
-        "OPENSSL_SSL_LIBRARY ou OPENSSL_CRYPTO_LIBRARY non défini.")
+        "OpenSSL introuvable. Installez OpenSSL et relancez.")
 endif()
 
 message(STATUS "OpenSSL include : ${OPENSSL_INCLUDE_DIR}")
-message(STATUS "OpenSSL SSL lib : ${OPENSSL_SSL_LIBRARY}")
-message(STATUS "OpenSSL Crypto  : ${OPENSSL_CRYPTO_LIBRARY}")
+message(STATUS "OpenSSL libs    : ${OPENSSL_LIBRARIES}")
 
 # Module Python
 pybind11_add_module(aegis_cpp src/aegis_module.cpp)
@@ -35,8 +44,8 @@ target_include_directories(aegis_cpp PRIVATE
 )
 
 target_link_libraries(aegis_cpp PRIVATE
-    ${OPENSSL_SSL_LIBRARY}
-    ${OPENSSL_CRYPTO_LIBRARY}
+    OpenSSL::SSL
+    OpenSSL::Crypto
 )
 
 # Copie le .pyd dans cpp/bin/
@@ -47,6 +56,8 @@ add_custom_command(TARGET aegis_cpp POST_BUILD
         $<TARGET_FILE:aegis_cpp>
         "${CMAKE_SOURCE_DIR}/bin/$<TARGET_FILE_NAME:aegis_cpp>"
 )
+
+
 
 
 
