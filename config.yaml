@@ -12,4 +12,4 @@ quarantine:
 
 logging:
   level: "INFO"
-  file: "./logs/antivirus.log"
+  file: "./logs/aegis.log"

@@ -117,7 +117,6 @@ def update():
     """Gestion des mises à jours de signatures."""
     pass
 
-
 @update.command(name="import")
 @click.argument("json_path")
 def update_import(json_path):

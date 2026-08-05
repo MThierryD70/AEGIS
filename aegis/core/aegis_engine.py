@@ -1,7 +1,7 @@
 import sys
 import os
 from pathlib import Path
-from aegis.logger.logger import get_logger
+from aegis.logger.logger import get_logger, log_section, log_success, log_failure,log_blank
 
 # Chemin vers cpp/bin - contient le .pyd et les DLL
 _CPP_BIN = Path(__file__).parent.parent.parent / "cpp" / "bin"
@@ -36,13 +36,28 @@ def _load_aegis_cpp():
     
 _cpp = _load_aegis_cpp()
 
-def log_status():
+
+
+
+'''def log_status():
     """Appelle cette fonction après setup_logger() pour afficher le status."""
     logger = get_logger()
     if _cpp is not None:
         logger.info("Module aegis_cpp (pybind11) chargé avec succès")
     else:
         logger.warning("aegis_cpp non disponible - fallback Python actif")
+'''
+
+def log_status():
+    log_section("Modules C++")
+    if _cpp is not None:
+        log_success("Module aegis_cpp (pybind11) chargé")
+    else:
+        log_failure("aegis_cpp non disponible - fallback Python actif")
+    log_blank()
+
+
+
 
 class AegisHasher:
     """Hasher unifié - C++ si disponible, Python sinon."""

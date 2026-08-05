@@ -7,18 +7,38 @@ import click
 def get_config():
     from aegis.config.manager import Config
     from aegis.logger.logger import setup_logger
+    
     config = Config.from_yaml("config.yaml")
     setup_logger(config)
     return config
 
 
-
 # ─────────────────────────────────────────
 # Groupe principal
 # ─────────────────────────────────────────
-@click.group()
+def print_logo_safe():
+    """Affiche le logo sans planter si pyfiglet manque."""
+    try:
+        from aegis.logo import print_logo
+        print_logo()
+    except Exception:
+        pass
+
+class AegisGroup(click.Group):
+    """Groupe Click personnalisé qui affiche le logo sur --help ou sans args."""
+    def invoke(self, ctx):
+        # Affiche le logo si aucune sous-commande ou si --help
+        if not ctx.protected_args and not ctx.args:
+            print_logo_safe()
+        super().invoke(ctx)
+
+    def get_help(self, ctx):
+        print_logo_safe()
+        return super().get_help(ctx)
+
+@click.group(cls=AegisGroup)
 def cli():
-    """AEGIS Antivirus — Protection à base de signatures."""
+    """AEGIS Antivirus - Protection à base de signatures."""
     pass
 
 
@@ -167,6 +187,8 @@ def quarantine_delete(quarantine_id):
         click.echo("Échec de la suppression.", err=True)
 
 
+
+
 # ─────────────────────────────────────────
 # Groupe : update
 # ─────────────────────────────────────────
@@ -193,6 +215,25 @@ def update_import(json_path):
     else:
         click.echo("Import échoué.", err=True)
 
+@update.command(name="fetch")
+@click.argument("url")
+@click.option("--verify/--no-verify", default=True,
+              help="Vérifie l'intégrité SHA-256 si disponible")
+def update_fetch(url, verify):
+    """Télécharge et importe des signatures depuis une URL."""
+    from aegis.updater.updater import Updater
+    config = get_config()
+    updater = Updater(config)
+    result = updater.import_from_url(url)
+
+    if result["success"]:
+        click.echo(f"Import depuis URL réussi :")
+        click.echo(f"  Ajoutées : {result['added']}")
+        click.echo(f"  Doublons : {result['skipped']}")
+        click.echo(f"  Erreurs  : {result['errors']}")
+    else:
+        click.echo("Import depuis URL échoué.", err=True)
+
 
 @update.command(name="status")
 def update_status():
@@ -203,6 +244,10 @@ def update_status():
     status = updater.status()
     click.echo(f"Signatures en base : {status['total_signatures']}")
     click.echo(f"Base de données    : {status['database_path']}")
+
+
+
+
 
 
 @cli.group()
@@ -227,11 +272,95 @@ def build_compile(force):
             "\n⚠ Compilation échouée ou environnement incomplet.\n"
             "  AEGIS fonctionne en mode Python pur (moins rapide).\n"
             "  Installez g++, CMake et OpenSSL puis relancez :\n"
-            "  antivirus build compile"
+            "  aegis build compile"
         )
 
 
 @build.command(name="status")
+def build_status():
+    """Affiche le statut des modules C++."""
+    from aegis.build.detector import EnvironmentDetector
+    from aegis.logger.logger import log_section, log_blank, log_success, log_failure
+    from rich.console import Console
+    from pathlib import Path
+    get_config()
+
+    console = Console()
+    detector = EnvironmentDetector()
+    report = detector.detect()
+
+    # ── Section Environnement C++ ──
+    log_section("Environnement C++")
+
+    for tool in report.tools:
+        if tool.found:
+            console.print(
+                f"  [bold green]✓[/bold green] "
+                f"[cyan]{tool.name:<8}[/cyan] {tool.path}"
+            )
+        else:
+            console.print(
+                f"  [bold red]✗[/bold red] "
+                f"[cyan]{tool.name:<8}[/cyan] "
+                f"[dim]{tool.note}[/dim]"
+            )
+
+    log_blank()
+
+    # Chemins OpenSSL et MinGW
+    fields = [
+        ("OpenSSL include", report.openssl_include),
+        ("OpenSSL lib    ", report.openssl_lib),
+        ("MinGW bin      ", report.mingw_bin),
+    ]
+    for label, value in fields:
+        if value:
+            console.print(
+                f"  [dim]{label}[/dim] : "
+                f"[white]{value}[/white]"
+            )
+        else:
+            console.print(
+                f"  [dim]{label}[/dim] : "
+                f"[red]non trouvé[/red]"
+            )
+
+    log_blank()
+
+    # Résultat compilation
+    if report.can_build:
+        console.print(
+            "  Compilation C++ : [bold green]✓ possible[/bold green]"
+        )
+    else:
+        console.print(
+            "  Compilation C++ : [bold red]✗ impossible[/bold red]"
+        )
+        console.print(
+            "  [dim]Lancez : aegis build compile[/dim]"
+        )
+
+    # ── Section Modules compilés ──
+    log_blank()
+    log_section("Modules compilés")
+
+    bin_dir = Path("cpp/bin")
+    pyd_files = list(bin_dir.glob("aegis_cpp*.pyd")) if bin_dir.exists() else []
+
+    if pyd_files:
+        for f in pyd_files:
+            console.print(f"  [bold green]✓[/bold green] {f.name}")
+    else:
+        console.print("  [bold red]✗[/bold red] Aucun module compilé")
+        console.print(
+            "  [dim]Lancez : aegis build compile[/dim]"
+        )
+
+    log_blank()
+
+
+
+'''
 def build_status():
     """Affiche le statut des modules C++."""
     from aegis.build.detector import EnvironmentDetector
@@ -245,14 +374,14 @@ def build_status():
     bin_dir = Path("cpp/bin")
     pyd_files = list(bin_dir.glob("aegis_cpp*.pyd")) if bin_dir.exists() else []
 
-    click.echo("\n=== Modules compilés ===")
+    click.echo("=== Modules compilés ===")
     if pyd_files:
         for f in pyd_files:
             click.echo(f"  OK {f.name}")
     else:
         click.echo("  X Aucun module compilé")
-        click.echo("    Lancez : antivirus build compile")
-
+        click.echo("    Lancez : aegis build compile")
+'''
 
 
 

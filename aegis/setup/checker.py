@@ -3,7 +3,7 @@ import importlib
 import subprocess
 from dataclasses import dataclass, field
 from typing import List
-from aegis.logger.logger import get_logger
+from aegis.logger.logger import get_logger, log_section, log_blank
 
 
 
@@ -12,6 +12,7 @@ REQUIRED = [
     ("yaml",            "pyyaml",           "6.0.1"),
     ("click",           "click",            "8.1.7"),
     ("rich",            "rich",             "13.7.0"),
+    ("pyfiglet",    "pyfiglet",          "1.0.2"),
     ("pefile",          "pefile",           "2023.2.7"),
     ("httpx",           "httpx",            "0.25.2"),
     ("cryptography",    "cryptography",     "41.0.7"),
@@ -119,9 +120,39 @@ class DependencyChecker:
                 )
             report.results.append(result)
         return report
+    
 
     def run_full_check(self, auto_install: bool = True) -> bool:
-        self.logger.info("\n\n====================== Vérification des dépendances Python ============================")
+        log_section("Vérification des dépendances Python")
+    
+        if not self.check_python_version():
+            log_blank()
+            return False
+    
+        self.logger.info("Dépendances obligatoires :")
+        report = self.check_and_install(REQUIRED, auto_install)
+    
+        self.logger.info("Dépendances optionnelles :")
+        self.check_and_install(OPTIONAL, auto_install=False)
+    
+        log_blank()  # ← placé AVANT les return
+    
+        if report.all_ok:
+            self.logger.info(
+                f"Toutes les dépendances sont satisfaites "
+                f"({report.installed_count} installée(s))"
+            )
+        else:
+            self.logger.error(
+                f"Dépendances manquantes : {', '.join(report.failed)}"
+            )
+    
+        log_blank()
+        return report.all_ok  # ← un seul return à la fin
+
+
+    '''def run_full_check(self, auto_install: bool = True) -> bool:
+        log_section("Vérification des dépendances Python")
 
         if not self.check_python_version():
             return False
@@ -143,6 +174,9 @@ class DependencyChecker:
                 f"Dépendances manquantes : {', '.join(report.failed)}"
             )
             return False
+
+        log_blank()
+        return report.all_ok'''
         
 
 

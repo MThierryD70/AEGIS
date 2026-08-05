@@ -7,50 +7,120 @@ développé en Python avec extensions C++ via pybind11.
 
 - **Python 3.10+** — [télécharger](https://www.python.org/downloads/)
 - **g++ et CMake** *(optionnel — pour les performances C++)* — [télécharger](https://github.com/brechtsanders/winlibs_mingw)
-- **OpenSSL** *(optionnel — requis avec g++)* — [télécharger](https://slproweb.com/products/Win32OpenSSL.html)
+- **OpenSSL** *(optionnel - requis avec g++)* — [télécharger](https://slproweb.com/products/Win32OpenSSL.html)
 
 ## Installation
 
+
 ```bash
-git clone https://github.com/<ton-compte>/aegis.git
+git clone https://github.com/MThierryD70/AEGIS.git
 cd aegis
 python install.py
 ```
 
-C'est tout. Le script installe les dépendances, compile les modules
-C++ si l'environnement le permet, et valide l'installation.
+Le script installe les dépendances, compile les modules C++ si
+l'environnement le permet, et valide l'installation.
+
+Après installation, deux façons de lancer AEGIS :
+
+```bash
+# Commande directe (recommandée - si Scripts/ est dans votre PATH)
+aegis scan <chemin>
+
+# Alternative universelle
+python aegis.py scan <chemin>
+```
 
 ## Commandes disponibles
 
 ```bash
 # Scanner un fichier ou répertoire
-antivirus scan <chemin>
-antivirus scan <chemin> --json       # rapport JSON
-antivirus scan <chemin> --quarantine # mise en quarantaine auto
+aegis scan <chemin>
+aegis scan <chemin> --json       # rapport JSON
+aegis scan <chemin> --quarantine # mise en quarantaine auto
 
 # Mettre à jour les signatures
-antivirus update import signatures.json
-antivirus update status
+aegis update import signatures.json
+aegis update status
 
 # Gérer la quarantaine
-antivirus quarantine list
-antivirus quarantine restore <id>
-antivirus quarantine delete <id>
+aegis quarantine list
+aegis quarantine restore <id>
+aegis quarantine delete <id>
 
 # Compiler les modules C++
-antivirus build compile
-antivirus build compile --force
-antivirus build status
+aegis build compile
+aegis build compile --force
+aegis build status
 
 # Vérifier les dépendances Python
-antivirus setup
+aegis setup
 ```
+
+
+# ⚠ Base de signatures — action requise
+
+La base de signatures fournie dans ce dépôt est **volontairement
+légère** (< 500 signatures) pour des raisons de taille de dépôt
+GitHub.
+
+**Un antivirus efficace nécessite des millions de signatures.**
+
+Pour enrichir la base, importe des signatures depuis des sources
+publiques de threat intelligence :
+
+### Sources recommandées
+
+| Source | Format | Lien |
+|--------|--------|------|
+| MalwareBazaar | JSON | https://bazaar.abuse.ch/export/ |
+| VirusShare | MD5 hashsets | https://virusshare.com |
+| OpenIOC | Indicateurs | https://github.com/fireeye/iocs |
+
+### Procédure d'import
+
+```bash
+# 1 — Télécharge un export JSON depuis MalwareBazaar
+# 2 — Convertis au format AEGIS si nécessaire (voir TECHNICAL_DOCS.md)
+# 3 — Importe dans la base
+
+aegis update import signatures.json
+
+# Vérifie le nombre de signatures chargées
+aegis update status
+```
+
+### Format JSON attendu
+
+```json
+{
+  "version": "2026.04.21",
+  "signatures": [
+    {
+      "hash_type": "sha256",
+      "hash_value": "275a021b...",
+      "malware_name": "NomDuMalware",
+      "severity": 3
+    }
+  ]
+}
+```
+
+> **Note** : Plus la base est volumineuse, plus le Bloom Filter
+> C++ fait une grande différence de gain sur les lookups.
+> Avec 1 million de signatures, le filtre n'occupe que ~9.6 Mo en RAM.
+
+
+
+
+
+
 
 ## Architecture
 
 ```
 AEGIS/
-├── antivirus/          # Package principal
+├── aegis/          # Package principal
 │   ├── scanner/        # FileWalker, Hasher, Engine
 │   ├── detection/      # SignatureMatcher, Heuristic, YARA
 │   ├── db/             # SignatureDB (SQLite)

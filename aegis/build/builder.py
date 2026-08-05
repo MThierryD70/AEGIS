@@ -3,7 +3,7 @@ import shutil
 import sys
 from pathlib import Path
 from aegis.build.detector import EnvironmentDetector, EnvReport
-from aegis.logger.logger import get_logger
+from aegis.logger.logger import get_logger, log_section, log_blank, log_success, log_failure
 
 
 class CppBuilder:
@@ -15,11 +15,10 @@ class CppBuilder:
         self.detector  = EnvironmentDetector()
 
     def build(self, force_rebuild: bool = False) -> bool:
-        self.logger.info("=== Construction des modules C++ ===")
+        log_section("Compilation des modules C++")
 
         # Étape 1 — détection environnement
         report = self.detector.detect()
-        self.logger.info(report.summary())
 
         if not report.can_build:
             self.logger.warning(
@@ -88,12 +87,21 @@ class CppBuilder:
         if not self._cmake_build():
             return False
 
-        if self._pyd_exists():
+        '''if self._pyd_exists():
             self.logger.info("✓ Module C++ compilé avec succès")
             self._verify_module()
             return True
         else:
             self.logger.error("✗ Fichier .pyd introuvable après compilation")
+            return False'''
+
+        if self._pyd_exists():
+            log_success("Module C++ compilé avec succès")
+            log_blank()
+            return True
+        else:
+            log_failure("Fichier .pyd introuvable après compilation")
+            log_blank()
             return False
 
 
@@ -224,7 +232,7 @@ class CppBuilder:
             "\nPour installer les outils manquants :\n"
             "  g++/CMake : https://github.com/brechtsanders/winlibs_mingw\n"
             "  OpenSSL   : https://slproweb.com/products/Win32OpenSSL.html\n"
-            "  Puis relancez : antivirus build"
+            "  Puis relancez : aegis build"
         )
 
     def rebuild(self) -> bool:

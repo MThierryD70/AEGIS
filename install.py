@@ -1,5 +1,5 @@
 """
-AEGIS Antivirus — Script d'installation universel
+AEGIS Antivirus - Script d'installation universel
 Usage : python install.py
 """
 import sys
@@ -11,7 +11,7 @@ from pathlib import Path
 def print_header():
     print("""
 ╔══════════════════════════════════════════════════════╗
-║           AEGIS Antivirus — Installation             ║
+║           AEGIS Antivirus - Installation             ║
 ║      Antivirus à base de signatures Python/C++       ║
 ╚══════════════════════════════════════════════════════╝
 """)
@@ -93,7 +93,7 @@ def build_cpp_modules() -> bool:
             print("        AEGIS fonctionnera en mode Python pur")
             print("        Pour activer C++ plus tard :")
             print("        1. Installez g++ et CMake")
-            print("        2. Lancez : antivirus build compile")
+            print("        2. Lancez : aegis build compile")
             return False
 
     except Exception as e:
@@ -129,10 +129,12 @@ def run_validation() -> bool:
 
         # Vérifie la CLI
         result = subprocess.run(
-            [sys.executable, "main.py", "--help"],
+            [sys.executable, "aegis.py", "--help"],
             capture_output=True,
             text=True
         )
+ 
+
         if result.returncode == 0:
             print(f"      ✓ CLI opérationnelle")
         else:
@@ -174,18 +176,44 @@ def print_summary(steps: dict):
     print("╠══════════════════════════════════════════════════════╣")
 
     if all_critical_ok:
-        print("║  ✓ AEGIS est prêt à l'emploi !                      ║")
+        print("║  ✓ AEGIS est prêt à l'emploi !                       ║")
         print("║                                                      ║")
         print("║  Commandes disponibles :                             ║")
-        print("║    antivirus scan <chemin>                           ║")
-        print("║    antivirus update import <fichier.json>            ║")
-        print("║    antivirus quarantine list                         ║")
-        print("║    antivirus build compile                           ║")
-        print("║    antivirus --help                                  ║")
+        print("║    aegis scan <chemin>                               ║")
+        print("║    aegis update import <fichier.json>                ║")
+        print("║    aegis quarantine list                             ║")
+        print("║    aegis build compile                               ║")
+        print("║    aegis --help                                      ║")
+        print("║                                                      ║")
+        print("║  Alternative : python aegis.py <commande>            ║")
+
     else:
         print("║  ✗ Installation incomplète — voir erreurs ci-dessus  ║")
 
     print("╚══════════════════════════════════════════════════════╝")
+
+
+def import_initial_signatures() -> bool:
+    print("[+] Import des signatures initiales...")
+    sample = Path("data/sample_signatures.json")
+    if not sample.exists():
+        print("      ⚠ Aucun fichier de signatures trouvé")
+        return True  # non bloquant
+
+    try:
+        from aegis.config.manager import Config
+        from aegis.logger.logger import setup_logger
+        from aegis.updater.updater import Updater
+
+        config = Config.from_yaml("config.yaml")
+        setup_logger(config)
+        updater = Updater(config)
+        result = updater.import_from_file(str(sample))
+        print(f"      ✓ {result['added']} signature(s) importée(s)")
+        return True
+    except Exception as e:
+        print(f"      ⚠ Import ignoré : {e}")
+        return True  # non bloquant
 
 
 def main():
@@ -199,28 +227,31 @@ def main():
         "valid":  False,
     }
 
-    # Étape 1 — Python
+    # Étape 1 - Python
     steps["python"] = check_python_version()
     if not steps["python"]:
         print_summary(steps)
         sys.exit(1)
 
-    # Étape 2 — rich (bootstrap)
+    # Étape 2 - rich (bootstrap)
     steps["rich"] = install_rich()
     if not steps["rich"]:
         print_summary(steps)
         sys.exit(1)
 
-    # Étape 3 — dépendances
+    # Étape 3 - dépendances
     steps["deps"] = install_dependencies()
     if not steps["deps"]:
         print_summary(steps)
         sys.exit(1)
 
-    # Étape 4 — modules C++ (optionnel — pas de sys.exit si échec)
+    # Étape 4 - modules C++ (optionnel — pas de sys.exit si échec)
     steps["cpp"] = build_cpp_modules()
 
-    # Étape 5 — validation
+    # Étape 5 - Import des signatures initales
+    import_initial_signatures()
+
+    # Étape 6 - validation
     steps["valid"] = run_validation()
 
     print_summary(steps)

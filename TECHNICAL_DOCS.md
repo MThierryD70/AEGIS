@@ -564,7 +564,7 @@ result = lib.sha256_file(path.encode())
 ```cmake
 # CMakeLists.txt
 cmake_minimum_required(VERSION 3.15)
-project(antivirus_cpp)
+project(eagis_cpp)
 
 find_package(pybind11 REQUIRED)
 find_package(OpenSSL REQUIRED)

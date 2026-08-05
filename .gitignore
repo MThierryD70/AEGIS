@@ -1,0 +1,53 @@
+# ── Python ──────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+.installed.cfg
+pip-wheel-metadata/
+
+# ── Package installé ────────────────────
+aegis_antivirus.egg-info/
+
+# ── C++ / CMake ─────────────────────────
+cpp/build/
+cpp/bin/*.pyd
+cpp/bin/*.dll
+cpp/bin/libgcc*
+cpp/bin/libstdc*
+cpp/bin/libwinpthread*
+cpp/bin/libcrypto*
+cpp/old_build/
+
+# ── Données générées ────────────────────
+data/signatures.db
+logs/
+quarantine/
+
+# ── Environnements virtuels ─────────────
+.venv/
+venv/
+env/
+
+# ── IDE ─────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── OS ──────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Fichiers temporaires ─────────────────
+*.tmp
+*.bak
+*.swp
+tmp/
+temp/

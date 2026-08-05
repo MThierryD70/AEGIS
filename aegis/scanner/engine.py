@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import List, Optional
 
 from aegis.config.manager import Config
-from aegis.logger.logger import get_logger
+from aegis.logger.logger import get_logger, log_section, log_blank
 from aegis.scanner.walker import FileWalker
 from aegis.db.signature_db import SignatureDB
 
@@ -63,8 +63,9 @@ class ScanReport:
             f" {self.threats_found} menace (s) détectée (s) "
         )
 
-class ScannerEngine:
 
+
+class ScannerEngine:
     def __init__(self, config: Config):
         self.config = config
         self.logger = get_logger()
@@ -79,9 +80,32 @@ class ScannerEngine:
         log_status()
 
 
+    def scan(self, path: str) -> ScanReport:
+        log_section(f"Scan — {path}")
+        self.logger.info(f"Démarrage du scan : {path}")
+        report = ScanReport()
+        start = time.perf_counter()
+
+        for file_path in self.walker.walk(path):
+            result = self._analyze(file_path)
+            report.results.append(result)
+            if result.is_threat:
+                self.logger.warning(
+                    f"MENACE : {result.match_result.malware_name} "
+                    f"→ {file_path.name}"
+                )
+            else:
+                self.logger.debug(f"Propre : {file_path.name}")
+
+        report.duration_seconds = time.perf_counter() - start
+        log_blank()
+        self.logger.info(str(report))
+        log_blank()
+        return report
 
 
-    def scan (self, path: str) -> ScanReport:
+
+    '''def scan (self, path: str) -> ScanReport:
         self.logger.info (f" Démarrage du scan : {path}")
         report = ScanReport()
         start = time.perf_counter()
@@ -98,7 +122,10 @@ class ScannerEngine:
                 self.logger.debug(f" Propre: {file_path}")
         report.duration_seconds = time.perf_counter() - start
         self.logger.info(str(report))
-        return report
+        return report'''
+
+
+    
     
     def _analyze(self, path: Path) -> FileResult:
         #hashes = HashCalculator.compute (path)

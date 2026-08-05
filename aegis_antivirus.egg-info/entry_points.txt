@@ -1,2 +1,2 @@
 [console_scripts]
-antivirus = antivirus.cli:cli
+aegis = aegis.cli:cli
