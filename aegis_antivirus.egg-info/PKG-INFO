@@ -12,11 +12,12 @@ Requires-Dist: click>=8.1.7
 Requires-Dist: rich>=13.7.0
 Requires-Dist: pyfiglet>=1.0.2
 Requires-Dist: pefile>=2023.2.7
-Requires-Dist: python-magic-bin>=0.4.14
 Requires-Dist: httpx>=0.25.2
 Requires-Dist: cryptography>=41.0.7
 Requires-Dist: pybind11>=3.0.0
 Requires-Dist: yara-python>=4.3.0
+Requires-Dist: python-magic-bin>=0.4.14; sys_platform == "win32"
+Requires-Dist: python-magic>=0.4.27; sys_platform != "win32"
 Provides-Extra: api
 Requires-Dist: fastapi>=0.104.1; extra == "api"
 Requires-Dist: uvicorn>=0.24.0; extra == "api"

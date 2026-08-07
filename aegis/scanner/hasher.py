@@ -28,6 +28,6 @@ class HashCalculator:
             return None
         
         except OSError as e:
-            logger.error(f"Erreur lecture du fichier {path} : {e}")
+            logger.warning(f"Fichier illisible, ignoré {path} : {e}")
             return None
     

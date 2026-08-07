@@ -260,25 +260,46 @@ def build():
               help="Force la recompilation même si déjà compilé")
 def build_compile(force):
     """Compile les modules C++ (hasher + bloom filter)."""
+    from aegis.build.msys2_detector import Msys2Detector
+    from aegis.build.msys2_builder import Msys2CppBuilder
     from aegis.build.builder import CppBuilder
     config = get_config()
-    builder = CppBuilder()
+
+    # MSYS2 est la chaîne préférée (chemins sans espaces) ;
+    # la chaîne classique sert de secours.
+    msys2 = Msys2Detector()
+    if msys2.is_available():
+        builder = Msys2CppBuilder()
+    else:
+        builder = CppBuilder()
+
     success = builder.build(force_rebuild=force)
 
     if success:
         click.echo("\nOK Modules C++ prêts - performances maximales actives")
     else:
-        click.echo(
-            "\n⚠ Compilation échouée ou environnement incomplet.\n"
-            "  AEGIS fonctionne en mode Python pur (moins rapide).\n"
-            "  Installez g++, CMake et OpenSSL puis relancez :\n"
-            "  aegis build compile"
-        )
+        click.echo("\n⚠ Compilation échouée ou environnement incomplet.")
+        click.echo("  AEGIS fonctionne en mode Python pur (moins rapide).")
+        if not msys2.is_available():
+            click.echo("\n  MSYS2 non détecté — chaîne recommandée :")
+            click.echo("    1. Installez MSYS2 : https://www.msys2.org")
+            click.echo("    2. Dans le terminal « MSYS2 MINGW64 » :")
+            click.echo(f"         {msys2.pacman_command()}")
+            click.echo("    3. Dans cmd (PATH utilisateur) :")
+            click.echo(f"         {msys2.path_command()}")
+        else:
+            click.echo(
+                "\n  Paquets MSYS2 manquants ? "
+                "Dans « MSYS2 MINGW64 » :"
+            )
+            click.echo(f"    {msys2.pacman_command()}")
+        click.echo("\n  Puis relancez : aegis build compile")
 
 
 @build.command(name="status")
 def build_status():
     """Affiche le statut des modules C++."""
+    from aegis.build.msys2_detector import Msys2Detector
     from aegis.build.detector import EnvironmentDetector
     from aegis.logger.logger import log_section, log_blank, log_success, log_failure
     from rich.console import Console
@@ -286,62 +307,141 @@ def build_status():
     get_config()
 
     console = Console()
-    detector = EnvironmentDetector()
-    report = detector.detect()
+    msys2 = Msys2Detector()
 
-    # ── Section Environnement C++ ──
-    log_section("Environnement C++")
+    # ── Section Chaîne MSYS2 (recommandée) ──
+    log_section("Environnement C++ (MSYS2)")
 
-    for tool in report.tools:
-        if tool.found:
+    if msys2.is_available():
+        report = msys2.detect()
+
+        for tool in report.tools:
+            if tool.found:
+                console.print(
+                    f"  [bold green]✓[/bold green] "
+                    f"[cyan]{tool.name:<12}[/cyan] {tool.path}"
+                )
+            else:
+                console.print(
+                    f"  [bold red]✗[/bold red] "
+                    f"[cyan]{tool.name:<12}[/cyan] "
+                    f"[dim]{tool.note}[/dim]"
+                )
+
+        log_blank()
+
+        fields = [
+            ("OpenSSL include", report.openssl_include),
+            ("OpenSSL lib    ", report.openssl_lib),
+            ("MSYS2 bin      ", report.mingw_bin),
+            ("Générateur     ", msys2.generator or "non trouvé"),
+        ]
+        for label, value in fields:
+            if value:
+                console.print(
+                    f"  [dim]{label}[/dim] : "
+                    f"[white]{value}[/white]"
+                )
+            else:
+                console.print(
+                    f"  [dim]{label}[/dim] : "
+                    f"[red]non trouvé[/red]"
+                )
+
+        log_blank()
+
+        if report.can_build:
             console.print(
-                f"  [bold green]✓[/bold green] "
-                f"[cyan]{tool.name:<8}[/cyan] {tool.path}"
+                "  Compilation C++ : [bold green]✓ possible[/bold green]"
             )
         else:
             console.print(
-                f"  [bold red]✗[/bold red] "
-                f"[cyan]{tool.name:<8}[/cyan] "
-                f"[dim]{tool.note}[/dim]"
+                "  Compilation C++ : [bold red]✗ impossible[/bold red]"
             )
-
-    log_blank()
-
-    # Chemins OpenSSL et MinGW
-    fields = [
-        ("OpenSSL include", report.openssl_include),
-        ("OpenSSL lib    ", report.openssl_lib),
-        ("MinGW bin      ", report.mingw_bin),
-    ]
-    for label, value in fields:
-        if value:
             console.print(
-                f"  [dim]{label}[/dim] : "
-                f"[white]{value}[/white]"
+                "  [dim]Paquets MSYS2 manquants — dans « MSYS2 MINGW64 » :\n"
+                f"  {msys2.pacman_command()}"
             )
-        else:
-            console.print(
-                f"  [dim]{label}[/dim] : "
-                f"[red]non trouvé[/red]"
-            )
+            console.print("  [dim]Puis : aegis build compile[/dim]")
 
-    log_blank()
+        log_blank()
 
-    # Résultat compilation
-    if report.can_build:
-        console.print(
-            "  Compilation C++ : [bold green]✓ possible[/bold green]"
-        )
     else:
+        console.print("  [bold red]✗ MSYS2 non installé[/bold red]")
         console.print(
-            "  Compilation C++ : [bold red]✗ impossible[/bold red]"
+            "  [dim]Chaîne recommandée : chemins sans espaces,"
+            " ni ld.exe ni DLL introuvables.[/dim]"
+        )
+        console.print("  [dim]Installation :[/dim]")
+        console.print("    1. [cyan]https://www.msys2.org[/cyan]")
+        console.print("    2. Dans le terminal « MSYS2 MINGW64 » :")
+        console.print(
+            f"       [bold cyan]{msys2.pacman_command()}[/bold cyan]"
+        )
+        console.print("    3. Dans cmd (PATH utilisateur) :")
+        console.print(
+            f"       [bold cyan]{msys2.path_command()}[/bold cyan]"
         )
         console.print(
-            "  [dim]Lancez : aegis build compile[/dim]"
+            "       Puis rouvrez le terminal et relancez :"
+            " aegis build status"
         )
+        log_blank()
+
+        # ── Chaîne de secours (ancien MinGW) ──
+        log_section("Chaîne de secours (MinGW classique)")
+
+        report = EnvironmentDetector().detect()
+        for tool in report.tools:
+            if tool.found:
+                console.print(
+                    f"  [bold green]✓[/bold green] "
+                    f"[cyan]{tool.name:<12}[/cyan] {tool.path}"
+                )
+            else:
+                console.print(
+                    f"  [bold red]✗[/bold red] "
+                    f"[cyan]{tool.name:<12}[/cyan] "
+                    f"[dim]{tool.note}[/dim]"
+                )
+
+        log_blank()
+
+        fields = [
+            ("OpenSSL include", report.openssl_include),
+            ("OpenSSL lib    ", report.openssl_lib),
+            ("MinGW bin      ", report.mingw_bin),
+        ]
+        for label, value in fields:
+            if value:
+                console.print(
+                    f"  [dim]{label}[/dim] : "
+                    f"[white]{value}[/white]"
+                )
+            else:
+                console.print(
+                    f"  [dim]{label}[/dim] : "
+                    f"[red]non trouvé[/red]"
+                )
+
+        log_blank()
+
+        if report.can_build:
+            console.print(
+                "  Compilation C++ : "
+                "[bold yellow]✓ possible (secours)[/bold yellow]"
+            )
+        else:
+            console.print(
+                "  Compilation C++ : [bold red]✗ impossible[/bold red]"
+            )
+        console.print(
+            "  [dim]La chaîne MSYS2 reste recommandée pour éviter"
+            " les soucis de chemins avec espaces.[/dim]"
+        )
+        log_blank()
 
     # ── Section Modules compilés ──
-    log_blank()
     log_section("Modules compilés")
 
     bin_dir = Path("cpp/bin")

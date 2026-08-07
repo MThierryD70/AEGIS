@@ -1,4 +1,5 @@
 import sys
+import platform
 import importlib
 import subprocess
 from dataclasses import dataclass, field
@@ -6,19 +7,29 @@ from typing import List
 from aegis.logger.logger import get_logger, log_section, log_blank
 
 
+# Dépendances obligatoires adaptées par OS (nom_import, nom_pip, version_min)
+def get_required_packages():
+    base = [
+        ("yaml",         "pyyaml",       "6.0.1"),
+        ("click",        "click",        "8.1.7"),
+        ("rich",         "rich",         "13.7.0"),
+        ("pyfiglet",     "pyfiglet",     "1.0.2"),
+        ("pefile",       "pefile",       "2023.2.7"),
+        ("httpx",        "httpx",        "0.25.2"),
+        ("cryptography", "cryptography", "41.0.7"),
+        ("pybind11",     "pybind11",     "3.0.0"),
+        ("yara",         "yara-python",  "4.3.0"),
+    ]
+    if platform.system() == "Windows":
+        base.append(("magic", "python-magic-bin", "0.4.14"))
+    else:
+        base.append(("magic", "python-magic",     "0.4.27"))
+    return base
 
-# Dépendances obligatoires : (nom_import, nom_pip, version_min)
-REQUIRED = [
-    ("yaml",            "pyyaml",           "6.0.1"),
-    ("click",           "click",            "8.1.7"),
-    ("rich",            "rich",             "13.7.0"),
-    ("pyfiglet",    "pyfiglet",          "1.0.2"),
-    ("pefile",          "pefile",           "2023.2.7"),
-    ("httpx",           "httpx",            "0.25.2"),
-    ("cryptography",    "cryptography",     "41.0.7"),
-    ("pybind11",        "pybind11",         "3.0.0"),
-    ("yara",            "yara-python",      "4.3.0"),
-]
+REQUIRED = get_required_packages()
+
+
+
 
 # Dépendances optionnelles
 

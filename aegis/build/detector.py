@@ -110,7 +110,13 @@ class EnvironmentDetector:
 
         # Cherche dans les emplacements standards Windows
         if platform.system() == "Windows":
-            for base in self.OPENSSL_SEARCH_PATHS_WIN:
+            bases = [
+                b for b in self.OPENSSL_SEARCH_PATHS_WIN
+                if Path(b).exists()
+            ]
+            # Priorise les chemins sans espaces
+            bases.sort(key=lambda b: " " in b)
+            for base in bases:
                 candidate = Path(base) / "include" / "openssl" / "sha.h"
                 if candidate.exists():
                     return str(Path(base) / "include")
@@ -118,18 +124,30 @@ class EnvironmentDetector:
 
     def _find_openssl_lib(self) -> str:
         if platform.system() == "Windows":
-            # Cherche libssl.lib ou libssl.a
-            for base in self.OPENSSL_SEARCH_PATHS_WIN:
-                for subpath in [
-                    "lib/VC/x64/MD",
-                    "lib/VC/x64/MT",
-                    "lib",
-                    "lib64",
-                ]:
-                    for libname in ["libssl.lib", "libssl.a"]:
+            bases = [
+                b for b in self.OPENSSL_SEARCH_PATHS_WIN
+                if Path(b).exists()
+            ]
+            # Priorise les chemins sans espaces
+            bases.sort(key=lambda b: " " in b)
+
+            # Import libs MinGW en priorité : ld de MinGW ne gère pas
+            # toujours les .lib compilés pour MSVC
+            for base in bases:
+                for subpath in ["lib", "lib64",
+                                "lib/VC/x64/MD", "lib/VC/x64/MT"]:
+                    for libname in ["libssl.dll.a", "libssl.a"]:
                         candidate = Path(base) / subpath / libname
                         if candidate.exists():
                             return str(Path(base) / subpath)
+
+            # Dernier recours : import libs MSVC (.lib)
+            for base in bases:
+                for subpath in ["lib/VC/x64/MD", "lib/VC/x64/MT",
+                                "lib", "lib64"]:
+                    candidate = Path(base) / subpath / "libssl.lib"
+                    if candidate.exists():
+                        return str(Path(base) / subpath)
         else:
             # Linux / Mac
             for path in ["/usr/lib", "/usr/local/lib",
@@ -141,9 +159,16 @@ class EnvironmentDetector:
     def _find_mingw_bin(self) -> str:
         if platform.system() != "Windows":
             return ""
-        for path in self.MINGW_SEARCH_PATHS_WIN:
-            if Path(path).exists():
-                return path
+
+        # Priorise les chemins sans espaces : gcc/MinGW gère mal un
+        # préfixe d'installation contenant des espaces
+        existing = [
+            p for p in self.MINGW_SEARCH_PATHS_WIN if Path(p).exists()
+        ]
+        existing.sort(key=lambda p: " " in p)
+        if existing:
+            return existing[0]
+
         # Cherche g++ dans PATH et remonte vers bin/
         gpp = shutil.which("g++")
         if gpp:
@@ -158,9 +183,10 @@ class EnvironmentDetector:
             paths.append(str(Path(gpp).parent.parent))
         return paths
 
-    def generate_cmake_args(self, report: EnvReport) -> list:
+    '''def generate_cmake_args(self, report: EnvReport) -> list:
         """Génère les arguments CMake adaptés à l'environnement détecté."""
         args = ["-G", "MinGW Makefiles", "-DCMAKE_BUILD_TYPE=Release"]
+        #args = ["-G", "Ninja", "-DCMAKE_BUILD_TYPE=Release"]
 
         if report.openssl_include:
             args += [f"-DOPENSSL_INCLUDE_DIR={report.openssl_include}"]
@@ -179,7 +205,111 @@ class EnvironmentDetector:
                     ]
                     break
 
+        return args'''
+    
+    def _to_short_path(self, path: str) -> str:
+        """Convertit un chemin Windows en version courte (8.3) sans espaces."""
+        import platform
+        if platform.system() != "Windows" or " " not in path:
+            return path
+        try:
+            import ctypes
+            buf = ctypes.create_unicode_buffer(260)
+            result = ctypes.windll.kernel32.GetShortPathNameW(path, buf, 260)
+            # Ne renvoie le résultat que s'il est réellement sans espace
+            # (les noms courts 8.3 peuvent être désactivés sur le volume)
+            if result and " " not in buf.value:
+                return buf.value
+        except Exception:
+            pass
+        return path  # fallback si la conversion échoue
+    
+
+    def generate_cmake_args(self, report: EnvReport) -> list:
+        """
+        Génère les arguments CMake adaptés à l'environnement.
+        Essaie MinGW Makefiles en premier, Ninja en fallback.
+        """
+        import platform
+
+        # Choix du générateur selon l'OS
+        if platform.system() == "Windows":
+            generator = self._find_best_generator()
+        else:
+            generator = "Unix Makefiles"
+
+        args = ["-G", generator, "-DCMAKE_BUILD_TYPE=Release"]
+
+        if report.openssl_include:
+            include_path = self._to_short_path(report.openssl_include)
+            args += [f"-DOPENSSL_INCLUDE_DIR={include_path}"]
+
+        if report.openssl_lib:
+            lib_path = Path(self._to_short_path(report.openssl_lib))
+            # Import libs MinGW (.dll.a / .a) en priorité, puis .lib MSVC
+            for name in ["libssl.dll.a", "libssl.a", "libssl.lib"]:
+                if (lib_path / name).exists():
+                    ssl_lib    = str(lib_path / name).replace("\\", "/")
+                    crypto_lib = str(lib_path / name.replace("ssl", "crypto")).replace("\\", "/")
+                    args += [
+                        f"-DOPENSSL_SSL_LIBRARY={ssl_lib}",
+                        f"-DOPENSSL_CRYPTO_LIBRARY={crypto_lib}",
+                    ]
+                    break
+
+        # Compilateurs et make : chemins courts pour éviter les espaces.
+        # Empêche CMake d'enregistrer des chemins longs avec espaces
+        # dans le CMakeCache (C:/Program Files/mingw64/...).
+        if platform.system() == "Windows" and report.mingw_bin:
+            mingw_bin = self._to_short_path(report.mingw_bin)
+            gcc = Path(mingw_bin) / "gcc.exe"
+            gpp = Path(mingw_bin) / "g++.exe"
+            if gcc.exists():
+                args.append(f"-DCMAKE_C_COMPILER={str(gcc).replace('\\', '/')}")
+            if gpp.exists():
+                args.append(f"-DCMAKE_CXX_COMPILER={str(gpp).replace('\\', '/')}")
+            if generator == "MinGW Makefiles":
+                make = Path(mingw_bin) / "mingw32-make.exe"
+                if make.exists():
+                    args.append(
+                        f"-DCMAKE_MAKE_PROGRAM={str(make).replace('\\', '/')}"
+                    )
+
         return args
+
+        
+    def _find_best_generator(self) -> str:
+        """
+        Détecte le meilleur générateur CMake disponible sur Windows.
+        Priorité : MinGW Makefiles > Ninja > NMake Makefiles
+        """
+        import subprocess
+        import shutil
+    
+        # Vérifie si mingw32-make est disponible
+        mingw_make = shutil.which("mingw32-make")
+        if mingw_make:
+            # Vérifie que mingw32-make fonctionne réellement
+            try:
+                result = subprocess.run(
+                    ["mingw32-make", "--version"],
+                    capture_output=True,
+                    timeout=5
+                )
+                if result.returncode == 0:
+                    return "MinGW Makefiles"
+            except Exception:
+                pass
+    
+        # Fallback Ninja
+        ninja = shutil.which("ninja")
+        if ninja:
+            return "Ninja"
+    
+        # Dernier recours
+        return "MinGW Makefiles"
+
+    
 
 
 

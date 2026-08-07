@@ -14,8 +14,13 @@ from aegis.detection.signature_matcher import MatchResult
 
 from aegis.core.aegis_engine import AegisHasher, AegisBloomMatcher, log_status
 
-#from aegis.detection.heuristic import HeuristicAnalyzer, HeuristicResult
-#from aegis.detection.yara_scanner import YaraScanner, YaraResult
+from aegis.detection.heuristic import HeuristicAnalyzer, HeuristicResult
+from aegis.detection.yara_scanner import YaraScanner, YaraResult
+
+# Fréquence des messages de progression pendant le scan (en nb de fichiers).
+# Le scan est silencieux entre les avertissements : ce compteur évite
+# l'impression que le scan est bloqué sur un gros fichier.
+PROGRESS_EVERY = 75
 
 
 @dataclass
@@ -24,18 +29,40 @@ class FileResult:
     hashes: Optional[dict]
     match_result: MatchResult
 
-    #heuristic_result : HeuristicResult = None
-    #yara_result: YaraResult = None
+    heuristic_result : HeuristicResult = None
+    yara_result: YaraResult = None
 
     @property
     def is_threat (self) -> bool:
         sig_threat = self.match_result.is_threat
-        #yara_threat = self.yara_result is not None and self.yara_result.is_threat
-        """heuristic_threat = (
+        yara_threat = self.yara_result is not None and self.yara_result.is_threat
+        heuristic_threat = (
             self.heuristic_result is not None
             and self.heuristic_result.is_suspicious
-        )"""
-        return sig_threat #or yara_threat #or heuristic_threat
+        )
+        return sig_threat or yara_threat or heuristic_threat
+
+    @property
+    def threat_name (self) -> Optional[str]:
+        """Nom lisible de la menace, quelle que soit la source (signature,
+        YARA ou heuristique)."""
+        if self.match_result.is_threat:
+            return self.match_result.malware_name or "Signature (inconnue)"
+        if self.yara_result is not None and self.yara_result.is_threat:
+            return ", ".join(self.yara_result.matched_rules) or "Règle YARA"
+        if self.heuristic_result is not None and self.heuristic_result.is_suspicious:
+            return "Heuristique"
+        return None
+
+    @property
+    def threat_severity (self) -> Optional[str]:
+        if self.match_result.is_threat:
+            return str(self.match_result.severity)
+        if self.yara_result is not None and self.yara_result.is_threat:
+            return self.yara_result.severity
+        if self.heuristic_result is not None and self.heuristic_result.is_suspicious:
+            return "medium"
+        return None
     
 
 
@@ -75,8 +102,8 @@ class ScannerEngine:
 
         self.matcher = AegisBloomMatcher(self.db)
 
-        #self.heuristic = HeuristicAnalyzer()
-        #self.yara_scanner = YaraScanner("data/yara_rules")
+        self.heuristic = HeuristicAnalyzer()
+        self.yara_scanner = YaraScanner("data/yara_rules")
         log_status()
 
 
@@ -85,47 +112,31 @@ class ScannerEngine:
         self.logger.info(f"Démarrage du scan : {path}")
         report = ScanReport()
         start = time.perf_counter()
+        scanned = 0
 
         for file_path in self.walker.walk(path):
             result = self._analyze(file_path)
             report.results.append(result)
+            scanned += 1
+
             if result.is_threat:
                 self.logger.warning(
-                    f"MENACE : {result.match_result.malware_name} "
-                    f"→ {file_path.name}"
+                    f"MENACE : {result.threat_name} "
+                    f"→ {file_path}"
                 )
             else:
                 self.logger.debug(f"Propre : {file_path.name}")
 
-        report.duration_seconds = time.perf_counter() - start
-        log_blank()
-        self.logger.info(str(report))
-        log_blank()
-        return report
-
-
-
-    '''def scan (self, path: str) -> ScanReport:
-        self.logger.info (f" Démarrage du scan : {path}")
-        report = ScanReport()
-        start = time.perf_counter()
-
-        for file_path in self.walker.walk(path):
-            result = self._analyze (file_path)
-            report.results.append(result)
-            if result.is_threat:
-                self.logger.warning(
-                    f" [!] MENACE : {result.match_result.malware_name} "
-                    f" ->  {file_path}"
+            if scanned % PROGRESS_EVERY == 0:
+                self.logger.info(
+                    f"Progression : {scanned} fichier(s) analysé(s)"
                 )
-            else:
-                self.logger.debug(f" Propre: {file_path}")
+
         report.duration_seconds = time.perf_counter() - start
+        log_blank()
         self.logger.info(str(report))
-        return report'''
-
-
-    
+        log_blank()
+        return report    
     
     def _analyze(self, path: Path) -> FileResult:
         #hashes = HashCalculator.compute (path)
@@ -139,14 +150,14 @@ class ScannerEngine:
             )
         
         match_result = self.matcher.check(hashes)
-        #heuristic_result = self.heuristic.analyze(path)
-        #yara_result = self.yara_scanner.scan(path)
+        heuristic_result = self.heuristic.analyze(path)
+        yara_result = self.yara_scanner.scan(path)
 
         return FileResult(
             path=path,
             hashes = hashes,
             match_result = match_result,
-            #heuristic_result=heuristic_result,
-            #yara_result=yara_result
+            heuristic_result=heuristic_result,
+            yara_result=yara_result
         )  
 

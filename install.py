@@ -50,7 +50,74 @@ def install_rich() -> bool:
             return False
 
 
+
+
 def install_dependencies() -> bool:
+    print("[3/5] Installation des dépendances Python...")
+    import subprocess, sys
+
+    # Dépendances critiques installées d'abord
+    critical = [
+        "click>=8.1.7",
+        "rich>=13.7.0",
+        "pyyaml>=6.0.1",
+        "pyfiglet>=1.0.2",
+        "httpx>=0.25.2",
+        "cryptography>=41.0.7",
+        "pybind11>=3.0.0",
+        "pefile>=2023.2.7",
+    ]
+
+    # python-magic selon l'OS
+    import platform
+    if platform.system() == "Windows":
+        critical.append("python-magic-bin>=0.4.14")
+    else:
+        critical.append("python-magic>=0.4.27")
+
+    # yara-python - optionnel car peut échouer sans compilateur
+    optional = ["yara-python>=4.3.0"]
+
+    all_ok = True
+    for pkg in critical:
+        result = subprocess.run(
+            [sys.executable, "-m", "pip", "install", pkg],
+            capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            print(f"      ✓ {pkg.split('>=')[0]}")
+        else:
+            print(f"      ✗ {pkg.split('>=')[0]} — échec")
+            all_ok = False
+
+    for pkg in optional:
+        result = subprocess.run(
+            [sys.executable, "-m", "pip", "install", pkg],
+            capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            print(f"      ✓ {pkg.split('>=')[0]}")
+        else:
+            print(f"      ⚠ {pkg.split('>=')[0]} — optionnel, ignoré")
+            print(f"        Sur Windows : installez Visual C++ Build Tools")
+            print(f"        Sur Linux   : sudo apt install libyara-dev")
+
+    # Installe le projet lui-même en mode editable
+    result = subprocess.run(
+        [sys.executable, "-m", "pip", "install", "-e", ".",
+         "--no-deps"],  # --no-deps car déjà installées ci-dessus
+        capture_output=True, text=True
+    )
+    if result.returncode != 0:
+        print(f"      ✗ Installation du projet échouée")
+        all_ok = False
+
+    return all_ok
+
+
+
+
+'''def install_dependencies() -> bool:
     print("[3/5] Installation des dépendances Python...")
     try:
         # Installe via pyproject.toml
@@ -67,7 +134,7 @@ def install_dependencies() -> bool:
             return False
     except Exception as e:
         print(f"      ✗ Exception : {e}")
-        return False
+        return False'''
 
 
 def build_cpp_modules() -> bool:
@@ -76,13 +143,21 @@ def build_cpp_modules() -> bool:
         # Import différé — dépendances déjà installées à ce stade
         from aegis.config.manager import Config
         from aegis.logger.logger import setup_logger
+        from aegis.build.msys2_detector import Msys2Detector
+        from aegis.build.msys2_builder import Msys2CppBuilder
         from aegis.build.builder import CppBuilder
 
         # Setup logger minimal pour le builder
         config = Config.from_yaml("config.yaml")
         setup_logger(config)
 
-        builder = CppBuilder()
+        # MSYS2 préféré (chemins sans espaces) — secours classique
+        msys2 = Msys2Detector()
+        if msys2.is_available():
+            builder = Msys2CppBuilder()
+        else:
+            builder = CppBuilder()
+
         success = builder.build(force_rebuild=False)
 
         if success:
@@ -92,8 +167,16 @@ def build_cpp_modules() -> bool:
             print("      ⚠ Modules C++ non disponibles")
             print("        AEGIS fonctionnera en mode Python pur")
             print("        Pour activer C++ plus tard :")
-            print("        1. Installez g++ et CMake")
-            print("        2. Lancez : aegis build compile")
+            if msys2.is_available():
+                print("        1. Réinstallez les paquets dans « MSYS2 MINGW64 » :")
+                print(f"           {msys2.pacman_command()}")
+                print("        2. Lancez : aegis build compile")
+            else:
+                print("        1. Installez MSYS2 (https://www.msys2.org)")
+                print("        2. Dans « MSYS2 MINGW64 » :")
+                print(f"           {msys2.pacman_command()}")
+                print(f"        3. Dans cmd : {msys2.path_command()}")
+                print("        4. Lancez : aegis build compile")
             return False
 
     except Exception as e:
@@ -195,7 +278,7 @@ def print_summary(steps: dict):
 
 def import_initial_signatures() -> bool:
     print("[+] Import des signatures initiales...")
-    sample = Path("data/sample_signatures.json")
+    sample = Path("data/malwarebazaar_signatures.json")
     if not sample.exists():
         print("      ⚠ Aucun fichier de signatures trouvé")
         return True  # non bloquant

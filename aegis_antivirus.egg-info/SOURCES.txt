@@ -6,8 +6,9 @@ aegis/cli_old.py
 aegis/logo.py
 aegis/build/__init__.py
 aegis/build/builder.py
-aegis/build/detector _old.py
 aegis/build/detector.py
+aegis/build/msys2_builder.py
+aegis/build/msys2_detector.py
 aegis/config/__init__.py
 aegis/config/manager.py
 aegis/core/__init__.py

@@ -23,12 +23,42 @@ _CPP_BIN = Path(__file__).parent.parent.parent / "cpp" / "bin"
         return None
 '''
 
+def _dll_search_dirs() -> list:
+    """Dossiers où chercher les DLL dépendantes du .pyd (runtime MinGW/MSYS2).
+
+    Le .pyd compilé via MSYS2 dépend de DLL situées dans
+    C:\\msys64\\mingw64\\bin (libstdc++-6.dll, libssl-3-x64.dll, ...).
+    """
+    dirs = []
+    if _CPP_BIN.exists():
+        dirs.append(str(_CPP_BIN))
+    try:
+        from aegis.build.msys2_detector import Msys2Detector
+        msys = Msys2Detector()
+        if msys.bin_dir:
+            dirs.append(str(msys.bin_dir))
+    except Exception:
+        pass
+    # Compatibilité avec l'ancien MinGW (winlibs dans Program Files)
+    legacy = Path(r"C:\Program Files\mingw64\bin")
+    if legacy.exists():
+        dirs.append(str(legacy))
+    return dirs
+
+
 def _load_aegis_cpp():
     if not _CPP_BIN.exists():
         return None
     try:
         if str(_CPP_BIN) not in sys.path:
             sys.path.insert(0, str(_CPP_BIN))
+        # Enregistre les dossiers de DLL dépendantes (Python 3.8+)
+        if hasattr(os, "add_dll_directory"):
+            for dll_dir in _dll_search_dirs():
+                try:
+                    os.add_dll_directory(dll_dir)
+                except Exception:
+                    pass
         import aegis_cpp
         return aegis_cpp
     except ImportError:

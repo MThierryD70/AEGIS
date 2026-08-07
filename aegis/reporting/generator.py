@@ -47,8 +47,8 @@ class ReportGenerator:
         for result in report.results:
             if result.is_threat:
                 statut = "[red]MENACE[/red]"
-                manace = f"[red]{result.match_result.malware_name}[/red]"
-                severite = f"[red]{result.match_result.severity}/4[/red]"
+                manace = f"[red]{result.threat_name}[/red]"
+                severite = f"[red]{result.threat_severity}[/red]"
             else:
                 statut = "[green]Propre[/green]"
                 manace = "-"
@@ -75,8 +75,8 @@ class ReportGenerator:
                 {
                     "path": str(r.path),
                     "is_threat": r.is_threat,
-                    "malware_name": r.match_result.malware_name,
-                    "severity": r.match_result.severity,
+                    "malware_name": r.threat_name,
+                    "severity": r.threat_severity,
                     "hashes": r.hashes
                 }
                 for r in report.results
@@ -107,8 +107,8 @@ class ReportGenerator:
                 writer.writerow([
                     str(r.path),
                     r.is_threat,
-                    r.match_result.malware_name or "",
-                    r.match_result.severity or "",
+                    r.threat_name or "",
+                    r.threat_severity or "",
                     r.hashes.get("md5", "") if r.hashes else "",
                     r.hashes.get ("sha256", "") if r.hashes else ""
                 ])

@@ -21,7 +21,7 @@ class QuarantineConfig:
 @dataclass
 class LoggingConfig:
     level : str = "INFO"
-    file: str = "./logs/antivirus.log"
+    file: str = "./logs/aegis.log"
 
 @dataclass
 class Config:

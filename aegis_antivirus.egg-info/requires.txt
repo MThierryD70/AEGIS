@@ -3,11 +3,16 @@ click>=8.1.7
 rich>=13.7.0
 pyfiglet>=1.0.2
 pefile>=2023.2.7
-python-magic-bin>=0.4.14
 httpx>=0.25.2
 cryptography>=41.0.7
 pybind11>=3.0.0
 yara-python>=4.3.0
+
+[:sys_platform != "win32"]
+python-magic>=0.4.27
+
+[:sys_platform == "win32"]
+python-magic-bin>=0.4.14
 
 [api]
 fastapi>=0.104.1
