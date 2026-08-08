@@ -9,7 +9,6 @@
 // Pour 1 million de signatures, faux positifs ~1%
 //_________________________________________________
 
-
 #define BLOOM_SIZE 9600000 // taille du tableau en bits (~9.6 Mo)
 #define BLOOM_BYTES (BLOOM_SIZE / 8)
 #define NUM_HASHES 7                // nombre de fonctions de hash
@@ -97,6 +96,4 @@ int bloom_count_set_bits(){
     }
     return count;
 }
-
-
 

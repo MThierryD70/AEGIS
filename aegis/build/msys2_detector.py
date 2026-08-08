@@ -21,7 +21,6 @@ from typing import Optional
 
 from aegis.build.detector import EnvReport, ToolInfo
 
-
 # Paquets MSYS2 à installer (environnement MINGW64)
 MSYS2_PACKAGES = (
     "mingw-w64-x86_64-gcc "
@@ -45,7 +44,6 @@ OPENSSL_LIB_NAMES = ["libssl.dll.a", "libssl.a", "libssl.lib"]
 
 class Msys2Detector:
     """Détecte et décrit la chaîne d'outils C++ fournie par MSYS2."""
-
     def __init__(self, root: Optional[Path] = None):
         self.root = root if root else self._find_msys2_root()
         self.bin_dir = self._find_mingw_bin()
@@ -58,7 +56,6 @@ class Msys2Detector:
         self.generator = self._detect_generator()
 
     # ── Résolution des chemins ──────────────────────────
-
     def _find_msys2_root(self) -> Optional[Path]:
         env_root = os.environ.get("AEGIS_MSYS2_ROOT")
         candidates = ([Path(env_root)] if env_root else []) + MSYS2_ROOTS
@@ -96,7 +93,6 @@ class Msys2Detector:
     def detect(self) -> EnvReport:
         """Produit un EnvReport au même format que le détecteur classique."""
         report = EnvReport()
-
         if not self.is_available():
             report.tools.append(ToolInfo(
                 name="MSYS2", found=False,

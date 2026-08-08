@@ -1,6 +1,5 @@
 """
-Logo AEGIS — affiché au démarrage de l'outil.
-Dégradé bleu → vert → bleu avec rich et pyfiglet.
+Logo AEGIS - affiché au démarrage de l'outil.
 """
 from rich.console import Console
 from rich.text import Text
@@ -90,6 +89,5 @@ def print_logo():
         "Python + C++ · "
         "v1.0.0[/dim]\n"
     )
-
 
 

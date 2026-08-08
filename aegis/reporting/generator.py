@@ -114,3 +114,5 @@ class ReportGenerator:
                 ])
 
         self.logger.info(f" Rapport CSV sauvegardé : {output}")
+
+

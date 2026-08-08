@@ -85,15 +85,18 @@ def log_blank():
 
 
 def log_success(message: str):
-    """Message de succès en vert gras — hors système logging."""
+    """Message de succès en vert gras - hors système logging."""
     _console.print(f"  [bold green]✓[/bold green] {message}")
 
 
 def log_failure(message: str):
-    """Message d'échec en rouge gras — hors système logging."""
-    _console.print(f"  [bold red]✗[/bold red] {message}")
+    """Message d'échec en rouge gras - hors système logging."""
+    _console.print(f"  [bold red]X[/bold red] {message}")
 
 
 def log_warning_inline(message: str):
-    """Avertissement inline en orange — hors système logging."""
+    """Avertissement inline en orange - hors système logging."""
     _console.print(f"  [bold orange1]⚠[/bold orange1] {message}")
+
+
+

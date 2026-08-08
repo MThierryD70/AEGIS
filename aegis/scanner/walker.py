@@ -109,3 +109,4 @@ class FileWalker:
             return False
         resolved = str(path.resolve())
         return any(resolved.startswith(excluded) for excluded in self.exclude_paths)
+

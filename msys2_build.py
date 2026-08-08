@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 """
 Compilation des modules C++ AEGIS via l'environnement MSYS2.
-
-Usage (depuis la racine du projet) :
-    python msys2_build.py status            # état de l'environnement MSYS2
-    python msys2_build.py compile [--force] # compile les modules C++
-    python msys2_build.py install           # instructions d'installation MSYS2
 """
 import argparse
 import sys
@@ -142,3 +137,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    

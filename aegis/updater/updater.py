@@ -66,57 +66,6 @@ class Updater:
         )
         return {"success": True, "added": added, "skipped": skipped, "errors": errors}
     
-
-    '''def import_from_url(self, url: str) -> dict:
-        try:
-            import httpx
-        except ImportError:
-            self.logger.error(" httpx non installé - pip install hattpx")
-            return {"success": False, "added": 0, "skipped": 0, "errors": 0}
-        
-        self.logger.info(f" Téléchargement des signatures depuis : {url}")
-
-        try:
-
-            # Téléchargement de signatures
-
-            response = httpx.get(url, timeout=30)
-            response.raise_for_status()
-            content = response.content
-
-            # Vérifie l'intégrité si un fichier .sha256 existe
-            checksum_url = url + ".sha256"
-
-            try:
-                checksum_response = httpx.get(checksum_url, timeout=10)
-                if checksum_response.status_code == 200:
-                    excepted_hash = checksum_response.text.strip().lower()
-                    actual_hash = hashlib.sha256(content).hexdigest()
-
-                    if actual_hash != excepted_hash:
-                        self.logger.error(
-                            f" Vérification d'intégrité échoue -"
-                            f" attendu: {excepted_hash[:16]}..."
-                            f" obtenu: {actual_hash[:16]}..."
-                        )
-
-                        return {"success": False, "added": 0, "skipped": 0, "errors": 0}
-                    self.logger.info(" Intégrité vérifié avec succès")
-            except:
-                self.logger.info("Pas de fichier .sha256 troouvée, intégrité non vérifié")
-
-
-            # Sauvegarde temoraire et import
-            tmp_path = Path("data/tmp_updater.json")
-            tmp_path.write_bytes(content)
-            result = self.import_from_file(str(tmp_path))
-            tmp_path.unlink()
-            return result
-                
-        except Exception as e:
-            self.logger.error (f" Erreur téléchargement: {e}")
-            return {"success": False, "added": 0, "skipped": 0, "errors": 0}'''
-
     def import_from_url(self, url: str) -> dict:
         try:
             import httpx
@@ -219,15 +168,7 @@ class Updater:
                     "malware_name": f"{malware_name}-MD5",
                     "severity":     4
                 })
-
         return output
-
-
-
-
-
-
-
 
     def status(self) -> dict:
         count = self.db.count()

@@ -94,3 +94,4 @@ class YaraScanner:
             matched_rules=matched_rules,
             severity=severity
         )
+    

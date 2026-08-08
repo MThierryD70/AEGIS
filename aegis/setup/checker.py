@@ -6,7 +6,6 @@ from dataclasses import dataclass, field
 from typing import List
 from aegis.logger.logger import get_logger, log_section, log_blank
 
-
 # Dépendances obligatoires adaptées par OS (nom_import, nom_pip, version_min)
 def get_required_packages():
     base = [
@@ -27,9 +26,6 @@ def get_required_packages():
     return base
 
 REQUIRED = get_required_packages()
-
-
-
 
 # Dépendances optionnelles
 
@@ -160,52 +156,4 @@ class DependencyChecker:
     
         log_blank()
         return report.all_ok  # ← un seul return à la fin
-
-
-    '''def run_full_check(self, auto_install: bool = True) -> bool:
-        log_section("Vérification des dépendances Python")
-
-        if not self.check_python_version():
-            return False
-
-        self.logger.info("Dépendances obligatoires : ")
-        report = self.check_and_install(REQUIRED, auto_install)
-
-        self.logger.info("Dépendances optionelles: ")
-        self.check_and_install(OPTIONAL, auto_install=False)
-
-        if report.all_ok:
-            self.logger.info(
-                f"Toutes les dépendances sont satisfaites "
-                f"({report.installed_count} installée (s))"
-            )
-            return True
-        else:
-            self.logger.error(
-                f"Dépendances manquantes : {', '.join(report.failed)}"
-            )
-            return False
-
-        log_blank()
-        return report.all_ok'''
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -2,7 +2,7 @@ import click
 
 
 # ─────────────────────────────────────────
-# Helpers — imports différés dans chaque fonction
+# Helpers - imports différés dans chaque fonction
 # ─────────────────────────────────────────
 def get_config():
     from aegis.config.manager import Config
@@ -11,7 +11,6 @@ def get_config():
     config = Config.from_yaml("config.yaml")
     setup_logger(config)
     return config
-
 
 # ─────────────────────────────────────────
 # Groupe principal
@@ -186,9 +185,6 @@ def quarantine_delete(quarantine_id):
     else:
         click.echo("Échec de la suppression.", err=True)
 
-
-
-
 # ─────────────────────────────────────────
 # Groupe : update
 # ─────────────────────────────────────────
@@ -196,7 +192,6 @@ def quarantine_delete(quarantine_id):
 def update():
     """Gestion des mises à jour de signatures."""
     pass
-
 
 @update.command(name="import")
 @click.argument("json_path")
@@ -244,11 +239,6 @@ def update_status():
     status = updater.status()
     click.echo(f"Signatures en base : {status['total_signatures']}")
     click.echo(f"Base de données    : {status['database_path']}")
-
-
-
-
-
 
 @cli.group()
 def build():
@@ -309,7 +299,7 @@ def build_status():
     console = Console()
     msys2 = Msys2Detector()
 
-    # ── Section Chaîne MSYS2 (recommandée) ──
+    # --- Section Chaîne MSYS2 (recommandée) ──
     log_section("Environnement C++ (MSYS2)")
 
     if msys2.is_available():
@@ -433,7 +423,7 @@ def build_status():
             )
         else:
             console.print(
-                "  Compilation C++ : [bold red]✗ impossible[/bold red]"
+                "  Compilation C++ : [bold red]X impossible[/bold red]"
             )
         console.print(
             "  [dim]La chaîne MSYS2 reste recommandée pour éviter"
@@ -441,7 +431,7 @@ def build_status():
         )
         log_blank()
 
-    # ── Section Modules compilés ──
+    # --- Section Modules compilés ──
     log_section("Modules compilés")
 
     bin_dir = Path("cpp/bin")
@@ -451,40 +441,37 @@ def build_status():
         for f in pyd_files:
             console.print(f"  [bold green]✓[/bold green] {f.name}")
     else:
-        console.print("  [bold red]✗[/bold red] Aucun module compilé")
+        console.print("  [bold red]X[/bold red] Aucun module compilé")
         console.print(
             "  [dim]Lancez : aegis build compile[/dim]"
         )
 
     log_blank()
 
-
-
-'''
-def build_status():
-    """Affiche le statut des modules C++."""
-    from aegis.build.detector import EnvironmentDetector
+@cli.command()
+@click.option("--path", default="Tests/Malwares_test/eicar.com",
+              help="Chemin de sortie du fichier de test")
+def generate_test(path):
+    """Génère un fichier de test EICAR pour valider la détection."""
+    import os
     from pathlib import Path
-    get_config()
 
-    detector = EnvironmentDetector()
-    report = detector.detect()
-    click.echo(report.summary())
+    # La chaîne EICAR est publique et documentée — eicar.org
+    # Elle est stockée en deux parties pour éviter les faux positifs
+    # sur le code source lui-même
+    part1 = r"X5O!P%@AP[4\PZX54(P^)7CC)7}"
+    part2 = r"$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*"
+    eicar_string = part1 + part2
 
-    bin_dir = Path("cpp/bin")
-    pyd_files = list(bin_dir.glob("aegis_cpp*.pyd")) if bin_dir.exists() else []
+    output = Path(path)
+    output.parent.mkdir(parents=True, exist_ok=True)
 
-    click.echo("=== Modules compilés ===")
-    if pyd_files:
-        for f in pyd_files:
-            click.echo(f"  OK {f.name}")
-    else:
-        click.echo("  X Aucun module compilé")
-        click.echo("    Lancez : aegis build compile")
-'''
-
-
-
-
+    output.write_text(eicar_string, encoding="ascii")
+    click.echo(f"Fichier de test créé : {output}")
+    click.echo("Lancez maintenant : aegis scan Tests/Malwares_test/")
+    click.echo()
+    click.echo("[!] Windows Defender peut supprimer ce fichier immédiatement.")
+    click.echo("    C'est normal - ajoutez Tests/Malwares_test/ en exclusion Defender")
+    click.echo("    pour tester, puis retirez l'exclusion après.")
 
 

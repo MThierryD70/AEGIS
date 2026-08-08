@@ -65,8 +65,6 @@ class FileResult:
         return None
     
 
-
-
 @dataclass
 class ScanReport:
     results: List[FileResult] = field(default_factory=list)
@@ -89,8 +87,6 @@ class ScanReport:
             f" {self.total_scanned} fichiers(s) analysé (s), "
             f" {self.threats_found} menace (s) détectée (s) "
         )
-
-
 
 class ScannerEngine:
     def __init__(self, config: Config):

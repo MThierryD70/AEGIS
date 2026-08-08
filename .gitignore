@@ -1,3 +1,4 @@
+
 # ── Python ──────────────────────────────
 __pycache__/
 *.py[cod]
@@ -7,27 +8,32 @@ __pycache__/
 *.egg
 .eggs/
 dist/
-build/
 .installed.cfg
 pip-wheel-metadata/
+aegis/scanner/hasher_cpp.py
+aegis/detection/bloom_matcher_cpp.py
+aegis/logger/logger_old.py
 
 # ── Package installé ────────────────────
 aegis_antivirus.egg-info/
 
 # ── C++ / CMake ─────────────────────────
-cpp/build/
 cpp/bin/*.pyd
 cpp/bin/*.dll
 cpp/bin/libgcc*
 cpp/bin/libstdc*
 cpp/bin/libwinpthread*
 cpp/bin/libcrypto*
-cpp/old_build/
+cpp/build.bat
+cpp/bin/hasher.dll
+cpp/bin/bloom_matcher.dll
 
 # ── Données générées ────────────────────
 data/signatures.db
 logs/
 quarantine/
+data/old_sample_signatures.json 
+data/Imports signatures/
 
 # ── Environnements virtuels ─────────────
 .venv/
@@ -51,3 +57,10 @@ desktop.ini
 *.swp
 tmp/
 temp/
+data/tmp_*.json
+
+reports/
+cpp/logs/
+Tests/Tests_par_etape/
+Tests/Malwares_test/
+

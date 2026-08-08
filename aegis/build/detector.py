@@ -7,7 +7,6 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional, List
 
-
 @dataclass
 class ToolInfo:
     name: str
@@ -15,7 +14,6 @@ class ToolInfo:
     path: str = ""
     version: str = ""
     note: str = ""
-
 
 @dataclass
 class EnvReport:
@@ -182,30 +180,6 @@ class EnvironmentDetector:
             # Remonte de bin/g++ vers la racine
             paths.append(str(Path(gpp).parent.parent))
         return paths
-
-    '''def generate_cmake_args(self, report: EnvReport) -> list:
-        """Génère les arguments CMake adaptés à l'environnement détecté."""
-        args = ["-G", "MinGW Makefiles", "-DCMAKE_BUILD_TYPE=Release"]
-        #args = ["-G", "Ninja", "-DCMAKE_BUILD_TYPE=Release"]
-
-        if report.openssl_include:
-            args += [f"-DOPENSSL_INCLUDE_DIR={report.openssl_include}"]
-
-        if report.openssl_lib:
-            # Cherche les fichiers .lib ou .a
-            lib_path = Path(report.openssl_lib)
-            for name in ["libssl.lib", "libssl.a"]:
-                if (lib_path / name).exists():
-                    ssl_lib  = str(lib_path / name)
-                    crypto_name = name.replace("ssl", "crypto")
-                    crypto_lib  = str(lib_path / crypto_name)
-                    args += [
-                        f"-DOPENSSL_SSL_LIBRARY={ssl_lib}",
-                        f"-DOPENSSL_CRYPTO_LIBRARY={crypto_lib}",
-                    ]
-                    break
-
-        return args'''
     
     def _to_short_path(self, path: str) -> str:
         """Convertit un chemin Windows en version courte (8.3) sans espaces."""
@@ -274,7 +248,6 @@ class EnvironmentDetector:
                     args.append(
                         f"-DCMAKE_MAKE_PROGRAM={str(make).replace('\\', '/')}"
                     )
-
         return args
 
         
@@ -308,14 +281,5 @@ class EnvironmentDetector:
     
         # Dernier recours
         return "MinGW Makefiles"
-
     
-
-
-
-
-
-
-
-
 

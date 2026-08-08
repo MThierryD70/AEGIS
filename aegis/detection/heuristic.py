@@ -183,3 +183,4 @@ class HeuristicAnalyzer:
                 break
 
         return indicators
+

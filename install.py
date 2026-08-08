@@ -46,11 +46,8 @@ def install_rich() -> bool:
             print("      ✓ rich installé")
             return True
         except subprocess.CalledProcessError:
-            print("      ✗ Échec installation rich")
+            print("      X Échec installation rich")
             return False
-
-
-
 
 def install_dependencies() -> bool:
     print("[3/5] Installation des dépendances Python...")
@@ -113,29 +110,6 @@ def install_dependencies() -> bool:
         all_ok = False
 
     return all_ok
-
-
-
-
-'''def install_dependencies() -> bool:
-    print("[3/5] Installation des dépendances Python...")
-    try:
-        # Installe via pyproject.toml
-        result = subprocess.run(
-            [sys.executable, "-m", "pip", "install", "-e", "."],
-            capture_output=True,
-            text=True
-        )
-        if result.returncode == 0:
-            print("      ✓ Toutes les dépendances installées")
-            return True
-        else:
-            print(f"      ✗ Erreur :\n{result.stderr[:300]}")
-            return False
-    except Exception as e:
-        print(f"      ✗ Exception : {e}")
-        return False'''
-
 
 def build_cpp_modules() -> bool:
     print("[4/5] Compilation des modules C++...")
@@ -207,7 +181,7 @@ def run_validation() -> bool:
         if hashes and hashes.get("sha256"):
             print(f"      ✓ Hasher opérationnel")
         else:
-            print(f"      ✗ Hasher défaillant")
+            print(f"      X Hasher défaillant")
             return False
 
         # Vérifie la CLI

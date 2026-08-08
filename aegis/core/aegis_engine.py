@@ -6,23 +6,6 @@ from aegis.logger.logger import get_logger, log_section, log_success, log_failur
 # Chemin vers cpp/bin - contient le .pyd et les DLL
 _CPP_BIN = Path(__file__).parent.parent.parent / "cpp" / "bin"
 
-
-'''def _load_aegis_cpp():
-    logger = get_logger()
-    if not _CPP_BIN.exists():
-        logger.warning("cpp/bin introuvable - modules C++ désactivés")
-        return None
-    try:
-        if str(_CPP_BIN) not in sys.path:
-            sys.path.insert(0, str(_CPP_BIN))
-        import aegis_cpp
-        logger.info("Module aegis_cpp (pybind11) chargé avec succès")
-        return aegis_cpp
-    except ImportError as e:
-        logger.warning(f"aegis_cpp non disponible, fallback Python: {e}")
-        return None
-'''
-
 def _dll_search_dirs() -> list:
     """Dossiers où chercher les DLL dépendantes du .pyd (runtime MinGW/MSYS2).
 
@@ -66,18 +49,6 @@ def _load_aegis_cpp():
     
 _cpp = _load_aegis_cpp()
 
-
-
-
-'''def log_status():
-    """Appelle cette fonction après setup_logger() pour afficher le status."""
-    logger = get_logger()
-    if _cpp is not None:
-        logger.info("Module aegis_cpp (pybind11) chargé avec succès")
-    else:
-        logger.warning("aegis_cpp non disponible - fallback Python actif")
-'''
-
 def log_status():
     log_section("Modules C++")
     if _cpp is not None:
@@ -85,9 +56,6 @@ def log_status():
     else:
         log_failure("aegis_cpp non disponible - fallback Python actif")
     log_blank()
-
-
-
 
 class AegisHasher:
     """Hasher unifié - C++ si disponible, Python sinon."""
@@ -106,8 +74,6 @@ class AegisHasher:
         # Fallback Python
         from aegis.scanner.hasher import HashCalculator
         return HashCalculator.compute(path)
-
-
 
 class AegisBloomMatcher:
     """"Bloom Matcher inifié - C++ si disponible, Python sinon."""
@@ -165,22 +131,6 @@ class AegisBloomMatcher:
         if self._use_cpp:
             self._load_bloom()
             self.logger.info("Bloom Filter rechargé")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

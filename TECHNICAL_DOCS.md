@@ -1,8 +1,8 @@
-# Documentation Technique — Antivirus à base de signatures (Python → C++)
+# Documentation Technique — AEGIS Antivirus (Python + C++)
 
-**Version :** 1.0  
-**Auteur :** Projet personnel  
-**Dernière mise à jour :** 2026-04
+**Version :** 1.0.0
+**Auteur :** MASRA Thierry D.
+**Dernière mise à jour :** 2026-08
 
 ---
 
@@ -11,71 +11,83 @@
 1. [Vue d'ensemble](#1-vue-densemble)
 2. [Architecture globale](#2-architecture-globale)
 3. [Modules Python](#3-modules-python)
-4. [Bibliothèques et outils](#4-bibliothèques-et-outils)
-5. [Structure des répertoires](#5-structure-des-répertoires)
-6. [Base de données de signatures](#6-base-de-données-de-signatures)
-7. [Flux d'exécution détaillé](#7-flux-dexécution-détaillé)
-8. [API REST (optionnel)](#8-api-rest-optionnel)
-9. [Feuille de route C++](#9-feuille-de-route-c)
-10. [Étapes de développement](#10-étapes-de-développement)
-11. [Tests et validation](#11-tests-et-validation)
-12. [Références](#12-références)
+4. [Moteur C++ (aegis_cpp)](#4-moteur-c-aegis_cpp)
+5. [Compilation C++ (MSYS2 / MinGW)](#5-compilation-c-msys2--mingw)
+6. [Configuration](#6-configuration)
+7. [Base de données de signatures](#7-base-de-données-de-signatures)
+8. [Flux d'exécution détaillé](#8-flux-dexécution-détaillé)
+9. [Heuristique — seuils et indicateurs](#9-heuristique--seuils-et-indicateurs)
+10. [Règles YARA](#10-règles-yara)
+11. [Rapports](#11-rapports)
+12. [Tests et validation](#12-tests-et-validation)
+13. [Fichiers générés et .gitignore](#13-fichiers-générés-et-gitignore)
+14. [Feuille de route](#14-feuille-de-route)
+15. [Références](#15-références)
 
 ---
 
 ## 1. Vue d'ensemble
 
-Ce projet est un antivirus pédagogique et extensible, conçu en deux phases :
-
-- **Phase 1 (Python)** — prototype fonctionnel avec détection par signatures de hachage (MD5, SHA-256) et règles YARA, gestion de quarantaine, rapports et interface CLI.
-- **Phase 2 (C++)** — remplacement progressif des composants critiques (scanner, moteur YARA) par des modules C++ liés à Python via `pybind11` ou `ctypes`, pour des performances proches d'un antivirus professionnel.
+AEGIS est un antivirus à base de signatures, développé en Python avec un moteur C++
+haute performance lié via `pybind11`. Les deux composants critiques du scan — le hachage
+MD5/SHA-256 et le lookup de signatures — sont portés en C++ et se replient automatiquement
+sur des implémentations Python pures si le module compilé est indisponible.
 
 ### Principes directeurs
 
-- **Modularité** : chaque composant est indépendant et interchangeable.
-- **Extensibilité** : nouveaux modules de détection ajoutables sans modifier le cœur.
-- **Testabilité** : couverture de tests unitaires et d'intégration dès la phase Python.
-- **Séparation des couches** : détection, quarantaine, reporting et configuration sont strictement découplés.
+- **Modularité** : chaque composant (scanner, détection, quarantaine, rapport, config) est un package indépendant.
+- **Détection multi-couches** : signatures, heuristique PE et règles YARA s'additionnent.
+- **Repli transparent** : C++ si disponible, Python sinon — même interface (`AegisHasher`, `AegisBloomMatcher`).
+- **Anti-faux-positifs** : heuristique limitée aux fichiers PE, YARA limité aux sévérités `critical`/`high`.
+- **Robustesse** : chemins accentués (UTF-8 → UTF-16), alias Windows ignorés, fichiers trop gros ignorés avant hachage.
+
+### Composition de la détection
+
+| Couche | Module | Menace si |
+|--------|--------|-----------|
+| Signatures | `core/aegis_engine.py` → Bloom C++ + `db/signature_db.py` | hash connu |
+| Heuristique | `detection/heuristic.py` | score ≥ 1.0 (PE uniquement) |
+| YARA | `detection/yara_scanner.py` | règle de sévérité `critical` ou `high` |
 
 ---
 
 ## 2. Architecture globale
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│                  Interfaces utilisateur                       │
-│         CLI (Click/Argparse)    REST API (FastAPI)           │
-└────────────────────┬─────────────────────────────────────────┘
-                     │
-┌────────────────────▼─────────────────────────────────────────┐
-│                  Scanner Engine (core)                        │
-│     File Walker · Hash Calculator · Orchestration            │
-└───────┬──────────────────┬──────────────────┬────────────────┘
-        │                  │                  │
-┌───────▼──────┐  ┌────────▼──────┐  ┌────────▼──────────────┐
-│  Signature   │  │  Heuristic    │  │   Signature DB         │
-│  Matcher     │  │  Analyzer     │  │   (SQLite/JSON)        │
-│  MD5/SHA256  │  │  Entropie     │  │   Updater intégré      │
-│  YARA rules  │  │  Patterns     │  │                        │
-└───────┬──────┘  └────────┬──────┘  └────────────────────────┘
-        │                  │
-┌───────▼──────────────────▼──────────────────────────────────┐
-│           Report Generator    │    Quarantine Manager        │
-│           JSON/CSV/Console    │    Move/Encrypt/Restore      │
-└─────────────────────────────────────────────────────────────┘
-                Services transversaux
-         Config Manager · Logger · Updater · Scheduler
+┌───────────────────────────────────────────────────────────────┐
+│                    CLI (Click) — aegis/cli.py                  │
+│  scan · update · quarantine · build · setup · generate-test   │
+└───────────────┬───────────────────────────────────────────────┘
+                │
+┌───────────────▼───────────────────────────────────────────────┐
+│                 ScannerEngine (scanner/engine.py)              │
+│   FileWalker → AegisHasher → AegisBloomMatcher                 │
+│                                → HeuristicAnalyzer             │
+│                                → YaraScanner                   │
+└──────┬──────────────────┬──────────────────┬───────────────────┘
+       │                  │                  │
+┌──────▼──────┐   ┌───────▼───────┐   ┌──────▼──────────┐
+│  core/      │   │  detection/   │   │  db/            │
+│  aegis_     │   │  heuristic    │   │  signature_db   │
+│  engine     │   │  yara_scanner │   │  (SQLite)       │
+│  (C++⇄Py)   │   └───────────────┘   └─────────────────┘
+└─────────────┘
+       │
+┌──────▼───────────────────────────────────────────────────────┐
+│  QuarantineManager · ReportGenerator · Updater · Logger      │
+└──────────────────────────────────────────────────────────────┘
+        Services : Config (YAML) · setup/checker · build/*
 ```
 
 ### Couches architecturales
 
 | Couche | Rôle |
 |--------|------|
-| Interface | Reçoit les commandes utilisateur (scan, update, restore…) |
-| Scanner Engine | Coordonne le parcours des fichiers et dispatch les analyses |
-| Détection | Identifie les menaces par plusieurs méthodes |
-| Actions | Exécute les réponses (quarantaine, rapport) |
-| Services | Fournit les fonctions transversales (log, config, mise à jour) |
+| Interface | `cli.py` — commandes utilisateur, options, affichage |
+| Scanner Engine | Coordonne parcours, hachage et dispatch vers les détections |
+| Détection | Signatures (Bloom+SQLite), heuristique PE, YARA |
+| Actions | Quarantaine (move/restore/delete), rapports JSON/CSV |
+| Services | Config YAML, logger rich+fichier, updater, build C++ |
 
 ---
 
@@ -83,303 +95,339 @@ Ce projet est un antivirus pédagogique et extensible, conçu en deux phases :
 
 ### 3.1 `scanner/engine.py` — Scanner Engine
 
-Composant central qui orchestre le scan. Il instancie le `FileWalker`, calcule les empreintes, et délègue aux modules de détection.
+Composant central. Instancie le walker, la DB, le matcher (Bloom), l'heuristique et le scanner YARA, puis orchestre le scan.
 
 ```python
 class ScannerEngine:
     def __init__(self, config: Config):
-        self.config = config
-        self.signature_db = SignatureDB(config.db_path)
-        self.matcher = SignatureMatcher(self.signature_db)
+        self.walker = FileWalker(config)
+        self.db = SignatureDB(config.database.path)
+        self.matcher = AegisBloomMatcher(self.db)   # C++ si possible
         self.heuristic = HeuristicAnalyzer()
-        self.quarantine = QuarantineManager(config.quarantine_dir)
-        self.reporter = ReportGenerator()
+        self.yara_scanner = YaraScanner("data/yara_rules")
+        log_status()                                # C++ chargé ou fallback Python
 
-    def scan_path(self, path: str) -> ScanReport:
-        results = []
-        for file in FileWalker(path, self.config.extensions):
-            result = self._analyze_file(file)
+    def scan(self, path: str) -> ScanReport:
+        for file_path in self.walker.walk(path):
+            result = self._analyze(file_path)
+            report.results.append(result)
             if result.is_threat:
-                self.quarantine.quarantine(file)
-            results.append(result)
-        return self.reporter.generate(results)
-
-    def _analyze_file(self, file: Path) -> FileResult:
-        hashes = HashCalculator.compute(file)
-        sig_match = self.matcher.check(hashes)
-        heuristic_match = self.heuristic.analyze(file)
-        return FileResult(file, sig_match, heuristic_match)
+                logger.warning(f"MENACE : {result.threat_name} → {file_path}")
 ```
+
+**Types de données :**
+
+```python
+@dataclass
+class FileResult:
+    path: Path
+    hashes: Optional[dict]
+    match_result: MatchResult
+    heuristic_result: HeuristicResult = None
+    yara_result: YaraResult = None
+
+    @property
+    def is_threat(self) -> bool:        # OU logique des 3 couches
+    @property
+    def threat_name(self) -> str:       # nom selon la source (signature / YARA / "Heuristique")
+    @property
+    def threat_severity(self) -> str:   # sévérité selon la source
+
+@dataclass
+class ScanReport:
+    results: List[FileResult]
+    duration_seconds: float
+    @property total_scanned / threats_found / threats
+```
+
+**Progression** : `PROGRESS_EVERY = 75` — un message de log toutes les 75 fichiers analysés
+pour éviter l'impression d'un scan bloqué sur les gros fichiers.
 
 ### 3.2 `scanner/walker.py` — File Walker
 
-Parcourt récursivement un répertoire ou analyse un fichier unique. Supporte les filtres par extension, taille maximale, et liste d'exclusions.
+Énumération récursive par `os.scandir` (les métadonnées taille/type sont fournies par l'OS
+gratuitement, sans appel système supplémentaire par fichier).
 
-**Responsabilités :**
-- Parcours récursif avec `os.walk` ou `pathlib.Path.rglob`
-- Filtrage par extension (`.exe`, `.dll`, `.pdf`, `.js`, etc.)
-- Exclusion de chemins système ou utilisateur
-- Gestion des erreurs de permission (`PermissionError`)
+**Filtres appliqués, dans l'ordre (cheap → coûteux) :**
+1. **Extension** — `path.suffix.lower() not in config.scanner.extensions` → ignoré
+2. **Taille** — `st_size > max_file_size_mb * 1024 * 1024` → ignoré **avant** tout hachage
+3. **Alias Windows** — fichiers de taille 0 avec attribut `FILE_ATTRIBUTE_REPARSE_POINT` (0x400)
+   (alias WindowsApps illisibles, `Errno 22`) → ignorés
+4. **Exclusions** — `exclude_paths` de la config (testé seulement si la liste est non vide)
 
-### 3.3 `scanner/hasher.py` — Hash Calculator
+**Optimisations OneDrive :**
+- Pas de `Path.resolve()` par fichier (bloquant sur les reparse points « cloud ») : il n'est appelé
+  que si `exclude_paths` est non vide.
+- `_is_windows_alias` n'est testé que pour les fichiers de taille 0.
 
-Calcule les empreintes cryptographiques d'un fichier. Utilise la lecture par blocs pour les fichiers volumineux.
+### 3.3 `scanner/hasher.py` — Hash Calculator (fallback Python)
 
 ```python
-import hashlib
+BLOCK_SIZE = 65536  # 64 Ko
 
 class HashCalculator:
-    BLOCK_SIZE = 65536
-
     @staticmethod
-    def compute(path: Path) -> dict:
-        md5 = hashlib.md5()
-        sha256 = hashlib.sha256()
+    def compute(path: Path) -> Optional[dict]:
+        md5, sha256 = hashlib.md5(), hashlib.sha256()
         with open(path, "rb") as f:
-            while chunk := f.read(HashCalculator.BLOCK_SIZE):
-                md5.update(chunk)
-                sha256.update(chunk)
+            while chunk := f.read(BLOCK_SIZE):
+                md5.update(chunk); sha256.update(chunk)
         return {"md5": md5.hexdigest(), "sha256": sha256.hexdigest()}
+        # None si PermissionError / OSError (fichier ignoré)
 ```
 
-### 3.4 `detection/signature_matcher.py` — Signature Matcher
+### 3.4 `core/aegis_engine.py` — Pont C++ ⇄ Python
 
-Compare les empreintes d'un fichier contre la base de données de signatures. Supporte également les règles YARA pour la détection par patterns.
-
-**Méthodes de détection :**
-- Comparaison de hash MD5/SHA-256 contre la DB
-- Correspondance de règles YARA sur le contenu binaire
-- (Phase 2) Comparaison de hash fuzzy via `ssdeep`
-
-### 3.5 `detection/heuristic.py` — Heuristic Analyzer
-
-Détecte des comportements suspects sans signature préétablie.
-
-**Indicateurs analysés :**
-- **Entropie de Shannon** — valeur élevée (> 7.0) = contenu probablement chiffré ou packé
-- **Ratio sections PE suspectes** — sections exécutables avec peu de chaînes lisibles
-- **Imports PE suspects** — combinaisons d'API Windows liées à l'injection de code
-- **Scripts obfusqués** — détection de `eval(base64_decode(...))` et patterns similaires
+Charge `aegis_cpp.pyd` depuis `cpp/bin/` et enregistre les DLL dépendantes via `os.add_dll_directory`
+(runtime MinGW/MSYS2 : `libstdc++-6.dll`, `libssl-3-x64.dll`, …). Recherche dans :
+1. `cpp/bin/`
+2. `C:\msys64\mingw64\bin` (détecté par `Msys2Detector`)
+3. `C:\Program Files\mingw64\bin` (legacy)
 
 ```python
-def shannon_entropy(data: bytes) -> float:
-    import math
-    if not data:
-        return 0.0
-    frequency = [data.count(b) / len(data) for b in set(data)]
-    return -sum(p * math.log2(p) for p in frequency if p > 0)
+class AegisHasher:
+    @staticmethod
+    def compute(path):       # C++ si _cpp chargé, sinon HashCalculator Python
+class AegisBloomMatcher:
+    def __init__(self, db):  # SignatureMatcher SQLite en fallback
+    def _load_bloom(self):   # db.get_all_hashes() → _cpp.bloom_load(hashes)
+    def check(self, hashes):
+        # 1) _cpp.bloom_check(hash) en RAM  → si probablement présent :
+        # 2) self.db.lookup(hash) en SQLite → confirmation sans faux positif
+    def reload(self):        # recharger le filtre après un `update`
 ```
 
-### 3.6 `db/signature_db.py` — Signature Database
+### 3.5 `detection/signature_matcher.py` — Signature Matcher (fallback)
 
-Abstraction de la base de données. Supporte SQLite (développement) et JSON plat (distribution légère).
+```python
+@dataclass
+class MatchResult:
+    is_threat: bool
+    malware_name: Optional[str] = None
+    severity: Optional[int] = None       # 1..4
+    matched_hash: Optional[str] = None
+    hash_type: Optional[str] = None      # 'md5' | 'sha256'
 
-**Schéma SQLite :**
+class SignatureMatcher:
+    def check(self, hashes: dict) -> MatchResult:
+        for hash_type, hash_value in hashes.items():
+            result = self.db.lookup(hash_value)
+            if result is not None:
+                return MatchResult(is_threat=True, ...)
+```
+
+### 3.6 `detection/heuristic.py` — Heuristic Analyzer
+
+Analyse **uniquement les fichiers PE** (`.exe`, `.dll`). Détails complets en section 9.
+
+```python
+ENTROPY_THRESHOLD = 7.0          # entropie « dense » (PE uniquement)
+ENTROPY_SAMPLE_SIZE = 4 * 1024 * 1024   # échantillon de 4 Mo, 1 seule passe
+SUSPICIOUS_SCORE_THRESHOLD = 1.0 # score minimal pour « suspect »
+```
+
+### 3.7 `detection/yara_scanner.py` — YARA
+
+```python
+THREAT_SEVERITIES = {"critical", "high"}  # seules ces sévérités = MENACE
+
+class YaraScanner:
+    def __init__(self, rules_dir):   # compile tous les *.yar en une fois
+    def scan(self, path) -> YaraResult:
+        # tente rules.match(str(path)) ; sur échec (codepage ANSI de l'API C de
+        # YARA avec chemins accentués) → lit les octets et rules.match(data=...)
+```
+
+`YaraResult` : `is_threat`, `matched_rules` (liste), `severity`.
+
+### 3.8 `db/signature_db.py` — Signature Database (SQLite)
+
 ```sql
-CREATE TABLE signatures (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    hash_type   TEXT NOT NULL,        -- 'md5' | 'sha256'
-    hash_value  TEXT NOT NULL UNIQUE,
-    malware_name TEXT NOT NULL,
-    severity    INTEGER DEFAULT 1,    -- 1=low, 2=medium, 3=high, 4=critical
-    added_date  TEXT,
-    source      TEXT
+CREATE TABLE IF NOT EXISTS signatures (
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    hash_type     TEXT NOT NULL,          -- 'md5' | 'sha256'
+    hash_value    TEXT NOT NULL UNIQUE,   -- stocké en minuscules
+    malware_name  TEXT NOT NULL,
+    severity      INTEGER DEFAULT 1       -- 1=low .. 4=critical
 );
+CREATE INDEX IF NOT EXISTS idx_hash_value ON signatures (hash_value);
+```
 
-CREATE TABLE yara_rules (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    rule_name   TEXT NOT NULL,
-    rule_content TEXT NOT NULL,
-    enabled     INTEGER DEFAULT 1,
-    last_updated TEXT
+**API :** `add_signature(...)` (False si doublon `IntegrityError`), `lookup(hash_value)`,
+`count()`, `remove_signature(hash_value)`, `get_all_hashes()` (pour charger le Bloom).
+
+### 3.9 `quarantine/manager.py` — Quarantine Manager
+
+Déplace le fichier vers `quarantine/` et enregistre dans `quarantine/quarantine.db` :
+
+```sql
+CREATE TABLE quarantine (
+    id               TEXT PRIMARY KEY,     -- uuid4
+    original_path    TEXT NOT NULL,
+    quarantine_path  TEXT NOT NULL,
+    malware_name     TEXT,
+    severity         INTEGER,
+    date_quarantined TEXT NOT NULL
 );
 ```
 
-### 3.7 `quarantine/manager.py` — Quarantine Manager
+**API :** `quarantine(path, malware_name, severity)` → `quarantine_id | None`,
+`restore(id)` (recrée le dossier parent), `delete(id)`, `list_quarantined()`.
 
-Isole les fichiers infectés en les déplaçant dans un répertoire sécurisé, optionnellement chiffrés.
+### 3.10 `reporting/generator.py` — Report Generator
 
-**Fonctions :**
-- `quarantine(path)` — déplace et enregistre dans `quarantine.db`
-- `restore(quarantine_id)` — remet le fichier à son emplacement d'origine
-- `delete(quarantine_id)` — suppression définitive
-- Chiffrement optionnel avec `cryptography` (Fernet)
+- **Console** : résumé (fichiers analysés, menaces, durée) + tableau `rich` (fichier / statut / menace / sévérité).
+- **JSON** : `reports/scan_YYYYMMDD_HHMMSS.json` — résumé + résultats (chemin, menace, sévérité, hashes).
+- **CSV** : `reports/scan_YYYYMMDD_HHMMSS.csv` — colonnes `fichier, est_menace, malware, severite, md5, sha256`.
 
-### 3.8 `reporting/generator.py` — Report Generator
+### 3.11 `updater/updater.py` — Updater
 
-Produit des rapports dans plusieurs formats.
+- `import_from_file(json_path)` : lit le JSON AEGIS et insère les signatures (doublons ignorés).
+- `import_from_url(url)` : téléchargement `httpx` (timeout 60 s, follow_redirects),
+  vérification d'intégrité via `url + ".sha256"` (si disponible, `--no-verify` pour désactiver),
+  détection du format :
+  - JSON direct (`{...}` ou `[...]`)
+  - CSV MalwareBazaar (lignes `#` / virgules) → conversion automatique via `_convert_malware_signature_list_csv_to_json`
+  - fichier temporaire `data/tmp_update.json` puis import, et suppression.
+- `status()` : nombre de signatures + chemin de la base.
 
-**Formats supportés :**
-- Console (coloré avec `rich`)
-- JSON (pour intégration avec d'autres outils)
-- CSV (pour analyse en tableur)
-- HTML (rapport visuel, optionnel)
+### 3.12 `config/manager.py` — Config
 
-### 3.9 `config/manager.py` — Config Manager
+Dataclasses typées (`ScannerConfig`, `DatabaseConfig`, `QuarantineConfig`, `LoggingConfig`)
+chargées depuis `config.yaml` par `Config.from_yaml()`. Si le fichier est absent,
+des valeurs par défaut sont utilisées.
 
-Charge la configuration depuis un fichier YAML et la fusionne avec les arguments CLI.
+### 3.13 `logger/logger.py` — Logger
+
+`RichHandler` (couleurs, horodatage `HH:MM:SS`) sur console + `FileHandler` UTF-8 vers
+`logs/aegis.log`. `setup_logger(config)` est idempotent (évite les handlers dupliqués).
+Helpers : `log_section`, `log_blank`, `log_success`, `log_failure`, `log_warning_inline`.
+
+### 3.14 `setup/checker.py` — DependencyChecker
+
+Vérifie la version Python puis les dépendances obligatoires (adaptées par OS pour
+`python-magic` / `python-magic-bin`) avec installation automatique (`aegis setup`),
+et signale les dépendances optionnelles (`fastapi`, `uvicorn`).
+
+### 3.15 `build/` — Chaînes de compilation
+
+| Module | Rôle |
+|--------|------|
+| `detector.py` | `EnvironmentDetector` — détecte g++, cmake, OpenSSL, MinGW classique |
+| `builder.py` | `CppBuilder` — configuration + build CMake, vérification du `.pyd` |
+| `msys2_detector.py` | `Msys2Detector` — détecte `C:\msys64\mingw64\bin`, paquets pacman, générateur |
+| `msys2_builder.py` | `Msys2CppBuilder` — build via MSYS2 (cmake/ninja de MSYS2, PATH injecté) |
+
+---
+
+## 4. Moteur C++ (aegis_cpp)
+
+Source : `cpp/src/aegis_module.cpp` — module `pybind11` unique `aegis_cpp`.
+
+### 4.1 Hashing (OpenSSL EVP)
+
+- Lecture via `CreateFileW` (Unicode) : conversion UTF-8 → UTF-16 dans le module,
+  donc **chemins accentués supportés**.
+- `compute_hashes(filepath) -> {"md5": ..., "sha256": ...}` avec EVP (MD5 + SHA-256),
+  blocs de 64 Ko.
+
+### 4.2 Bloom Filter
+
+| Paramètre | Valeur |
+|-----------|--------|
+| Taille | `BLOOM_SIZE = 9 600 000` bits (≈ 1,2 Mo… ~9,6 Mo pour 1 M de hashes) |
+| Nb de fonctions de hachage | `NUM_HASHES = 7` |
+| Hash | FNV-1a (seed par index, multiplicateur constant) |
+
+- `bloom_init()`, `bloom_add(hash)`, `bloom_check(hash)` (False = absent **avec certitude**),
+  `bloom_load(hashes)`, `bloom_bit_count()`.
+- Le filtre ne contient **que** des hashes : la confirmation finale reste en SQLite
+  (`AegisBloomMatcher.check`), ce qui élimine les faux positifs du Bloom.
+
+### 4.3 Chargement Python
+
+`core/aegis_engine.py` charge le `.pyd` (sys.path `cpp/bin`), ajoute les DLL au
+`add_dll_directory` (runtime MSYS2), et expose `AegisHasher` / `AegisBloomMatcher`.
+Si `_cpp is None` → fallback Python silencieux (message au démarrage).
+
+---
+
+## 5. Compilation C++ (MSYS2 / MinGW)
+
+### 5.1 Chaîne MSYS2 (recommandée)
+
+Avantages : chemins sans espaces (`C:\msys64\mingw64\bin`), outils cohérents, ninja fourni.
+
+```bash
+# Dans le terminal « MSYS2 MINGW64 » :
+pacman -S --needed mingw-w64-x86_64-gcc mingw-w64-x86_64-cmake mingw-w64-x86_64-openssl
+
+# Dans cmd (PATH utilisateur), puis rouvrir le terminal :
+setx PATH "C:\msys64\mingw64\bin;%PATH%"
+```
+
+Racines détectées : `C:/msys64`, `C:/msys2`, `C:/tools/msys64`
+(surcharge possible via la variable d'environnement `AEGIS_MSYS2_ROOT`).
+Environnements : `mingw64` > `ucrt64` > `clang64`. Générateur : `Ninja` si présent, sinon `MinGW Makefiles`.
+
+### 5.2 Chaîne de secours (MinGW classique)
+
+winlibs g++ + CMake + OpenSSL dans `C:\Program Files\...` — géré par `EnvironmentDetector`
+(chemins courts 8.3 via `GetShortPathNameW` pour éviter les espaces dans le cache CMake).
+
+### 5.3 Build
+
+```bash
+aegis build compile            # ou : aegis build compile --force
+aegis build status             # état détaillé des outils et modules
+python msys2_build.py compile  # variante script
+```
+
+Le `CMakeLists.txt` :
+- exige `pybind11` (CONFIG) et Python ; OpenSSL via `-DOPENSSL_INCLUDE_DIR`,
+  `-DOPENSSL_SSL_LIBRARY`, `-DOPENSSL_CRYPTO_LIBRARY` (détectés par le builder) ;
+- copie le `.pyd` final dans `cpp/bin/` (POST_BUILD).
+
+Le module `.pyd` dépend des DLL runtime MSYS2 (`libstdc++-6.dll`, `libssl-3-x64.dll`, …)
+qui doivent rester accessibles : `C:\msys64\mingw64\bin` dans le PATH, sinon `cpp/bin/`
+(copie locale générée).
+
+---
+
+## 6. Configuration
+
+`config.yaml` — le seul fichier de configuration :
 
 ```yaml
-# config.yaml
 scanner:
-  extensions: [".exe", ".dll", ".js", ".pdf", ".docm"]
+  extensions: [".exe", ".dll", ".js", ".pdf", ".com", ".png"]
   max_file_size_mb: 100
-  threads: 4
-  exclude_paths:
-    - "C:/Windows/System32"
+  exclude_paths: []               # ex: ["C:/Windows/System32"]
 
 database:
   path: "./data/signatures.db"
-  auto_update: true
-  update_url: "https://your-update-server/signatures"
 
 quarantine:
   dir: "./quarantine"
-  encrypt: true
+  encrypt: false                  # réservé — chiffrement non implémenté
 
 logging:
-  level: "INFO"
-  file: "./logs/antivirus.log"
-  max_size_mb: 10
-  backup_count: 5
+  level: "INFO"                   # DEBUG | INFO | WARNING | ERROR
+  file: "./logs/aegis.log"
 ```
 
-### 3.10 `updater/updater.py` — Updater
-
-Met à jour la base de signatures depuis un serveur distant.
-
-**Fonctionnement :**
-- Téléchargement via `httpx` avec vérification de signature (SHA-256)
-- Format de mise à jour : JSON delta (seulement les nouvelles signatures)
-- Rollback automatique en cas d'échec d'intégrité
+Champs par défaut si le fichier est absent : extensions `[".exe", ".dll"]`, taille 100 Mo,
+base `./data/signatures.db`, quarantaine `./quarantine`, log `./logs/aegis.log`.
 
 ---
 
-## 4. Bibliothèques et outils
+## 7. Base de données de signatures
 
-### 4.1 Dépendances Python principales
-
-| Bibliothèque | Version | Usage |
-|---|---|---|
-| `yara-python` | ≥ 4.3 | Moteur de règles YARA |
-| `pefile` | ≥ 2023.2 | Parsing des exécutables Windows (PE) |
-| `python-magic` | ≥ 0.4 | Détection du type MIME réel |
-| `click` | ≥ 8.0 | Interface CLI déclarative |
-| `pyyaml` | ≥ 6.0 | Lecture de la configuration |
-| `rich` | ≥ 13.0 | Affichage console coloré et tables |
-| `httpx` | ≥ 0.25 | Requêtes HTTP pour les mises à jour |
-| `cryptography` | ≥ 41.0 | Chiffrement des fichiers en quarantaine |
-| `ssdeep` | ≥ 3.4 | Hash fuzzy (similarité de fichiers) |
-| `fastapi` | ≥ 0.100 | API REST (optionnel) |
-| `uvicorn` | ≥ 0.23 | Serveur ASGI pour FastAPI |
-| `pytest` | ≥ 7.0 | Tests unitaires |
-| `pytest-cov` | ≥ 4.0 | Couverture de code |
-
-### 4.2 Installation
-
-```bash
-# Environnement virtuel
-python -m venv .venv
-source .venv/bin/activate  # Linux/Mac
-# .venv\Scripts\activate   # Windows
-
-# Dépendances
-pip install -r requirements.txt
-
-# Dépendances système (Linux)
-sudo apt-get install libmagic1 libfuzzy-dev
-
-# Dépendances système (Windows)
-# Installer Visual C++ Build Tools pour ssdeep
-```
-
-### 4.3 `requirements.txt`
-
-```
-yara-python>=4.3.0
-pefile>=2023.2.7
-python-magic>=0.4.27
-click>=8.1.7
-pyyaml>=6.0.1
-rich>=13.7.0
-httpx>=0.25.2
-cryptography>=41.0.7
-ssdeep>=3.4
-fastapi>=0.104.1
-uvicorn>=0.24.0
-pytest>=7.4.3
-pytest-cov>=4.1.0
-```
-
----
-
-## 5. Structure des répertoires
-
-```
-antivirus/
-├── antivirus/                  # Package principal
-│   ├── __init__.py
-│   ├── cli.py                  # Point d'entrée CLI (Click)
-│   ├── scanner/
-│   │   ├── __init__.py
-│   │   ├── engine.py           # Orchestrateur principal
-│   │   ├── walker.py           # Parcours de fichiers
-│   │   └── hasher.py           # Calcul d'empreintes
-│   ├── detection/
-│   │   ├── __init__.py
-│   │   ├── signature_matcher.py
-│   │   ├── heuristic.py
-│   │   └── yara_scanner.py
-│   ├── db/
-│   │   ├── __init__.py
-│   │   ├── signature_db.py
-│   │   └── models.py
-│   ├── quarantine/
-│   │   ├── __init__.py
-│   │   └── manager.py
-│   ├── reporting/
-│   │   ├── __init__.py
-│   │   └── generator.py
-│   ├── updater/
-│   │   ├── __init__.py
-│   │   └── updater.py
-│   ├── config/
-│   │   ├── __init__.py
-│   │   └── manager.py
-│   └── api/                    # API REST optionnelle
-│       ├── __init__.py
-│       └── routes.py
-├── data/
-│   ├── signatures.db           # Base SQLite des signatures
-│   └── yara_rules/             # Fichiers .yar
-│       ├── malware.yar
-│       └── packer.yar
-├── quarantine/                 # Dossier de quarantaine
-├── logs/
-├── tests/
-│   ├── unit/
-│   │   ├── test_hasher.py
-│   │   ├── test_matcher.py
-│   │   └── test_heuristic.py
-│   ├── integration/
-│   │   └── test_scan_flow.py
-│   └── samples/                # Fichiers EICAR de test
-│       └── eicar.com
-├── config.yaml
-├── requirements.txt
-├── setup.py
-└── README.md
-```
-
----
-
-## 6. Base de données de signatures
-
-### 6.1 Format JSON (simple)
+### 7.1 Format JSON (import)
 
 ```json
 {
-  "version": "2026.04.01",
+  "version": "2026.05.23",
   "signatures": [
     {
       "hash_type": "sha256",
@@ -391,321 +439,217 @@ antivirus/
 }
 ```
 
-### 6.2 Format YARA (exemple)
+### 7.2 Format CSV MalwareBazaar (fetch URL)
 
-```yara
-rule EICAR_Test_File {
-    meta:
-        description = "Standard EICAR test file"
-        author = "EICAR"
-        severity = "critical"
-    strings:
-        $eicar = "X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*"
-    condition:
-        $eicar
-}
+`aegis update fetch <url>` convertit automatiquement le CSV MalwareBazaar
+(colonnes `#first_seen,sha256_hash,md5_hash,...`) en signatures `sha256` + `md5`
+(sévérité 4), nom du malware depuis la colonne signature.
 
-rule Suspicious_PE_Packer {
-    meta:
-        description = "Détecte des packers PE génériques"
-    strings:
-        $upx = "UPX0" ascii
-        $upx1 = "UPX1" ascii
-    condition:
-        uint16(0) == 0x5A4D and ($upx or $upx1)
-}
-```
+### 7.3 Contenu initial du dépôt
+
+`data/malwarebazaar_signatures.json` — 3208 signatures (dont EICAR),
+importées automatiquement par `install.py` (étape 5). La base SQLite `data/signatures.db`
+est **générée** et exclue de git.
 
 ---
 
-## 7. Flux d'exécution détaillé
+## 8. Flux d'exécution détaillé
 
 ```
-Utilisateur → CLI : scan /chemin/vers/répertoire
+Utilisateur → aegis scan /chemin [--json] [--csv] [--quarantine]
     │
     ▼
-ScannerEngine.scan_path("/chemin")
+ScannerEngine.scan(path)
     │
-    ├── FileWalker → génère liste de fichiers filtrés
+    ├── FileWalker.walk(path)
+    │       os.scandir récursif
+    │       ├── extension autorisée ?  sinon → ignoré
+    │       ├── taille ≤ 100 Mo ?      sinon → ignoré
+    │       ├── alias Windows ?        sinon → ignoré
+    │       └── exclusion ?            sinon → ignoré
     │
-    ├── Pour chaque fichier :
-    │     ├── HashCalculator.compute(file)
-    │     │       → {"md5": "...", "sha256": "..."}
+    ├── Pour chaque fichier retenu :
+    │     ├── AegisHasher.compute(file)
+    │     │       C++ (OpenSSL)  OU  Python (hashlib)
+    │     │       → {"md5": "...", "sha256": "..."}  OU None (illisible)
     │     │
-    │     ├── SignatureMatcher.check(hashes)
-    │     │       → Requête SQLite sur signatures
-    │     │       → Scan YARA sur contenu
-    │     │       → SigMatchResult(matched=True/False, name, severity)
+    │     ├── AegisBloomMatcher.check(hashes)
+    │     │       ├── Bloom C++ (probablement présent ?)
+    │     │       └── SQLite lookup (confirmation)
+    │     │       → MatchResult
     │     │
-    │     ├── HeuristicAnalyzer.analyze(file)
-    │     │       → Calcul entropie
-    │     │       → Parsing PE (si .exe/.dll)
+    │     ├── HeuristicAnalyzer.analyze(file)     # .exe/.dll uniquement
     │     │       → HeuristicResult(score, indicators)
     │     │
-    │     ├── Si menace détectée :
-    │     │       → QuarantineManager.quarantine(file)
-    │     │             Déplace vers /quarantine/<uuid>
-    │     │             Enregistre dans quarantine.db
+    │     ├── YaraScanner.scan(file)
+    │     │       → YaraResult(matched_rules, severity)   # alerte si critical/high
     │     │
-    │     └── FileResult(path, hashes, sig_result, heuristic_result)
+    │     └── FileResult(path, hashes, match, heuristic, yara)
     │
-    └── ReportGenerator.generate(results)
-              → Console (rich table)
-              → scan_report_YYYYMMDD.json
+    ├── Si is_threat : log "MENACE : <threat_name> → <chemin>"
+    ├── Progression log toutes les 75 fichiers
+    │
+    ├── Rapport console (rich)
+    ├── Si --json : reports/scan_<ts>.json
+    ├── Si --csv  : reports/scan_<ts>.csv
+    └── Si --quarantine : QuarantineManager.quarantine(chaque menace)
 ```
 
 ---
 
-## 8. API REST (optionnel)
+## 9. Heuristique — seuils et indicateurs
 
-Exposée via FastAPI pour intégration avec des outils externes (dashboard, SIEM).
+Applicable **uniquement** à `.exe` / `.dll` (constante `PE_EXTENSIONS`). Un PDF, une image
+ou un ZIP n'est jamais « suspect » par la seule entropie (faux positifs éliminés).
 
-### Endpoints
+| Constante | Valeur | Sens |
+|-----------|--------|------|
+| `ENTROPY_THRESHOLD` | 7.0 | entropie « dense » |
+| `ENTROPY_SAMPLE_SIZE` | 4 Mo | échantillon 1 seule passe |
+| `SUSPICIOUS_SCORE_THRESHOLD` | 1.0 | score minimal pour « suspect » |
+| `WEIGHT_ENTROPY` | 0.4 | entropie ≥ 7.0 |
+| `WEIGHT_PACKED` | 0.5 | packing (sections UPX/ASPack/… ou point d'entrée dans la dernière section) |
+| `WEIGHT_RWX_SECTION` | 0.5 | section exécutable + écriture + lecture |
+| `WEIGHT_SUSPICIOUS_IMPORTS` | 0.6 | combinaison d'imports Windows |
 
-| Méthode | Route | Description |
-|---------|-------|-------------|
-| `POST` | `/scan/file` | Analyse un fichier uploadé |
-| `POST` | `/scan/path` | Lance un scan sur un chemin serveur |
-| `GET` | `/quarantine` | Liste les fichiers en quarantaine |
-| `POST` | `/quarantine/{id}/restore` | Restaure un fichier |
-| `DELETE` | `/quarantine/{id}` | Supprime définitivement |
-| `POST` | `/update` | Déclenche une mise à jour des signatures |
-| `GET` | `/status` | Santé du service et stats |
+Imports suspects (combinaisons) :
 
-### Exemple de requête
-
-```bash
-curl -X POST http://localhost:8000/scan/file \
-  -F "file=@suspicious.exe" \
-  | python -m json.tool
+```python
+SUSPICIOUS_IMPORTS = [
+    {"VirtualAlloc", "WriteProcessMemory", "CreateRemoteThread"},
+    {"CryptEncrypt", "InternetConnect"},
+    {"RegSetValueEx", "ShellExecute", "DownloadFile"},
+]
 ```
 
-### Exemple de réponse
+Un score ≥ 1.0 exige de **combiner plusieurs indicateurs** (ex. entropie + packing),
+ce qui limite fortement les faux positifs sur des exécutables légitimes mais denses.
 
+---
+
+## 10. Règles YARA
+
+`data/yara_rules/test_rules.yar` — compilées au démarrage du `YaraScanner` :
+
+| Règle | Sévérité | Détection |
+|-------|----------|-----------|
+| `EICAR_Test_File` | `critical` | chaîne EICAR standard |
+| `Packed_Executable_UPX` | `medium` | `MZ` @0 + taille > 1 Ko + sections `UPX0`/`UPX1` |
+| `Suspicious_Script` | `medium` | 2 motifs parmi `eval(base64_decode)`, `eval(gzinflate)`, `fromCharCode` |
+
+Seules les sévérités `critical` et `high` (`THREAT_SEVERITIES`) déclenchent une alerte ;
+les règles `medium`/`low` sont loggées en info. Une règle trop large ne doit pas produire
+de faux positifs en cascade.
+
+---
+
+## 11. Rapports
+
+`--json` et `--csv` écrivent dans `reports/` (dossier créé à la volée) avec horodatage.
+
+**JSON** :
 ```json
 {
-  "filename": "suspicious.exe",
-  "sha256": "a3f5b2...",
-  "is_threat": true,
-  "detections": [
-    {
-      "method": "signature",
-      "malware_name": "Trojan.GenericKD.12345",
-      "severity": 3,
-      "confidence": 1.0
-    },
-    {
-      "method": "heuristic",
-      "indicators": ["high_entropy", "suspicious_imports"],
-      "score": 0.82
-    }
-  ],
-  "quarantined": true,
-  "scan_duration_ms": 47
+  "scan_date": "2026-08-08T...",
+  "summary": { "total_scanned": 331, "threats_found": 1, "duration_seconds": 5.47 },
+  "results": [
+    { "path": "C:/.../eicar.com", "is_threat": true,
+      "malware_name": "EICAR_Test_File", "severity": "critical",
+      "hashes": { "md5": "...", "sha256": "..." } }
+  ]
 }
 ```
 
----
-
-## 9. Feuille de route C++
-
-### 9.1 Objectif
-
-Remplacer les modules Python critiques en termes de performance par des extensions C++ liées à Python, sans modifier l'architecture ni les interfaces.
-
-### 9.2 Modules à porter en C++
-
-| Module Python | Module C++ | Gain estimé |
-|---|---|---|
-| `hasher.py` | `cpp/hasher.cpp` | ×5–10 sur fichiers > 10 Mo |
-| `signature_matcher.py` | `cpp/matcher.cpp` | ×3–5 (SIMD, bloom filter) |
-| `yara_scanner.py` | Utilise `libyara` directement | ×2–4 |
-| `walker.py` | `cpp/walker.cpp` | ×2–3 sur arborescences larges |
-
-### 9.3 Liaison Python-C++
-
-**Option A : `pybind11` (recommandé)**
-
-```cpp
-// cpp/hasher.cpp
-#include <pybind11/pybind11.h>
-#include <openssl/sha.h>
-
-namespace py = pybind11;
-
-std::string sha256_file(const std::string& path) {
-    // implémentation C++ rapide
-}
-
-PYBIND11_MODULE(hasher_cpp, m) {
-    m.def("sha256_file", &sha256_file, "Compute SHA-256 of a file");
-}
-```
-
-```python
-# Python — usage transparent
-try:
-    from hasher_cpp import sha256_file  # C++ si disponible
-except ImportError:
-    from .hasher import sha256_file     # fallback Python
-```
-
-**Option B : `ctypes`** (pas de compilation nécessaire côté Python)
-
-```python
-import ctypes
-lib = ctypes.CDLL("./libhasher.so")
-lib.sha256_file.restype = ctypes.c_char_p
-result = lib.sha256_file(path.encode())
-```
-
-### 9.4 Build System C++
-
-```cmake
-# CMakeLists.txt
-cmake_minimum_required(VERSION 3.15)
-project(eagis_cpp)
-
-find_package(pybind11 REQUIRED)
-find_package(OpenSSL REQUIRED)
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(YARA REQUIRED yara)
-
-pybind11_add_module(hasher_cpp cpp/hasher.cpp)
-target_link_libraries(hasher_cpp PRIVATE OpenSSL::Crypto)
-
-pybind11_add_module(matcher_cpp cpp/matcher.cpp)
-target_link_libraries(matcher_cpp PRIVATE ${YARA_LIBRARIES})
-```
+**CSV** : `fichier, est_menace, malware, severite, md5, sha256`
 
 ---
 
-## 10. Étapes de développement
+## 12. Tests et validation
 
-### Phase 1 — Prototype Python fonctionnel
+### 12.1 Test EICAR (validation rapide)
 
-**Étape 1 : Squelette et configuration**
-- Créer la structure de répertoires
-- Implémenter `Config Manager` (YAML + CLI)
-- Implémenter `Logger` avec rotation
+```bash
+aegis generate-test                      # crée Tests/Malwares_test/eicar.com
+aegis scan Tests/Malwares_test/          # → MENACE : EICAR_Test_File
+```
 
-**Étape 2 : Core scanner**
-- Implémenter `FileWalker` avec filtres
-- Implémenter `HashCalculator` (MD5, SHA-256)
-- Créer la structure de données `FileResult`
+Windows Defender supprime EICAR à la création : mettre `Tests/Malwares_test/` en exclusion
+temporaire (Windows Sécurité) pour tester.
 
-**Étape 3 : Base de signatures**
-- Créer le schéma SQLite
-- Implémenter `SignatureDB` (CRUD)
-- Charger la signature EICAR pour les tests
+### 12.2 Validation d'installation
 
-**Étape 4 : Détection par signatures**
-- Implémenter `SignatureMatcher` (hash lookup)
-- Intégrer `yara-python` pour les règles YARA
-- Tests unitaires avec EICAR
+`install.py` (étape 5/5) vérifie : base de signatures (nb d'entrées), hasher (hash de
+`config.yaml`), CLI (`python aegis.py --help`).
 
-**Étape 5 : Analyse heuristique**
-- Implémenter le calcul d'entropie de Shannon
-- Implémenter le parsing PE avec `pefile`
-- Définir les seuils et scores
+### 12.3 Tests pas à pas (développement)
 
-**Étape 6 : Quarantaine et rapports**
-- Implémenter `QuarantineManager`
-- Implémenter `ReportGenerator` (JSON, console `rich`)
+`Tests/Tests_par_etape/` — scripts `test_etap_N.py` / `.bash` validant les étapes de
+développement (squelette, walker, hasher, DB, matcher, heuristique, quarantaine, CLI,
+updater, build C++…). Fichiers d'exemples dans `Tests/Tests_par_etape/test_files/`
+(document.pdf, programme.exe, script.js, suspect.exe, …).
 
-**Étape 7 : CLI**
-- Commandes : `scan`, `update`, `quarantine list`, `quarantine restore`
-- Barre de progression avec `rich`
+### 12.4 Métriques observées
 
-**Étape 8 : Updater**
-- Téléchargement et vérification des mises à jour
-- Mise à jour delta de la base SQLite
-
-### Phase 2 — Migration C++
-
-**Étape 9 : Hasher C++**
-- Porter `hasher.py` en C++ avec OpenSSL
-- Binding `pybind11`
-- Tests de régression (mêmes sorties que Python)
-
-**Étape 10 : Matcher C++ avec Bloom filter**
-- Structure Bloom filter pour lookup O(1) des hashes
-- Porter la logique de matching
-
-**Étape 11 : Intégration libyara native**
-- Lier directement `libyara` depuis C++
-- Multithreading avec `std::thread` ou `OpenMP`
-
-**Étape 12 : File Walker C++ multi-thread**
-- Parcours parallèle avec pool de threads
-- Benchmark et optimisation
+| Métrique | Valeur constatée |
+|----------|------------------|
+| Scan répertoire de cours (331 fichiers) | ≈ 5,5 s |
+| Ignore d'un fichier > 100 Mo | ≈ 2 ms |
+| Hasher C++ | ×4 vs Python |
+| Bloom Matcher | ×4 vs SQLite direct |
 
 ---
 
-## 11. Tests et validation
+## 13. Fichiers générés et .gitignore
 
-### 11.1 Test avec EICAR
+Fichiers/dossiers créés à l'installation ou à l'usage, exclus du dépôt (`.gitignore`) :
 
-Le fichier EICAR est le standard de test antivirus. Son hash SHA-256 est connu et invariant.
-
-```python
-# tests/unit/test_matcher.py
-def test_eicar_detection():
-    db = SignatureDB(":memory:")
-    db.add_signature("sha256",
-        "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f",
-        "EICAR-Test-File", severity=4)
-    matcher = SignatureMatcher(db)
-    result = matcher.check({"sha256": "275a021b..."})
-    assert result.matched == True
-    assert result.malware_name == "EICAR-Test-File"
-```
-
-### 11.2 Tests de performance
-
-```python
-# tests/integration/test_performance.py
-import time
-
-def test_scan_1000_files():
-    engine = ScannerEngine(Config())
-    start = time.perf_counter()
-    engine.scan_path("tests/samples/")
-    duration = time.perf_counter() - start
-    assert duration < 10.0  # moins de 10 secondes pour 1000 fichiers
-```
-
-### 11.3 Métriques cibles (Phase 1 Python)
-
-| Métrique | Cible |
-|----------|-------|
-| Vitesse de scan | > 100 fichiers/seconde |
-| Faux positifs | < 0.01% |
-| Temps de démarrage | < 1 seconde |
-| Empreinte mémoire | < 150 Mo |
-
-### 11.4 Métriques cibles (Phase 2 C++)
-
-| Métrique | Cible |
-|----------|-------|
-| Vitesse de scan | > 1 000 fichiers/seconde |
-| Empreinte mémoire | < 80 Mo |
-| Latence scan fichier unique | < 5 ms |
+| Élément | Généré par |
+|---------|-----------|
+| `__pycache__/`, `*.pyc` | interpréteur Python |
+| `aegis_antivirus.egg-info/` | `pip install -e .` |
+| `cpp/build/`, `cpp/old_build/`, `cpp/bin/*.pyd`, `cpp/bin/*.dll` | build C++ (CMake) |
+| `cpp/build.bat`, `cpp/bin/hasher.dll`, `cpp/bin/bloom_matcher.dll` | ancien build (legacy) |
+| `data/signatures.db` | `install.py` / updater |
+| `data/old_sample_signatures.json`, `data/Imports signatures/` | workspace (inutilisé) |
+| `data/tmp_updater.json`, `data/tmp_update.json` | updater (fichiers temporaires) |
+| `logs/`, `cpp/logs/` | logger |
+| `quarantine/` | quarantaine (fichiers + `quarantine.db`) |
+| `reports/` | `aegis scan --json/--csv` |
+| `.venv/`, `venv/`, `env/` | environnements virtuels |
+| `Tests/Tests_par_etape/`, `Tests/Malwares_test/` | tests (non publiés) |
 
 ---
 
-## 12. Références
+## 14. Feuille de route
+
+- [x] **Hasher C++** — OpenSSL EVP, Unicode, bloc 64 Ko (×4 vs Python)
+- [x] **Bloom Matcher C++** — FNV-1a ×7, 9,6 M bits, confirmation SQLite (×4 vs SQLite)
+- [x] **Heuristique PE** — packing, RWX, imports, entropie (anti-faux-positifs)
+- [x] **YARA** — règles par sévérité (`critical`/`high` = alerte)
+- [x] **Updater** — import JSON local / URL, conversion CSV MalwareBazaar, vérification SHA-256
+- [x] **Build MSYS2** — chaîne recommandée + secours MinGW + repli Python pur
+- [ ] Walker C++ multi-thread (parcours parallèle)
+- [ ] Multithreading du scan (pool de workers)
+- [ ] Chiffrement réel de la quarantaine (`cryptography`/Fernet — champ `encrypt` prévu)
+- [ ] API REST (dépendances optionnelles `fastapi`/`uvicorn` déclarées)
+
+---
+
+## 15. Références
 
 - **YARA documentation** : https://yara.readthedocs.io
 - **pefile documentation** : https://github.com/erocarrera/pefile
 - **pybind11 documentation** : https://pybind11.readthedocs.io
-- **libyara C API** : https://yara.readthedocs.io/en/stable/capi.html
+- **OpenSSL EVP (hashing)** : https://docs.openssl.org/master/man3/EVP_DigestInit/
 - **EICAR test file** : https://www.eicar.org/download-anti-malware-testfile/
-- **ClamAV (référence open-source)** : https://www.clamav.net
-- **OpenSSL (hashing C++)** : https://docs.openssl.org/master/man3/EVP_DigestInit/
+- **MalwareBazaar (export de signatures)** : https://bazaar.abuse.ch
+- **MSYS2** : https://www.msys2.org
+- **Bloom filter (concept)** : https://en.wikipedia.org/wiki/Bloom_filter
 - **Shannon entropy in malware** : https://practicalsecurityanalytics.com/file-entropy/
-- **MalwareBazaar (samples de test)** : https://bazaar.abuse.ch
 
 ---
 
-*Ce document est une référence vivante. Mettre à jour les versions des dépendances et les métriques à chaque jalon de développement.*
+*Ce document est une référence vivante : mettez à jour les versions des dépendances, les
+métriques et la feuille de route à chaque évolution du projet.*
+
+
