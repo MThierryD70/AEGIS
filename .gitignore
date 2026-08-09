@@ -29,9 +29,11 @@ cpp/bin/hasher.dll
 cpp/bin/bloom_matcher.dll
 
 # ── Données générées ────────────────────
+# (ancrés à la racine : ne doivent PAS matcher des packages sources
+#  comme aegis/quarantine/ ou aegis/logs/)
 data/signatures.db
-logs/
-quarantine/
+/logs/
+/quarantine/
 data/old_sample_signatures.json 
 data/Imports signatures/
 
@@ -59,7 +61,7 @@ tmp/
 temp/
 data/tmp_*.json
 
-reports/
+/reports/
 cpp/logs/
 Tests/Tests_par_etape/
 Tests/Malwares_test/

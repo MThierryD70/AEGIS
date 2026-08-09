@@ -88,16 +88,46 @@ def install_dependencies() -> bool:
             all_ok = False
 
     for pkg in optional:
+        name = pkg.split(">=")[0]
         result = subprocess.run(
             [sys.executable, "-m", "pip", "install", pkg],
             capture_output=True, text=True
         )
         if result.returncode == 0:
-            print(f"      ✓ {pkg.split('>=')[0]}")
+            print(f"      ✓ {name}")
         else:
-            print(f"      ⚠ {pkg.split('>=')[0]} — optionnel, ignoré")
-            print(f"        Sur Windows : installez Visual C++ Build Tools")
-            print(f"        Sur Linux   : sudo apt install libyara-dev")
+            print(f"      ⚠ {name} — échec de l'installation (optionnel, ignoré)")
+            _explain_optional_failure(name, result.stderr)
+
+
+def _explain_optional_failure(name: str, stderr: str) -> None:
+    """Explique pourquoi un package optionnel n'a pas pu être installé et
+    quoi faire pour y remédier (ex. compilateur manquant pour yara-python)."""
+    if name != "yara-python":
+        print("        Voir le détail de l'erreur affiché par pip ci-dessus.")
+        return
+
+    print("")
+    print("        « yara-python » doit être compilé sur place et un composant")
+    print("        externe est manquant sur cette machine :")
+
+    if "Microsoft Visual C++ 14.0" in stderr or "C++ Build Tools" in stderr:
+        print("")
+        print("          → Windows : il manque le compilateur C/C++ de Microsoft.")
+        print("            Installez « Microsoft C++ Build Tools » :")
+        print("              https://visualstudio.microsoft.com/visual-cpp-build-tools/")
+        print("            (cochez la charge de travail « Développement Desktop en C++ »)")
+    else:
+        print("")
+        print("          → Linux : il manque le SDK YARA.")
+        print("            Installez-le :  sudo apt install libyara-dev")
+
+    print("")
+    print("          Puis relancez :  python install.py")
+    print("          (ou directement :  python -m pip install yara-python)")
+    print("")
+    print("        Sans yara-python, la détection par règles YARA est désactivée,")
+    print("        mais le reste d'AEGIS fonctionne normalement.")
 
     # Installe le projet lui-même en mode editable
     result = subprocess.run(
