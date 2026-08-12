@@ -10,14 +10,11 @@ from aegis.logger.logger import get_logger
 # remonter des dizaines de faux positifs.
 THREAT_SEVERITIES = {"critical", "high"}
 
-
 @dataclass
 class YaraResult:
-
     is_threat: bool
     matched_rules: List[str] = field(default_factory=list)
     severity: Optional[str] = None
-
 
     def __str__(self):
         if not self.is_threat:

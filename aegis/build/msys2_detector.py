@@ -41,7 +41,6 @@ MINGW_ENVS = ["mingw64", "ucrt64", "clang64"]
 # Import libs OpenSSL par ordre de préférence pour ld de MinGW
 OPENSSL_LIB_NAMES = ["libssl.dll.a", "libssl.a", "libssl.lib"]
 
-
 class Msys2Detector:
     """Détecte et décrit la chaîne d'outils C++ fournie par MSYS2."""
     def __init__(self, root: Optional[Path] = None):
@@ -235,3 +234,5 @@ class Msys2Detector:
             "         (libssl-3-x64.dll, libstdc++-6.dll, ...) requises"
             " au chargement du module .pyd.",
         ])
+
+    

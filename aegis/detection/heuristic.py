@@ -5,7 +5,6 @@ from pathlib import Path
 from typing import List, Tuple
 from aegis.logger.logger import get_logger
 
-
 # Seuil d'entropie au-delà duquel un exécutable est jugé « dense »
 # (contenu compressé/chiffré). Ne s'applique qu'aux fichiers PE : les formats
 # déjà compressés (PDF, PNG, ZIP...) ont naturellement une entropie très
@@ -27,7 +26,6 @@ WEIGHT_RWX_SECTION = 0.5
 WEIGHT_SUSPICIOUS_IMPORTS = 0.6
 
 # Imports PE considérés suspects par combinaison
-
 SUSPICIOUS_IMPORTS = [
     {"VirtualAlloc", "WriteProcessMemory", "CreateRemoteThread"},
     {"CryptEncrypt", "InternetConnect"},
@@ -45,31 +43,25 @@ IMAGE_SCN_MEM_EXECUTE = 0x20000000
 # Extensions analysées par l'heuristique (analyse PE uniquement)
 PE_EXTENSIONS = {".exe", ".dll"}
 
-
 @dataclass
 class HeuristicResult:
     is_suspicious: bool
     score: float = 0.0
     indicators: List[str] = field(default_factory=list)
-
     def __str__(self):
         if not self.is_suspicious:
             return f" Normal (score: {self.score:.2f})"
-
         return (
             f" SUSPECT (score: {self.score:.2f})"
             f"- {', '.join(self.indicators)}"
         )
 
-
 class HeuristicAnalyzer:
     def __init__(self):
         self.logger = get_logger()
-
     def analyze(self, path: Path) -> HeuristicResult:
         indicators = []
         score = 0.0
-
         # L'heuristique PE ne s'applique qu'aux exécutables : un PDF ou une
         # image n'est jamais « suspect » par la seule entropie.
         if path.suffix.lower() not in PE_EXTENSIONS:
