@@ -1,6 +1,5 @@
 import click
 
-
 # ─────────────────────────────────────────
 # Helpers - imports différés dans chaque fonction
 # ─────────────────────────────────────────
@@ -473,5 +472,3 @@ def generate_test(path):
     click.echo("[!] Windows Defender peut supprimer ce fichier immédiatement.")
     click.echo("    C'est normal - ajoutez Tests/Malwares_test/ en exclusion Defender")
     click.echo("    pour tester, puis retirez l'exclusion après.")
-
-

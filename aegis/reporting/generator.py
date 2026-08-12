@@ -10,19 +10,15 @@ from aegis.logger.logger import get_logger
 
 
 class ReportGenerator:
-
     def __init__(self):
         self.logger = get_logger()
         self.console = Console ()
 
     def print_console (self, report: ScanReport):
         # Résumé global
-
         self.console.print()
         self.console.rule("[bold blue] Résultat du scan[/bold blue]")
-
         color = "red" if report.threats_found > 0 else "green"
-        
         self.console.print(
             f"\n  Fichiers analysées : [bold] {report.total_scanned}[/bold]"
         )
@@ -35,14 +31,12 @@ class ReportGenerator:
             f"  Durée              : [bold] {report.duration_seconds:.2f}s[/bold]\n"
         )
 
-
         # Tableau des résultates
         table = Table (box = box.ROUNDED, show_header=True, header_style ="bold cyan")
         table.add_column("Fichiers", style = "dim", max_width=45)
         table.add_column("Statut", justify="center")
         table.add_column("Manace", max_width=30)
         table.add_column("Sévérité", justify="center")
-
 
         for result in report.results:
             if result.is_threat:
@@ -52,19 +46,15 @@ class ReportGenerator:
             else:
                 statut = "[green]Propre[/green]"
                 manace = "-"
-                severite = "-"
-            
+                severite = "-"            
             table.add_row (result.path.name, statut, manace, severite)
-        
+    
         self.console.print(table)
         self.console.print()
 
-    
     def save_json (self, report: ScanReport, output_path: str):
-
         data = {
             "scan_date": datetime.now().isoformat(),
-            
             "summary":{
                 "total_scanned": report.total_scanned,
                 "threats_found": report.threats_found,
@@ -88,10 +78,8 @@ class ReportGenerator:
 
         with open (output, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
-        
         self.logger.info(f" Rapport JSON sauvegardé: {output}")
     
-
     def save_csv(self, report: ScanReport, output_path: str):
         output = Path(output_path)
         output.parent.mkdir(parents=True, exist_ok=True)
@@ -114,5 +102,3 @@ class ReportGenerator:
                 ])
 
         self.logger.info(f" Rapport CSV sauvegardé : {output}")
-
-
