@@ -16,7 +16,6 @@ def print_header():
 ╚══════════════════════════════════════════════════════╝
 """)
 
-
 def check_python_version() -> bool:
     major, minor = sys.version_info[:2]
     print(f"[1/5] Vérification Python... {major}.{minor}", end=" ")
@@ -27,7 +26,6 @@ def check_python_version() -> bool:
         return False
     print("✓")
     return True
-
 
 def install_rich() -> bool:
     print("[2/5] Vérification de rich...", end=" ")
@@ -110,7 +108,6 @@ def install_dependencies() -> bool:
         all_ok = False
 
     return all_ok
-
 
 def _explain_optional_failure(name: str, stderr: str) -> None:
     """Explique pourquoi un package optionnel n'a pas pu être installé et
