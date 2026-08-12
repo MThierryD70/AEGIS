@@ -59,14 +59,12 @@ class YaraScanner:
             return YaraResult(is_threat=False)
 
         try:
-            try:
-                matches = self.rules.match(str(path))
-            except Exception:
-                # L'API C de YARA utilise la codepage ANSI sur Windows : les
-                # chemins accentués (é, è...) sont illisibles. On lit alors le
-                # fichier nous-mêmes et on passe les octets directement.
-                with open(path, "rb") as f:
-                    matches = self.rules.match(data=f.read())
+            # L'API C de YARA utilise la codepage ANSI sur Windows : les
+            # chemins accentués (é, è...) y sont illisibles. On passe donc
+            # toujours les octets directement, ce qui évite l'échec puis le
+            # fallback (et la relecture du fichier qui l'accompagnait).
+            with open(path, "rb") as f:
+                matches = self.rules.match(data=f.read())
         except Exception as e:
             self.logger.error(f" Erreur scan YARA sur {path} : {e}")
             return YaraResult(is_threat=False)

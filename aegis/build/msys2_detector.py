@@ -80,8 +80,6 @@ class Msys2Detector:
             return None
         if (self.bin_dir / "ninja.exe").exists():
             return "Ninja"
-        if (self.bin_dir / "mingw32-make.exe").exists():
-            return "MinGW Makefiles"
         return None
 
     # ── API publique ────────────────────────────────────
@@ -104,9 +102,6 @@ class Msys2Detector:
         report.tools.append(self._tool_from(self.bin_dir / "gcc.exe", "gcc"))
         report.tools.append(self._tool_from(self.bin_dir / "cmake.exe", "cmake"))
         report.tools.append(self._tool_from(self.bin_dir / "ninja.exe", "ninja"))
-        report.tools.append(
-            self._tool_from(self.bin_dir / "mingw32-make.exe", "mingw32-make")
-        )
         report.tools.append(ToolInfo(
             name="python", found=True, path=sys.executable,
             version=self._get_version(sys.executable)

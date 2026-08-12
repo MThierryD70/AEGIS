@@ -1,4 +1,5 @@
 import math
+from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Tuple
@@ -104,16 +105,15 @@ class HeuristicAnalyzer:
             if not data:
                 return 0.0
 
-            frequencies = [0] * 256
-            for byte in data:
-                frequencies[byte] += 1
+            # Counter est implémenté en C : histogramme bien plus rapide
+            # qu'une boucle Python octet par octet, résultat identique.
+            frequencies = Counter(data)
 
             size = len(data)
             entropy = 0.0
-            for count in frequencies:
-                if count:
-                    p = count / size
-                    entropy -= p * math.log2(p)
+            for count in frequencies.values():
+                p = count / size
+                entropy -= p * math.log2(p)
 
             return entropy
         except (PermissionError, OSError) as e:
@@ -129,7 +129,13 @@ class HeuristicAnalyzer:
 
         try:
             import pefile
-            pe = pefile.PE(str(path))
+            # fast_load + parse sélectif : on ne décode que les sections et
+            # la table d'imports, en ignorant les répertoires coûteux
+            # (ressource, TLS, relocations...) inutiles pour nos indicateurs.
+            pe = pefile.PE(str(path), fast_load=True)
+            pe.parse_data_directories(
+                directories=[pefile.DIRECTORY_ENTRY["IMAGE_DIRECTORY_ENTRY_IMPORT"]]
+            )
         except Exception as e:
             self.logger.debug(f" Analyse PE ignorée pour {path.name} : {e}")
             return indicators

@@ -99,6 +99,18 @@ def install_dependencies() -> bool:
             print(f"      ⚠ {name} — échec de l'installation (optionnel, ignoré)")
             _explain_optional_failure(name, result.stderr)
 
+    # Installe le projet lui-même en mode editable
+    result = subprocess.run(
+        [sys.executable, "-m", "pip", "install", "-e", ".",
+         "--no-deps"],  # --no-deps car déjà installées ci-dessus
+        capture_output=True, text=True
+    )
+    if result.returncode != 0:
+        print(f"      ✗ Installation du projet échouée")
+        all_ok = False
+
+    return all_ok
+
 
 def _explain_optional_failure(name: str, stderr: str) -> None:
     """Explique pourquoi un package optionnel n'a pas pu être installé et
@@ -129,17 +141,6 @@ def _explain_optional_failure(name: str, stderr: str) -> None:
     print("        Sans yara-python, la détection par règles YARA est désactivée,")
     print("        mais le reste d'AEGIS fonctionne normalement.")
 
-    # Installe le projet lui-même en mode editable
-    result = subprocess.run(
-        [sys.executable, "-m", "pip", "install", "-e", ".",
-         "--no-deps"],  # --no-deps car déjà installées ci-dessus
-        capture_output=True, text=True
-    )
-    if result.returncode != 0:
-        print(f"      ✗ Installation du projet échouée")
-        all_ok = False
-
-    return all_ok
 
 def build_cpp_modules() -> bool:
     print("[4/5] Compilation des modules C++...")
